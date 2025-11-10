@@ -19,4 +19,14 @@
     <PackageReference Include="System.Management" Version="9.0.10" />
   </ItemGroup>
 
+  <ItemGroup>
+    <!-- CosmicUI Theme Resources -->
+    <Resource Include="CosmicUI\Themes\VoidTheme.xaml" />
+    <Resource Include="CosmicUI\Themes\GamingTheme.xaml" />
+    <Resource Include="CosmicUI\Themes\WorkTheme.xaml" />
+    <Resource Include="CosmicUI\Themes\Overlays\PinkAccent.xaml" />
+    <Resource Include="CosmicUI\Themes\Overlays\PurpleAccent.xaml" />
+    <Resource Include="CosmicUI\Themes\Overlays\BlueAccent.xaml" />
+  </ItemGroup>
+
 </Project>

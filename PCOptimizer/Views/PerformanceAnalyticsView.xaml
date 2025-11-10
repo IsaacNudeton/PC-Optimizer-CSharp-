@@ -1,10 +1,10 @@
 <UserControl x:Class="PCOptimizer.Views.PerformanceAnalyticsView"
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-             Background="{StaticResource DeepBlackBrush}"
-             Foreground="{StaticResource PrimaryTextBrush}">
+             Background="{DynamicResource DeepBlackBrush}"
+             Foreground="{DynamicResource PrimaryTextBrush}">
 
-    <ScrollViewer VerticalScrollBarVisibility="Auto" Background="{StaticResource DeepBlackBrush}">
+    <ScrollViewer VerticalScrollBarVisibility="Auto" Background="{DynamicResource DeepBlackBrush}">
         <Grid Margin="24">
             <Grid.RowDefinitions>
                 <RowDefinition Height="Auto" />
@@ -14,9 +14,9 @@
             </Grid.RowDefinitions>
 
             <!-- Time Range Selector -->
-            <Border Grid.Row="0" Style="{StaticResource CardStyle}" Margin="0,0,0,24">
+            <Border Grid.Row="0" Style="{DynamicResource CardStyle}" Margin="0,0,0,24">
                 <StackPanel>
-                    <TextBlock Text="Time Range" Style="{StaticResource H3TextBlockStyle}" Margin="0,0,0,12" />
+                    <TextBlock Text="Time Range" Style="{DynamicResource H3TextBlockStyle}" Margin="0,0,0,12" />
                     <Grid>
                         <Grid.ColumnDefinitions>
                             <ColumnDefinition Width="*" />
@@ -26,22 +26,22 @@
                             <ColumnDefinition Width="*" />
                         </Grid.ColumnDefinitions>
 
-                        <Button Grid.Column="0" Content="1 Hour" Style="{StaticResource PrimaryButtonStyle}"
+                        <Button Grid.Column="0" Content="1 Hour" Style="{DynamicResource PrimaryButtonStyle}"
                                Margin="0,0,8,0" Padding="16,8" />
-                        <Button Grid.Column="1" Content="6 Hours" Style="{StaticResource SecondaryButtonStyle}"
+                        <Button Grid.Column="1" Content="6 Hours" Style="{DynamicResource SecondaryButtonStyle}"
                                Margin="0,0,8,0" Padding="16,8" />
-                        <Button Grid.Column="2" Content="24 Hours" Style="{StaticResource SecondaryButtonStyle}"
+                        <Button Grid.Column="2" Content="24 Hours" Style="{DynamicResource SecondaryButtonStyle}"
                                Margin="0,0,8,0" Padding="16,8" />
-                        <Button Grid.Column="3" Content="7 Days" Style="{StaticResource SecondaryButtonStyle}"
+                        <Button Grid.Column="3" Content="7 Days" Style="{DynamicResource SecondaryButtonStyle}"
                                Margin="0,0,8,0" Padding="16,8" />
-                        <Button Grid.Column="4" Content="30 Days" Style="{StaticResource SecondaryButtonStyle}"
+                        <Button Grid.Column="4" Content="30 Days" Style="{DynamicResource SecondaryButtonStyle}"
                                Padding="16,8" />
                     </Grid>
                 </StackPanel>
             </Border>
 
             <!-- Historical Performance Chart -->
-            <Border Grid.Row="1" Style="{StaticResource CardStyle}" Margin="0,0,0,24">
+            <Border Grid.Row="1" Style="{DynamicResource CardStyle}" Margin="0,0,0,24">
                 <Grid>
                     <Grid.RowDefinitions>
                         <RowDefinition Height="Auto" />
@@ -51,30 +51,30 @@
 
                     <!-- Header -->
                     <StackPanel Grid.Row="0" Margin="0,0,0,16">
-                        <TextBlock Text="Historical Performance" Style="{StaticResource H3TextBlockStyle}" />
-                        <TextBlock Text="CPU, GPU, and RAM usage over time" Style="{StaticResource SecondaryTextBlockStyle}"
+                        <TextBlock Text="Historical Performance" Style="{DynamicResource H3TextBlockStyle}" />
+                        <TextBlock Text="CPU, GPU, and RAM usage over time" Style="{DynamicResource SecondaryTextBlockStyle}"
                                   Margin="0,4,0,0" />
                     </StackPanel>
 
                     <!-- Chart Placeholder -->
-                    <Border Grid.Row="1" Background="{StaticResource LighterCharcoalBrush}"
-                           BorderBrush="{StaticResource GoldBrightBrush}" BorderThickness="2" CornerRadius="8">
+                    <Border Grid.Row="1" Background="{DynamicResource LighterCharcoalBrush}"
+                           BorderBrush="{DynamicResource GoldBrightBrush}" BorderThickness="2" CornerRadius="8">
                         <Grid VerticalAlignment="Center" HorizontalAlignment="Center">
-                            <TextBlock Text="📊 Performance Chart" Style="{StaticResource H3TextBlockStyle}"
-                                      Foreground="{StaticResource GoldMediumBrush}" />
+                            <TextBlock Text="📊 Performance Chart" Style="{DynamicResource H3TextBlockStyle}"
+                                      Foreground="{DynamicResource GoldMediumBrush}" />
                         </Grid>
                     </Border>
 
                     <!-- Metric Toggles -->
                     <StackPanel Grid.Row="2" Margin="0,16,0,0">
                         <StackPanel Orientation="Horizontal">
-                            <CheckBox Content="CPU Usage" Foreground="{StaticResource ElectricBlueBrush}"
+                            <CheckBox Content="CPU Usage" Foreground="{DynamicResource ElectricBlueBrush}"
                                      Margin="0,0,24,0" IsChecked="True" />
-                            <CheckBox Content="GPU Usage" Foreground="{StaticResource GoldMediumBrush}"
+                            <CheckBox Content="GPU Usage" Foreground="{DynamicResource GoldMediumBrush}"
                                      Margin="0,0,24,0" IsChecked="True" />
-                            <CheckBox Content="RAM Usage" Foreground="{StaticResource CopperBrush}"
+                            <CheckBox Content="RAM Usage" Foreground="{DynamicResource CopperBrush}"
                                      Margin="0,0,24,0" IsChecked="True" />
-                            <CheckBox Content="CPU Temp" Foreground="{StaticResource GoldBrightBrush}"
+                            <CheckBox Content="CPU Temp" Foreground="{DynamicResource GoldBrightBrush}"
                                      Margin="0,0,0,0" />
                         </StackPanel>
                     </StackPanel>
@@ -82,7 +82,7 @@
             </Border>
 
             <!-- Anomaly Detection Timeline -->
-            <Border Grid.Row="2" Style="{StaticResource CardStyle}" Margin="0,0,0,24">
+            <Border Grid.Row="2" Style="{DynamicResource CardStyle}" Margin="0,0,0,24">
                 <Grid>
                     <Grid.RowDefinitions>
                         <RowDefinition Height="Auto" />
@@ -92,9 +92,9 @@
 
                     <!-- Header -->
                     <StackPanel Grid.Row="0" Margin="0,0,0,16">
-                        <TextBlock Text="Anomaly Detection Timeline" Style="{StaticResource H3TextBlockStyle}" />
+                        <TextBlock Text="Anomaly Detection Timeline" Style="{DynamicResource H3TextBlockStyle}" />
                         <TextBlock Text="Recent detected anomalies and performance changes"
-                                  Style="{StaticResource SecondaryTextBlockStyle}" Margin="0,4,0,0" />
+                                  Style="{DynamicResource SecondaryTextBlockStyle}" Margin="0,4,0,0" />
                     </StackPanel>
 
                     <!-- Filters -->
@@ -105,29 +105,29 @@
                             <ColumnDefinition Width="*" />
                         </Grid.ColumnDefinitions>
 
-                        <ComboBox Grid.Column="0" Background="{StaticResource DarkGrayBrush}"
-                                 Foreground="{StaticResource PrimaryTextBrush}" Margin="0,0,12,0">
+                        <ComboBox Grid.Column="0" Background="{DynamicResource DarkGrayBrush}"
+                                 Foreground="{DynamicResource PrimaryTextBrush}" Margin="0,0,12,0">
                             <ComboBoxItem Content="All Anomalies" IsSelected="True" />
                             <ComboBoxItem Content="Spikes Only" />
                             <ComboBoxItem Content="Change Points Only" />
                         </ComboBox>
 
-                        <ComboBox Grid.Column="1" Background="{StaticResource DarkGrayBrush}"
-                                 Foreground="{StaticResource PrimaryTextBrush}" Margin="0,0,12,0">
+                        <ComboBox Grid.Column="1" Background="{DynamicResource DarkGrayBrush}"
+                                 Foreground="{DynamicResource PrimaryTextBrush}" Margin="0,0,12,0">
                             <ComboBoxItem Content="All Metrics" IsSelected="True" />
                             <ComboBoxItem Content="CPU" />
                             <ComboBoxItem Content="GPU" />
                             <ComboBoxItem Content="RAM" />
                         </ComboBox>
 
-                        <Button Grid.Column="2" Content="Export Timeline" Style="{StaticResource SecondaryButtonStyle}"
+                        <Button Grid.Column="2" Content="Export Timeline" Style="{DynamicResource SecondaryButtonStyle}"
                                Padding="16,8" />
                     </Grid>
 
                     <!-- Timeline Items -->
                     <StackPanel Grid.Row="2">
                         <!-- Anomaly Item 1 -->
-                        <Border Background="{StaticResource LighterCharcoalBrush}" BorderBrush="{StaticResource DangerBrush}"
+                        <Border Background="{DynamicResource LighterCharcoalBrush}" BorderBrush="{DynamicResource DangerBrush}"
                                BorderThickness="2,0,0,0" Padding="16" Margin="0,0,0,12">
                             <Grid>
                                 <Grid.ColumnDefinitions>
@@ -138,28 +138,28 @@
 
                                 <StackPanel Grid.Column="0" Margin="0,0,16,0">
                                     <TextBlock Text="⚡" FontSize="20" />
-                                    <TextBlock Text="CPU Spike" Style="{StaticResource SmallTextBlockStyle}"
+                                    <TextBlock Text="CPU Spike" Style="{DynamicResource SmallTextBlockStyle}"
                                               Margin="0,4,0,0" />
                                 </StackPanel>
 
                                 <StackPanel Grid.Column="1">
                                     <TextBlock Text="94.2% CPU Usage - Confidence: 98.7%"
-                                              Style="{StaticResource BodyTextBlockStyle}" Margin="0,0,0,4" />
+                                              Style="{DynamicResource BodyTextBlockStyle}" Margin="0,0,0,4" />
                                     <TextBlock Text="2024-01-15 14:32:18 - 2 minutes ago"
-                                              Style="{StaticResource SmallTextBlockStyle}" />
+                                              Style="{DynamicResource SmallTextBlockStyle}" />
                                 </StackPanel>
 
                                 <StackPanel Grid.Column="2" Orientation="Horizontal" Margin="12,0,0,0">
-                                    <Button Content="Details" Style="{StaticResource SecondaryButtonStyle}"
+                                    <Button Content="Details" Style="{DynamicResource SecondaryButtonStyle}"
                                            Padding="12,4" Margin="0,0,8,0" />
-                                    <Button Content="Dismiss" Style="{StaticResource SecondaryButtonStyle}"
+                                    <Button Content="Dismiss" Style="{DynamicResource SecondaryButtonStyle}"
                                            Padding="12,4" />
                                 </StackPanel>
                             </Grid>
                         </Border>
 
                         <!-- Anomaly Item 2 -->
-                        <Border Background="{StaticResource LighterCharcoalBrush}" BorderBrush="{StaticResource WarningBrush}"
+                        <Border Background="{DynamicResource LighterCharcoalBrush}" BorderBrush="{DynamicResource WarningBrush}"
                                BorderThickness="2,0,0,0" Padding="16" Margin="0,0,0,12">
                             <Grid>
                                 <Grid.ColumnDefinitions>
@@ -170,28 +170,28 @@
 
                                 <StackPanel Grid.Column="0" Margin="0,0,16,0">
                                     <TextBlock Text="📈" FontSize="20" />
-                                    <TextBlock Text="Change Point" Style="{StaticResource SmallTextBlockStyle}"
+                                    <TextBlock Text="Change Point" Style="{DynamicResource SmallTextBlockStyle}"
                                               Margin="0,4,0,0" />
                                 </StackPanel>
 
                                 <StackPanel Grid.Column="1">
                                     <TextBlock Text="RAM Usage Pattern Shifted - Baseline: 76.5%"
-                                              Style="{StaticResource BodyTextBlockStyle}" Margin="0,0,0,4" />
+                                              Style="{DynamicResource BodyTextBlockStyle}" Margin="0,0,0,4" />
                                     <TextBlock Text="2024-01-15 12:18:45 - 4 hours ago"
-                                              Style="{StaticResource SmallTextBlockStyle}" />
+                                              Style="{DynamicResource SmallTextBlockStyle}" />
                                 </StackPanel>
 
                                 <StackPanel Grid.Column="2" Orientation="Horizontal" Margin="12,0,0,0">
-                                    <Button Content="Details" Style="{StaticResource SecondaryButtonStyle}"
+                                    <Button Content="Details" Style="{DynamicResource SecondaryButtonStyle}"
                                            Padding="12,4" Margin="0,0,8,0" />
-                                    <Button Content="Dismiss" Style="{StaticResource SecondaryButtonStyle}"
+                                    <Button Content="Dismiss" Style="{DynamicResource SecondaryButtonStyle}"
                                            Padding="12,4" />
                                 </StackPanel>
                             </Grid>
                         </Border>
 
                         <!-- Anomaly Item 3 -->
-                        <Border Background="{StaticResource LighterCharcoalBrush}" BorderBrush="{StaticResource DangerBrush}"
+                        <Border Background="{DynamicResource LighterCharcoalBrush}" BorderBrush="{DynamicResource DangerBrush}"
                                BorderThickness="2,0,0,0" Padding="16">
                             <Grid>
                                 <Grid.ColumnDefinitions>
@@ -202,21 +202,21 @@
 
                                 <StackPanel Grid.Column="0" Margin="0,0,16,0">
                                     <TextBlock Text="⚡" FontSize="20" />
-                                    <TextBlock Text="GPU Spike" Style="{StaticResource SmallTextBlockStyle}"
+                                    <TextBlock Text="GPU Spike" Style="{DynamicResource SmallTextBlockStyle}"
                                               Margin="0,4,0,0" />
                                 </StackPanel>
 
                                 <StackPanel Grid.Column="1">
                                     <TextBlock Text="99.1% GPU Usage - Confidence: 99.2%"
-                                              Style="{StaticResource BodyTextBlockStyle}" Margin="0,0,0,4" />
+                                              Style="{DynamicResource BodyTextBlockStyle}" Margin="0,0,0,4" />
                                     <TextBlock Text="2024-01-14 18:45:30 - 1 day ago"
-                                              Style="{StaticResource SmallTextBlockStyle}" />
+                                              Style="{DynamicResource SmallTextBlockStyle}" />
                                 </StackPanel>
 
                                 <StackPanel Grid.Column="2" Orientation="Horizontal" Margin="12,0,0,0">
-                                    <Button Content="Details" Style="{StaticResource SecondaryButtonStyle}"
+                                    <Button Content="Details" Style="{DynamicResource SecondaryButtonStyle}"
                                            Padding="12,4" Margin="0,0,8,0" />
-                                    <Button Content="Dismiss" Style="{StaticResource SecondaryButtonStyle}"
+                                    <Button Content="Dismiss" Style="{DynamicResource SecondaryButtonStyle}"
                                            Padding="12,4" />
                                 </StackPanel>
                             </Grid>
@@ -226,7 +226,7 @@
             </Border>
 
             <!-- Performance Trends -->
-            <Border Grid.Row="3" Style="{StaticResource CardStyle}">
+            <Border Grid.Row="3" Style="{DynamicResource CardStyle}">
                 <Grid>
                     <Grid.RowDefinitions>
                         <RowDefinition Height="Auto" />
@@ -234,7 +234,7 @@
                     </Grid.RowDefinitions>
 
                     <TextBlock Grid.Row="0" Text="Performance Trends (Last 7 Days)"
-                              Style="{StaticResource H3TextBlockStyle}" Margin="0,0,0,16" />
+                              Style="{DynamicResource H3TextBlockStyle}" Margin="0,0,0,16" />
 
                     <Grid Grid.Row="1">
                         <Grid.ColumnDefinitions>
@@ -244,44 +244,44 @@
                         </Grid.ColumnDefinitions>
 
                         <!-- Average Usage Card -->
-                        <Border Background="{StaticResource LighterCharcoalBrush}" BorderBrush="{StaticResource GoldBrightBrush}"
+                        <Border Background="{DynamicResource LighterCharcoalBrush}" BorderBrush="{DynamicResource GoldBrightBrush}"
                                BorderThickness="2" CornerRadius="8" Padding="16" Margin="0,0,12,0">
                             <StackPanel>
-                                <TextBlock Text="Average Usage" Style="{StaticResource BodyTextBlockStyle}"
+                                <TextBlock Text="Average Usage" Style="{DynamicResource BodyTextBlockStyle}"
                                           Margin="0,0,0,12" />
-                                <TextBlock Text="CPU: 42.3%" Style="{StaticResource SecondaryTextBlockStyle}"
+                                <TextBlock Text="CPU: 42.3%" Style="{DynamicResource SecondaryTextBlockStyle}"
                                           Margin="0,0,0,4" />
-                                <TextBlock Text="GPU: 38.7%" Style="{StaticResource SecondaryTextBlockStyle}"
+                                <TextBlock Text="GPU: 38.7%" Style="{DynamicResource SecondaryTextBlockStyle}"
                                           Margin="0,0,0,4" />
-                                <TextBlock Text="RAM: 64.2%" Style="{StaticResource SecondaryTextBlockStyle}" />
+                                <TextBlock Text="RAM: 64.2%" Style="{DynamicResource SecondaryTextBlockStyle}" />
                             </StackPanel>
                         </Border>
 
                         <!-- Peak Usage Card -->
-                        <Border Background="{StaticResource LighterCharcoalBrush}" BorderBrush="{StaticResource GoldBrightBrush}"
+                        <Border Background="{DynamicResource LighterCharcoalBrush}" BorderBrush="{DynamicResource GoldBrightBrush}"
                                BorderThickness="2" CornerRadius="8" Padding="16" Margin="0,0,12,0">
                             <StackPanel>
-                                <TextBlock Text="Peak Usage" Style="{StaticResource BodyTextBlockStyle}"
+                                <TextBlock Text="Peak Usage" Style="{DynamicResource BodyTextBlockStyle}"
                                           Margin="0,0,0,12" />
-                                <TextBlock Text="CPU: 98.4% (14:32)" Style="{StaticResource SecondaryTextBlockStyle}"
+                                <TextBlock Text="CPU: 98.4% (14:32)" Style="{DynamicResource SecondaryTextBlockStyle}"
                                           Margin="0,0,0,4" />
-                                <TextBlock Text="GPU: 99.8% (18:45)" Style="{StaticResource SecondaryTextBlockStyle}"
+                                <TextBlock Text="GPU: 99.8% (18:45)" Style="{DynamicResource SecondaryTextBlockStyle}"
                                           Margin="0,0,0,4" />
-                                <TextBlock Text="RAM: 87.1% (12:18)" Style="{StaticResource SecondaryTextBlockStyle}" />
+                                <TextBlock Text="RAM: 87.1% (12:18)" Style="{DynamicResource SecondaryTextBlockStyle}" />
                             </StackPanel>
                         </Border>
 
                         <!-- Anomaly Summary Card -->
-                        <Border Background="{StaticResource LighterCharcoalBrush}" BorderBrush="{StaticResource GoldBrightBrush}"
+                        <Border Background="{DynamicResource LighterCharcoalBrush}" BorderBrush="{DynamicResource GoldBrightBrush}"
                                BorderThickness="2" CornerRadius="8" Padding="16">
                             <StackPanel>
-                                <TextBlock Text="Anomaly Summary" Style="{StaticResource BodyTextBlockStyle}"
+                                <TextBlock Text="Anomaly Summary" Style="{DynamicResource BodyTextBlockStyle}"
                                           Margin="0,0,0,12" />
-                                <TextBlock Text="Total Detected: 47" Style="{StaticResource SecondaryTextBlockStyle}"
+                                <TextBlock Text="Total Detected: 47" Style="{DynamicResource SecondaryTextBlockStyle}"
                                           Margin="0,0,0,4" />
-                                <TextBlock Text="Spikes: 32" Style="{StaticResource SecondaryTextBlockStyle}"
+                                <TextBlock Text="Spikes: 32" Style="{DynamicResource SecondaryTextBlockStyle}"
                                           Margin="0,0,0,4" />
-                                <TextBlock Text="Change Points: 15" Style="{StaticResource SecondaryTextBlockStyle}" />
+                                <TextBlock Text="Change Points: 15" Style="{DynamicResource SecondaryTextBlockStyle}" />
                             </StackPanel>
                         </Border>
                     </Grid>

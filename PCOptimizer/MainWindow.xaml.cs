@@ -113,27 +113,13 @@ namespace PCOptimizer
 
         private void UpdateActiveButton(Button activeButton)
         {
-            // Reset all buttons
-            DashboardButton.Foreground = FindResource("PrimaryTextBrush") as Brush;
-            DashboardButton.BorderThickness = new Thickness(0);
+            // Reset all buttons - only update border, let DynamicResource in XAML handle colors
+            foreach (var button in new[] { DashboardButton, OptimizerButton, AnalyticsButton, HistoryButton, SettingsButton, AboutButton })
+            {
+                button.BorderThickness = new Thickness(0);
+            }
 
-            OptimizerButton.Foreground = FindResource("PrimaryTextBrush") as Brush;
-            OptimizerButton.BorderThickness = new Thickness(0);
-
-            AnalyticsButton.Foreground = FindResource("PrimaryTextBrush") as Brush;
-            AnalyticsButton.BorderThickness = new Thickness(0);
-
-            HistoryButton.Foreground = FindResource("PrimaryTextBrush") as Brush;
-            HistoryButton.BorderThickness = new Thickness(0);
-
-            SettingsButton.Foreground = FindResource("PrimaryTextBrush") as Brush;
-            SettingsButton.BorderThickness = new Thickness(0);
-
-            AboutButton.Foreground = FindResource("PrimaryTextBrush") as Brush;
-            AboutButton.BorderThickness = new Thickness(0);
-
-            // Highlight active button
-            activeButton.Foreground = FindResource("GoldBrightBrush") as Brush;
+            // Highlight active button with border (color comes from style/DynamicResource)
             activeButton.BorderThickness = new Thickness(3, 0, 0, 0);
         }
     }

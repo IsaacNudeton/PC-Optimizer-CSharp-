@@ -6,9 +6,8 @@
     <Application.Resources>
         <ResourceDictionary>
             <ResourceDictionary.MergedDictionaries>
-                <ui:ThemeResources RequestedTheme="Dark" />
-                <ui:XamlControlsResources />
-                <ResourceDictionary Source="Resources/ThemeResources.xaml" />
+                <!-- CosmicUI Base Theme (Default: Void/Universal) -->
+                <ResourceDictionary Source="CosmicUI/Themes/VoidTheme.xaml" />
             </ResourceDictionary.MergedDictionaries>
         </ResourceDictionary>
     </Application.Resources>

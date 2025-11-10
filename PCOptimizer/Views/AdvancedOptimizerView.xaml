@@ -1,43 +1,43 @@
 <UserControl x:Class="PCOptimizer.Views.AdvancedOptimizerView"
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-             Background="{StaticResource DeepBlackBrush}"
-             Foreground="{StaticResource PrimaryTextBrush}">
+             Background="{DynamicResource DeepBlackBrush}"
+             Foreground="{DynamicResource PrimaryTextBrush}">
 
     <Grid Margin="24">
         <!-- Tab Control -->
-        <TabControl Background="{StaticResource DarkGrayBrush}"
-                   Foreground="{StaticResource PrimaryTextBrush}">
+        <TabControl Background="{DynamicResource DarkGrayBrush}"
+                   Foreground="{DynamicResource PrimaryTextBrush}">
 
             <!-- Performance Tab -->
-            <TabItem Header="⚡ Performance" Foreground="{StaticResource GoldBrightBrush}">
+            <TabItem Header="⚡ Performance" Foreground="{DynamicResource GoldBrightBrush}">
                 <ScrollViewer VerticalScrollBarVisibility="Auto">
                     <StackPanel Margin="24">
-                        <TextBlock Text="Windows Visual Effects" Style="{StaticResource H3TextBlockStyle}"
+                        <TextBlock Text="Windows Visual Effects" Style="{DynamicResource H3TextBlockStyle}"
                                   Margin="0,0,0,16" />
 
-                        <Border Background="{StaticResource LighterCharcoalBrush}" BorderBrush="{StaticResource GoldBrightBrush}"
+                        <Border Background="{DynamicResource LighterCharcoalBrush}" BorderBrush="{DynamicResource GoldBrightBrush}"
                                BorderThickness="2" CornerRadius="8" Padding="16" Margin="0,0,0,16">
                             <StackPanel>
-                                <CheckBox Content="Disable menu animations" Foreground="{StaticResource PrimaryTextBrush}"
+                                <CheckBox Content="Disable menu animations" Foreground="{DynamicResource PrimaryTextBrush}"
                                          Margin="0,8,0,8" IsChecked="True" />
                                 <TextBlock Text="Removes fade-in effect from Start menu and context menus"
-                                          Style="{StaticResource SmallTextBlockStyle}" Margin="24,0,0,8" />
+                                          Style="{DynamicResource SmallTextBlockStyle}" Margin="24,0,0,8" />
 
-                                <CheckBox Content="Disable taskbar animations" Foreground="{StaticResource PrimaryTextBrush}"
+                                <CheckBox Content="Disable taskbar animations" Foreground="{DynamicResource PrimaryTextBrush}"
                                          Margin="0,8,0,8" />
                                 <TextBlock Text="Removes minimize/maximize window animations"
-                                          Style="{StaticResource SmallTextBlockStyle}" Margin="24,0,0,12" />
+                                          Style="{DynamicResource SmallTextBlockStyle}" Margin="24,0,0,12" />
 
-                                <CheckBox Content="Disable Windows Search Indexing" Foreground="{StaticResource PrimaryTextBrush}"
+                                <CheckBox Content="Disable Windows Search Indexing" Foreground="{DynamicResource PrimaryTextBrush}"
                                          Margin="0,8,0,8" />
                                 <TextBlock Text="Reduces disk I/O from search indexing"
-                                          Style="{StaticResource SmallTextBlockStyle}" Margin="24,0,0,12" />
+                                          Style="{DynamicResource SmallTextBlockStyle}" Margin="24,0,0,12" />
 
-                                <CheckBox Content="Disable Superfetch" Foreground="{StaticResource PrimaryTextBrush}"
+                                <CheckBox Content="Disable Superfetch" Foreground="{DynamicResource PrimaryTextBrush}"
                                          Margin="0,8,0,8" />
                                 <TextBlock Text="Frees up background memory management"
-                                          Style="{StaticResource SmallTextBlockStyle}" Margin="24,0,0,12" />
+                                          Style="{DynamicResource SmallTextBlockStyle}" Margin="24,0,0,12" />
                             </StackPanel>
                         </Border>
 
@@ -48,117 +48,117 @@
                             </Grid.ColumnDefinitions>
 
                             <Button Grid.Column="0" Content="Apply All Optimizations"
-                                   Style="{StaticResource PrimaryButtonStyle}" Margin="0,0,12,0" Padding="16,12" />
+                                   Style="{DynamicResource PrimaryButtonStyle}" Margin="0,0,12,0" Padding="16,12" />
                             <Button Grid.Column="1" Content="Restore Windows Defaults"
-                                   Style="{StaticResource SecondaryButtonStyle}" Padding="16,12" />
+                                   Style="{DynamicResource SecondaryButtonStyle}" Padding="16,12" />
                         </Grid>
                     </StackPanel>
                 </ScrollViewer>
             </TabItem>
 
             <!-- Gaming Tab -->
-            <TabItem Header="🎮 Gaming" Foreground="{StaticResource GoldBrightBrush}">
+            <TabItem Header="🎮 Gaming" Foreground="{DynamicResource GoldBrightBrush}">
                 <ScrollViewer VerticalScrollBarVisibility="Auto">
                     <StackPanel Margin="24">
-                        <TextBlock Text="Gaming Optimizations" Style="{StaticResource H3TextBlockStyle}"
+                        <TextBlock Text="Gaming Optimizations" Style="{DynamicResource H3TextBlockStyle}"
                                   Margin="0,0,0,16" />
 
-                        <Border Background="{StaticResource LighterCharcoalBrush}" BorderBrush="{StaticResource GoldBrightBrush}"
+                        <Border Background="{DynamicResource LighterCharcoalBrush}" BorderBrush="{DynamicResource GoldBrightBrush}"
                                BorderThickness="2" CornerRadius="8" Padding="16" Margin="0,0,0,16">
                             <StackPanel>
-                                <TextBlock Text="Mouse Polling Rate" Style="{StaticResource BodyTextBlockStyle}"
+                                <TextBlock Text="Mouse Polling Rate" Style="{DynamicResource BodyTextBlockStyle}"
                                           Margin="0,0,0,8" />
                                 <Slider Minimum="125" Maximum="1000" Value="500" Margin="0,0,0,16" />
 
-                                <CheckBox Content="Disable Game DVR" Foreground="{StaticResource PrimaryTextBrush}"
+                                <CheckBox Content="Disable Game DVR" Foreground="{DynamicResource PrimaryTextBrush}"
                                          Margin="0,8,0,8" IsChecked="True" />
                                 <TextBlock Text="Disables background game recording"
-                                          Style="{StaticResource SmallTextBlockStyle}" Margin="24,0,0,12" />
+                                          Style="{DynamicResource SmallTextBlockStyle}" Margin="24,0,0,12" />
 
-                                <CheckBox Content="Enable Fullscreen Optimizations" Foreground="{StaticResource PrimaryTextBrush}"
+                                <CheckBox Content="Enable Fullscreen Optimizations" Foreground="{DynamicResource PrimaryTextBrush}"
                                          Margin="0,8,0,8" IsChecked="True" />
                                 <TextBlock Text="Optimizes fullscreen game performance"
-                                          Style="{StaticResource SmallTextBlockStyle}" Margin="24,0,0,12" />
+                                          Style="{DynamicResource SmallTextBlockStyle}" Margin="24,0,0,12" />
 
-                                <CheckBox Content="Disable NVIDIA/AMD overlay" Foreground="{StaticResource PrimaryTextBrush}"
+                                <CheckBox Content="Disable NVIDIA/AMD overlay" Foreground="{DynamicResource PrimaryTextBrush}"
                                          Margin="0,8,0,8" />
                                 <TextBlock Text="Reduces overlay input lag"
-                                          Style="{StaticResource SmallTextBlockStyle}" Margin="24,0,0,0" />
+                                          Style="{DynamicResource SmallTextBlockStyle}" Margin="24,0,0,0" />
                             </StackPanel>
                         </Border>
 
-                        <Button Content="Apply Gaming Optimizations" Style="{StaticResource PrimaryButtonStyle}"
+                        <Button Content="Apply Gaming Optimizations" Style="{DynamicResource PrimaryButtonStyle}"
                                Padding="16,12" Margin="0,12,0,0" />
                     </StackPanel>
                 </ScrollViewer>
             </TabItem>
 
             <!-- Privacy Tab -->
-            <TabItem Header="🔒 Privacy" Foreground="{StaticResource GoldBrightBrush}">
+            <TabItem Header="🔒 Privacy" Foreground="{DynamicResource GoldBrightBrush}">
                 <ScrollViewer VerticalScrollBarVisibility="Auto">
                     <StackPanel Margin="24">
-                        <TextBlock Text="Privacy &amp; Telemetry Settings" Style="{StaticResource H3TextBlockStyle}"
+                        <TextBlock Text="Privacy &amp; Telemetry Settings" Style="{DynamicResource H3TextBlockStyle}"
                                   Margin="0,0,0,16" />
 
-                        <Border Background="{StaticResource LighterCharcoalBrush}" BorderBrush="{StaticResource GoldBrightBrush}"
+                        <Border Background="{DynamicResource LighterCharcoalBrush}" BorderBrush="{DynamicResource GoldBrightBrush}"
                                BorderThickness="2" CornerRadius="8" Padding="16" Margin="0,0,0,16">
                             <StackPanel>
-                                <TextBlock Text="Telemetry Level" Style="{StaticResource BodyTextBlockStyle}"
+                                <TextBlock Text="Telemetry Level" Style="{DynamicResource BodyTextBlockStyle}"
                                           Margin="0,0,0,12" />
 
-                                <RadioButton Content="Full (default)" Foreground="{StaticResource PrimaryTextBrush}"
+                                <RadioButton Content="Full (default)" Foreground="{DynamicResource PrimaryTextBrush}"
                                             Margin="0,4,0,4" />
-                                <RadioButton Content="Basic" Foreground="{StaticResource PrimaryTextBrush}"
+                                <RadioButton Content="Basic" Foreground="{DynamicResource PrimaryTextBrush}"
                                             Margin="0,4,0,4" />
-                                <RadioButton Content="Security Only (recommended)" Foreground="{StaticResource PrimaryTextBrush}"
+                                <RadioButton Content="Security Only (recommended)" Foreground="{DynamicResource PrimaryTextBrush}"
                                             Margin="0,4,0,12" IsChecked="True" />
 
-                                <Separator Background="{StaticResource GoldMediumBrush}" Margin="0,12,0,12" Height="1" />
+                                <Separator Background="{DynamicResource GoldMediumBrush}" Margin="0,12,0,12" Height="1" />
 
-                                <CheckBox Content="Disable activity history" Foreground="{StaticResource PrimaryTextBrush}"
+                                <CheckBox Content="Disable activity history" Foreground="{DynamicResource PrimaryTextBrush}"
                                          Margin="0,4,0,4" IsChecked="True" />
-                                <CheckBox Content="Disable location tracking" Foreground="{StaticResource PrimaryTextBrush}"
+                                <CheckBox Content="Disable location tracking" Foreground="{DynamicResource PrimaryTextBrush}"
                                          Margin="0,4,0,4" IsChecked="True" />
-                                <CheckBox Content="Disable Cortana" Foreground="{StaticResource PrimaryTextBrush}"
+                                <CheckBox Content="Disable Cortana" Foreground="{DynamicResource PrimaryTextBrush}"
                                          Margin="0,4,0,4" IsChecked="True" />
-                                <CheckBox Content="Disable Start menu ads" Foreground="{StaticResource PrimaryTextBrush}"
+                                <CheckBox Content="Disable Start menu ads" Foreground="{DynamicResource PrimaryTextBrush}"
                                          Margin="0,4,0,4" IsChecked="True" />
-                                <CheckBox Content="Disable lock screen ads" Foreground="{StaticResource PrimaryTextBrush}"
+                                <CheckBox Content="Disable lock screen ads" Foreground="{DynamicResource PrimaryTextBrush}"
                                          Margin="0,4,0,0" IsChecked="True" />
                             </StackPanel>
                         </Border>
 
-                        <Button Content="Apply Privacy Settings" Style="{StaticResource PrimaryButtonStyle}"
+                        <Button Content="Apply Privacy Settings" Style="{DynamicResource PrimaryButtonStyle}"
                                Padding="16,12" Margin="0,12,0,0" />
                     </StackPanel>
                 </ScrollViewer>
             </TabItem>
 
             <!-- Network Tab -->
-            <TabItem Header="🌐 Network" Foreground="{StaticResource GoldBrightBrush}">
+            <TabItem Header="🌐 Network" Foreground="{DynamicResource GoldBrightBrush}">
                 <ScrollViewer VerticalScrollBarVisibility="Auto">
                     <StackPanel Margin="24">
-                        <TextBlock Text="Network Optimizations" Style="{StaticResource H3TextBlockStyle}"
+                        <TextBlock Text="Network Optimizations" Style="{DynamicResource H3TextBlockStyle}"
                                   Margin="0,0,0,16" />
 
-                        <Border Background="{StaticResource LighterCharcoalBrush}" BorderBrush="{StaticResource GoldBrightBrush}"
+                        <Border Background="{DynamicResource LighterCharcoalBrush}" BorderBrush="{DynamicResource GoldBrightBrush}"
                                BorderThickness="2" CornerRadius="8" Padding="16" Margin="0,0,0,16">
                             <StackPanel>
-                                <TextBlock Text="DNS Settings" Style="{StaticResource BodyTextBlockStyle}"
+                                <TextBlock Text="DNS Settings" Style="{DynamicResource BodyTextBlockStyle}"
                                           Margin="0,0,0,12" />
 
-                                <RadioButton Content="Auto (System default)" Foreground="{StaticResource PrimaryTextBrush}"
+                                <RadioButton Content="Auto (System default)" Foreground="{DynamicResource PrimaryTextBrush}"
                                             Margin="0,4,0,4" IsChecked="True" />
-                                <RadioButton Content="Cloudflare (1.1.1.1)" Foreground="{StaticResource PrimaryTextBrush}"
+                                <RadioButton Content="Cloudflare (1.1.1.1)" Foreground="{DynamicResource PrimaryTextBrush}"
                                             Margin="0,4,0,4" />
-                                <RadioButton Content="Google (8.8.8.8)" Foreground="{StaticResource PrimaryTextBrush}"
+                                <RadioButton Content="Google (8.8.8.8)" Foreground="{DynamicResource PrimaryTextBrush}"
                                             Margin="0,4,0,12" />
 
-                                <Separator Background="{StaticResource GoldMediumBrush}" Margin="0,12,0,12" Height="1" />
+                                <Separator Background="{DynamicResource GoldMediumBrush}" Margin="0,12,0,12" Height="1" />
 
-                                <TextBlock Text="TCP Optimization" Style="{StaticResource BodyTextBlockStyle}"
+                                <TextBlock Text="TCP Optimization" Style="{DynamicResource BodyTextBlockStyle}"
                                           Margin="0,0,0,8" />
-                                <ComboBox Background="{StaticResource DarkGrayBrush}" Foreground="{StaticResource PrimaryTextBrush}">
+                                <ComboBox Background="{DynamicResource DarkGrayBrush}" Foreground="{DynamicResource PrimaryTextBrush}">
                                     <ComboBoxItem Content="Gaming" />
                                     <ComboBoxItem Content="Streaming" />
                                     <ComboBoxItem Content="Balanced" IsSelected="True" />
@@ -167,60 +167,60 @@
                             </StackPanel>
                         </Border>
 
-                        <Button Content="Apply Network Optimizations" Style="{StaticResource PrimaryButtonStyle}"
+                        <Button Content="Apply Network Optimizations" Style="{DynamicResource PrimaryButtonStyle}"
                                Padding="16,12" Margin="0,12,0,0" />
                     </StackPanel>
                 </ScrollViewer>
             </TabItem>
 
             <!-- Storage Tab -->
-            <TabItem Header="💾 Storage" Foreground="{StaticResource GoldBrightBrush}">
+            <TabItem Header="💾 Storage" Foreground="{DynamicResource GoldBrightBrush}">
                 <ScrollViewer VerticalScrollBarVisibility="Auto">
                     <StackPanel Margin="24">
-                        <TextBlock Text="Storage &amp; Cleanup" Style="{StaticResource H3TextBlockStyle}"
+                        <TextBlock Text="Storage &amp; Cleanup" Style="{DynamicResource H3TextBlockStyle}"
                                   Margin="0,0,0,16" />
 
-                        <Border Background="{StaticResource LighterCharcoalBrush}" BorderBrush="{StaticResource GoldBrightBrush}"
+                        <Border Background="{DynamicResource LighterCharcoalBrush}" BorderBrush="{DynamicResource GoldBrightBrush}"
                                BorderThickness="2" CornerRadius="8" Padding="16" Margin="0,0,0,16">
                             <StackPanel>
-                                <TextBlock Text="Available Space Analysis" Style="{StaticResource BodyTextBlockStyle}"
+                                <TextBlock Text="Available Space Analysis" Style="{DynamicResource BodyTextBlockStyle}"
                                           Margin="0,0,0,12" />
 
-                                <CheckBox Content="Temp Files (4.2 GB)" Foreground="{StaticResource PrimaryTextBrush}"
+                                <CheckBox Content="Temp Files (4.2 GB)" Foreground="{DynamicResource PrimaryTextBrush}"
                                          Margin="0,4,0,4" IsChecked="True" />
-                                <CheckBox Content="Windows Update Cache (3.1 GB)" Foreground="{StaticResource PrimaryTextBrush}"
+                                <CheckBox Content="Windows Update Cache (3.1 GB)" Foreground="{DynamicResource PrimaryTextBrush}"
                                          Margin="0,4,0,4" IsChecked="True" />
-                                <CheckBox Content="Recycle Bin (2.8 GB)" Foreground="{StaticResource PrimaryTextBrush}"
+                                <CheckBox Content="Recycle Bin (2.8 GB)" Foreground="{DynamicResource PrimaryTextBrush}"
                                          Margin="0,4,0,4" IsChecked="True" />
-                                <CheckBox Content="Download Folder (1.5 GB)" Foreground="{StaticResource PrimaryTextBrush}"
+                                <CheckBox Content="Download Folder (1.5 GB)" Foreground="{DynamicResource PrimaryTextBrush}"
                                          Margin="0,4,0,12" IsChecked="True" />
 
-                                <Separator Background="{StaticResource GoldMediumBrush}" Margin="0,12,0,12" Height="1" />
+                                <Separator Background="{DynamicResource GoldMediumBrush}" Margin="0,12,0,12" Height="1" />
 
-                                <CheckBox Content="Enable TRIM (SSD optimization)" Foreground="{StaticResource PrimaryTextBrush}"
+                                <CheckBox Content="Enable TRIM (SSD optimization)" Foreground="{DynamicResource PrimaryTextBrush}"
                                          Margin="0,4,0,0" IsChecked="True" />
                             </StackPanel>
                         </Border>
 
-                        <TextBlock Text="Total to Clean: 11.6 GB" Style="{StaticResource BodyTextBlockStyle}"
+                        <TextBlock Text="Total to Clean: 11.6 GB" Style="{DynamicResource BodyTextBlockStyle}"
                                   Margin="0,12,0,12" />
 
-                        <Button Content="Clean Selected" Style="{StaticResource PrimaryButtonStyle}" Padding="16,12" />
+                        <Button Content="Clean Selected" Style="{DynamicResource PrimaryButtonStyle}" Padding="16,12" />
                     </StackPanel>
                 </ScrollViewer>
             </TabItem>
 
             <!-- Services Tab -->
-            <TabItem Header="⚙️ Services" Foreground="{StaticResource GoldBrightBrush}">
+            <TabItem Header="⚙️ Services" Foreground="{DynamicResource GoldBrightBrush}">
                 <ScrollViewer VerticalScrollBarVisibility="Auto">
                     <StackPanel Margin="24">
-                        <TextBlock Text="Services Manager" Style="{StaticResource H3TextBlockStyle}"
+                        <TextBlock Text="Services Manager" Style="{DynamicResource H3TextBlockStyle}"
                                   Margin="0,0,0,16" />
 
-                        <TextBlock Text="Safe to Disable Services" Style="{StaticResource BodyTextBlockStyle}"
-                                  Margin="0,0,0,12" Foreground="{StaticResource SuccessBrush}" />
+                        <TextBlock Text="Safe to Disable Services" Style="{DynamicResource BodyTextBlockStyle}"
+                                  Margin="0,0,0,12" Foreground="{DynamicResource SuccessBrush}" />
 
-                        <Border Background="{StaticResource LighterCharcoalBrush}" BorderBrush="{StaticResource GoldBrightBrush}"
+                        <Border Background="{DynamicResource LighterCharcoalBrush}" BorderBrush="{DynamicResource GoldBrightBrush}"
                                BorderThickness="2" CornerRadius="8" Padding="16" Margin="0,0,0,16">
                             <StackPanel>
                                 <Grid Margin="0,8,0,8">
@@ -229,14 +229,14 @@
                                         <ColumnDefinition Width="Auto" />
                                     </Grid.ColumnDefinitions>
                                     <StackPanel Grid.Column="0">
-                                        <TextBlock Text="Windows Update" Style="{StaticResource BodyTextBlockStyle}" />
-                                        <TextBlock Text="wuauserv" Style="{StaticResource SmallTextBlockStyle}" />
+                                        <TextBlock Text="Windows Update" Style="{DynamicResource BodyTextBlockStyle}" />
+                                        <TextBlock Text="wuauserv" Style="{DynamicResource SmallTextBlockStyle}" />
                                     </StackPanel>
-                                    <Button Grid.Column="1" Content="Disable" Style="{StaticResource SecondaryButtonStyle}"
+                                    <Button Grid.Column="1" Content="Disable" Style="{DynamicResource SecondaryButtonStyle}"
                                            Padding="12,4" Margin="12,0,0,0" />
                                 </Grid>
 
-                                <Separator Background="{StaticResource GoldMediumBrush}" Margin="0,12,0,12" Height="1" />
+                                <Separator Background="{DynamicResource GoldMediumBrush}" Margin="0,12,0,12" Height="1" />
 
                                 <Grid Margin="0,8,0,8">
                                     <Grid.ColumnDefinitions>
@@ -244,14 +244,14 @@
                                         <ColumnDefinition Width="Auto" />
                                     </Grid.ColumnDefinitions>
                                     <StackPanel Grid.Column="0">
-                                        <TextBlock Text="Superfetch" Style="{StaticResource BodyTextBlockStyle}" />
-                                        <TextBlock Text="SysMain" Style="{StaticResource SmallTextBlockStyle}" />
+                                        <TextBlock Text="Superfetch" Style="{DynamicResource BodyTextBlockStyle}" />
+                                        <TextBlock Text="SysMain" Style="{DynamicResource SmallTextBlockStyle}" />
                                     </StackPanel>
-                                    <Button Grid.Column="1" Content="Disable" Style="{StaticResource SecondaryButtonStyle}"
+                                    <Button Grid.Column="1" Content="Disable" Style="{DynamicResource SecondaryButtonStyle}"
                                            Padding="12,4" Margin="12,0,0,0" />
                                 </Grid>
 
-                                <Separator Background="{StaticResource GoldMediumBrush}" Margin="0,12,0,12" Height="1" />
+                                <Separator Background="{DynamicResource GoldMediumBrush}" Margin="0,12,0,12" Height="1" />
 
                                 <Grid Margin="0,8,0,0">
                                     <Grid.ColumnDefinitions>
@@ -259,29 +259,29 @@
                                         <ColumnDefinition Width="Auto" />
                                     </Grid.ColumnDefinitions>
                                     <StackPanel Grid.Column="0">
-                                        <TextBlock Text="Diagnostic Tracking" Style="{StaticResource BodyTextBlockStyle}" />
-                                        <TextBlock Text="DiagTrack" Style="{StaticResource SmallTextBlockStyle}" />
+                                        <TextBlock Text="Diagnostic Tracking" Style="{DynamicResource BodyTextBlockStyle}" />
+                                        <TextBlock Text="DiagTrack" Style="{DynamicResource SmallTextBlockStyle}" />
                                     </StackPanel>
-                                    <Button Grid.Column="1" Content="Disable" Style="{StaticResource SecondaryButtonStyle}"
+                                    <Button Grid.Column="1" Content="Disable" Style="{DynamicResource SecondaryButtonStyle}"
                                            Padding="12,4" Margin="12,0,0,0" />
                                 </Grid>
                             </StackPanel>
                         </Border>
 
-                        <Button Content="Disable All Safe Services" Style="{StaticResource PrimaryButtonStyle}"
+                        <Button Content="Disable All Safe Services" Style="{DynamicResource PrimaryButtonStyle}"
                                Padding="16,12" Margin="0,12,0,0" />
                     </StackPanel>
                 </ScrollViewer>
             </TabItem>
 
             <!-- Startup Tab -->
-            <TabItem Header="🚀 Startup" Foreground="{StaticResource GoldBrightBrush}">
+            <TabItem Header="🚀 Startup" Foreground="{DynamicResource GoldBrightBrush}">
                 <ScrollViewer VerticalScrollBarVisibility="Auto">
                     <StackPanel Margin="24">
-                        <TextBlock Text="Startup Programs" Style="{StaticResource H3TextBlockStyle}"
+                        <TextBlock Text="Startup Programs" Style="{DynamicResource H3TextBlockStyle}"
                                   Margin="0,0,0,16" />
 
-                        <Border Background="{StaticResource LighterCharcoalBrush}" BorderBrush="{StaticResource GoldBrightBrush}"
+                        <Border Background="{DynamicResource LighterCharcoalBrush}" BorderBrush="{DynamicResource GoldBrightBrush}"
                                BorderThickness="2" CornerRadius="8" Padding="16" Margin="0,0,0,16">
                             <StackPanel>
                                 <Grid Margin="0,8,0,8">
@@ -291,17 +291,17 @@
                                         <ColumnDefinition Width="Auto" />
                                     </Grid.ColumnDefinitions>
                                     <StackPanel Grid.Column="0">
-                                        <TextBlock Text="Discord" Style="{StaticResource BodyTextBlockStyle}" />
-                                        <TextBlock Text="High Impact 🔴" Style="{StaticResource SmallTextBlockStyle}"
-                                                  Foreground="{StaticResource DangerBrush}" />
+                                        <TextBlock Text="Discord" Style="{DynamicResource BodyTextBlockStyle}" />
+                                        <TextBlock Text="High Impact 🔴" Style="{DynamicResource SmallTextBlockStyle}"
+                                                  Foreground="{DynamicResource DangerBrush}" />
                                     </StackPanel>
-                                    <TextBlock Grid.Column="1" Text="ON" Style="{StaticResource BodyTextBlockStyle}"
+                                    <TextBlock Grid.Column="1" Text="ON" Style="{DynamicResource BodyTextBlockStyle}"
                                              Margin="12,0,0,0" />
-                                    <Button Grid.Column="2" Content="Disable" Style="{StaticResource SecondaryButtonStyle}"
+                                    <Button Grid.Column="2" Content="Disable" Style="{DynamicResource SecondaryButtonStyle}"
                                            Padding="12,4" Margin="12,0,0,0" />
                                 </Grid>
 
-                                <Separator Background="{StaticResource GoldMediumBrush}" Margin="0,12,0,12" Height="1" />
+                                <Separator Background="{DynamicResource GoldMediumBrush}" Margin="0,12,0,12" Height="1" />
 
                                 <Grid Margin="0,8,0,8">
                                     <Grid.ColumnDefinitions>
@@ -310,64 +310,64 @@
                                         <ColumnDefinition Width="Auto" />
                                     </Grid.ColumnDefinitions>
                                     <StackPanel Grid.Column="0">
-                                        <TextBlock Text="Steam" Style="{StaticResource BodyTextBlockStyle}" />
-                                        <TextBlock Text="Medium Impact 🟡" Style="{StaticResource SmallTextBlockStyle}"
-                                                  Foreground="{StaticResource WarningBrush}" />
+                                        <TextBlock Text="Steam" Style="{DynamicResource BodyTextBlockStyle}" />
+                                        <TextBlock Text="Medium Impact 🟡" Style="{DynamicResource SmallTextBlockStyle}"
+                                                  Foreground="{DynamicResource WarningBrush}" />
                                     </StackPanel>
-                                    <TextBlock Grid.Column="1" Text="OFF" Style="{StaticResource BodyTextBlockStyle}"
+                                    <TextBlock Grid.Column="1" Text="OFF" Style="{DynamicResource BodyTextBlockStyle}"
                                              Margin="12,0,0,0" />
-                                    <Button Grid.Column="2" Content="Enable" Style="{StaticResource SecondaryButtonStyle}"
+                                    <Button Grid.Column="2" Content="Enable" Style="{DynamicResource SecondaryButtonStyle}"
                                            Padding="12,4" Margin="12,0,0,0" />
                                 </Grid>
                             </StackPanel>
                         </Border>
 
-                        <Button Content="Disable All High Impact Startups" Style="{StaticResource DangerButtonStyle}"
+                        <Button Content="Disable All High Impact Startups" Style="{DynamicResource DangerButtonStyle}"
                                Padding="16,12" Margin="0,12,0,0" />
                     </StackPanel>
                 </ScrollViewer>
             </TabItem>
 
             <!-- Power Tab -->
-            <TabItem Header="🔋 Power" Foreground="{StaticResource GoldBrightBrush}">
+            <TabItem Header="🔋 Power" Foreground="{DynamicResource GoldBrightBrush}">
                 <ScrollViewer VerticalScrollBarVisibility="Auto">
                     <StackPanel Margin="24">
-                        <TextBlock Text="Power Settings" Style="{StaticResource H3TextBlockStyle}"
+                        <TextBlock Text="Power Settings" Style="{DynamicResource H3TextBlockStyle}"
                                   Margin="0,0,0,16" />
 
-                        <Border Background="{StaticResource LighterCharcoalBrush}" BorderBrush="{StaticResource GoldBrightBrush}"
+                        <Border Background="{DynamicResource LighterCharcoalBrush}" BorderBrush="{DynamicResource GoldBrightBrush}"
                                BorderThickness="2" CornerRadius="8" Padding="16" Margin="0,0,0,16">
                             <StackPanel>
-                                <TextBlock Text="Power Plan" Style="{StaticResource BodyTextBlockStyle}"
+                                <TextBlock Text="Power Plan" Style="{DynamicResource BodyTextBlockStyle}"
                                           Margin="0,0,0,12" />
 
                                 <RadioButton Content="🔋 Power Saver - Reduces performance to extend battery life"
-                                            Foreground="{StaticResource PrimaryTextBrush}" Margin="0,8,0,8" />
+                                            Foreground="{DynamicResource PrimaryTextBrush}" Margin="0,8,0,8" />
                                 <RadioButton Content="⚡ Balanced (Recommended) - Automatically balances performance and energy"
-                                            Foreground="{StaticResource PrimaryTextBrush}" Margin="0,8,0,8" IsChecked="True" />
+                                            Foreground="{DynamicResource PrimaryTextBrush}" Margin="0,8,0,8" IsChecked="True" />
                                 <RadioButton Content="⚡⚡ High Performance - Maximum performance, higher energy consumption"
-                                            Foreground="{StaticResource PrimaryTextBrush}" Margin="0,8,0,8" />
+                                            Foreground="{DynamicResource PrimaryTextBrush}" Margin="0,8,0,8" />
                                 <RadioButton Content="🔥 Ultimate Performance - Unlocks all CPU cores, disables power management"
-                                            Foreground="{StaticResource PrimaryTextBrush}" Margin="0,8,0,12" />
+                                            Foreground="{DynamicResource PrimaryTextBrush}" Margin="0,8,0,12" />
 
-                                <Separator Background="{StaticResource GoldMediumBrush}" Margin="0,12,0,12" Height="1" />
+                                <Separator Background="{DynamicResource GoldMediumBrush}" Margin="0,12,0,12" Height="1" />
 
-                                <TextBlock Text="Processor Power Management" Style="{StaticResource BodyTextBlockStyle}"
+                                <TextBlock Text="Processor Power Management" Style="{DynamicResource BodyTextBlockStyle}"
                                           Margin="0,0,0,8" />
-                                <TextBlock Text="Minimum CPU Power: 25%" Style="{StaticResource SmallTextBlockStyle}"
+                                <TextBlock Text="Minimum CPU Power: 25%" Style="{DynamicResource SmallTextBlockStyle}"
                                           Margin="0,0,0,4" />
                                 <Slider Minimum="0" Maximum="100" Value="25" Margin="0,0,0,12" />
 
-                                <TextBlock Text="Maximum CPU Power: 100%" Style="{StaticResource SmallTextBlockStyle}"
+                                <TextBlock Text="Maximum CPU Power: 100%" Style="{DynamicResource SmallTextBlockStyle}"
                                           Margin="0,0,0,4" />
                                 <Slider Minimum="0" Maximum="100" Value="100" Margin="0,0,0,12" />
 
-                                <CheckBox Content="Enable USB selective suspend" Foreground="{StaticResource PrimaryTextBrush}"
+                                <CheckBox Content="Enable USB selective suspend" Foreground="{DynamicResource PrimaryTextBrush}"
                                          Margin="0,4,0,4" />
                             </StackPanel>
                         </Border>
 
-                        <Button Content="Apply Power Settings" Style="{StaticResource PrimaryButtonStyle}"
+                        <Button Content="Apply Power Settings" Style="{DynamicResource PrimaryButtonStyle}"
                                Padding="16,12" Margin="0,12,0,0" />
                     </StackPanel>
                 </ScrollViewer>

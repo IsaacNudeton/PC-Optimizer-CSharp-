@@ -10,8 +10,8 @@
         Width="1600"
         MinHeight="720"
         MinWidth="1280"
-        Background="{StaticResource DeepBlackBrush}"
-        Foreground="{StaticResource PrimaryTextBrush}"
+        Background="{DynamicResource DeepBlackBrush}"
+        Foreground="{DynamicResource PrimaryTextBrush}"
         WindowStartupLocation="CenterScreen">
 
     <Window.DataContext>
@@ -25,18 +25,18 @@
         </Grid.ColumnDefinitions>
 
         <!-- Left Sidebar Navigation -->
-        <Border Grid.Column="0" Background="{StaticResource DarkGrayBrush}"
-                BorderBrush="{StaticResource GoldBrightBrush}" BorderThickness="0,0,2,0">
+        <Border Grid.Column="0" Background="{DynamicResource DarkGrayBrush}"
+                BorderBrush="{DynamicResource GoldBrightBrush}" BorderThickness="0,0,2,0">
             <StackPanel VerticalAlignment="Stretch">
                 <!-- Logo Section -->
-                <Border Background="{StaticResource LighterCharcoalBrush}" Padding="16" Margin="0,0,0,24">
+                <Border Background="{DynamicResource LighterCharcoalBrush}" Padding="16" Margin="0,0,0,24">
                     <StackPanel>
-                        <TextBlock Text="◊" FontSize="28" Foreground="{StaticResource GoldBrightBrush}"
+                        <TextBlock Text="◊" FontSize="28" Foreground="{DynamicResource GoldBrightBrush}"
                                   TextAlignment="Center" Margin="0,0,0,8" />
-                        <TextBlock Text="PC Optimizer" Style="{StaticResource H3TextBlockStyle}"
+                        <TextBlock Text="PC Optimizer" Style="{DynamicResource H3TextBlockStyle}"
                                   TextAlignment="Center" Margin="0,0,0,4" />
-                        <TextBlock Text="Event Horizon" Style="{StaticResource SmallTextBlockStyle}"
-                                  TextAlignment="Center" Foreground="{StaticResource ElectricBlueBrush}" />
+                        <TextBlock Text="Event Horizon" Style="{DynamicResource SmallTextBlockStyle}"
+                                  TextAlignment="Center" Foreground="{DynamicResource ElectricBlueBrush}" />
                     </StackPanel>
                 </Border>
 
@@ -44,85 +44,71 @@
                 <StackPanel>
                     <!-- Dashboard Button -->
                     <Button x:Name="DashboardButton" Content="📊 Dashboard"
-                           Background="{StaticResource DarkGrayBrush}"
-                           Foreground="{StaticResource GoldBrightBrush}"
-                           BorderBrush="{StaticResource GoldBrightBrush}"
-                           BorderThickness="3,0,0,0"
                            Click="NavigateToDashboard"
                            Padding="16,16"
                            HorizontalAlignment="Stretch"
                            HorizontalContentAlignment="Left"
                            Margin="0,0,0,0"
-                           Style="{StaticResource SecondaryButtonStyle}" />
+                           Style="{DynamicResource SecondaryButtonStyle}" />
 
                     <!-- Advanced Optimizer Button -->
                     <Button x:Name="OptimizerButton" Content="⚡ Advanced Optimizer"
-                           Background="{StaticResource DarkGrayBrush}"
-                           Foreground="{StaticResource PrimaryTextBrush}"
                            Click="NavigateToOptimizer"
                            Padding="16,16"
                            HorizontalAlignment="Stretch"
                            HorizontalContentAlignment="Left"
                            Margin="0,8,0,0"
-                           Style="{StaticResource SecondaryButtonStyle}" />
+                           Style="{DynamicResource SecondaryButtonStyle}" />
 
                     <!-- Analytics Button -->
                     <Button x:Name="AnalyticsButton" Content="📈 Analytics"
-                           Background="{StaticResource DarkGrayBrush}"
-                           Foreground="{StaticResource PrimaryTextBrush}"
                            Click="NavigateToAnalytics"
                            Padding="16,16"
                            HorizontalAlignment="Stretch"
                            HorizontalContentAlignment="Left"
                            Margin="0,8,0,0"
-                           Style="{StaticResource SecondaryButtonStyle}" />
+                           Style="{DynamicResource SecondaryButtonStyle}" />
 
                     <!-- History Button -->
                     <Button x:Name="HistoryButton" Content="📋 History Log"
-                           Background="{StaticResource DarkGrayBrush}"
-                           Foreground="{StaticResource PrimaryTextBrush}"
                            Click="NavigateToHistory"
                            Padding="16,16"
                            HorizontalAlignment="Stretch"
                            HorizontalContentAlignment="Left"
                            Margin="0,8,0,0"
-                           Style="{StaticResource SecondaryButtonStyle}" />
+                           Style="{DynamicResource SecondaryButtonStyle}" />
 
                     <!-- Settings Button -->
                     <Button x:Name="SettingsButton" Content="⚙️ Settings"
-                           Background="{StaticResource DarkGrayBrush}"
-                           Foreground="{StaticResource PrimaryTextBrush}"
                            Click="NavigateToSettings"
                            Padding="16,16"
                            HorizontalAlignment="Stretch"
                            HorizontalContentAlignment="Left"
                            Margin="0,8,0,0"
-                           Style="{StaticResource SecondaryButtonStyle}" />
+                           Style="{DynamicResource SecondaryButtonStyle}" />
 
                     <!-- About Button -->
                     <Button x:Name="AboutButton" Content="ℹ️ About"
-                           Background="{StaticResource DarkGrayBrush}"
-                           Foreground="{StaticResource PrimaryTextBrush}"
                            Click="NavigateToAbout"
                            Padding="16,16"
                            HorizontalAlignment="Stretch"
                            HorizontalContentAlignment="Left"
                            Margin="0,8,0,0"
-                           Style="{StaticResource SecondaryButtonStyle}" />
+                           Style="{DynamicResource SecondaryButtonStyle}" />
                 </StackPanel>
 
                 <!-- Footer Status -->
                 <StackPanel VerticalAlignment="Bottom" Margin="0,24,0,16">
-                    <Border Background="{StaticResource LighterCharcoalBrush}"
-                           BorderBrush="{StaticResource GoldMediumBrush}" BorderThickness="2"
+                    <Border Background="{DynamicResource LighterCharcoalBrush}"
+                           BorderBrush="{DynamicResource GoldMediumBrush}" BorderThickness="2"
                            CornerRadius="8" Padding="12">
                         <StackPanel>
-                            <TextBlock Text="Status" Style="{StaticResource SmallTextBlockStyle}"
+                            <TextBlock Text="Status" Style="{DynamicResource SmallTextBlockStyle}"
                                       Margin="0,0,0,4" />
                             <TextBlock Text="{Binding StatusMessage}"
-                                      Style="{StaticResource SmallTextBlockStyle}"
+                                      Style="{DynamicResource SmallTextBlockStyle}"
                                       TextWrapping="Wrap"
-                                      Foreground="{StaticResource ElectricBlueBrush}" />
+                                      Foreground="{DynamicResource ElectricBlueBrush}" />
                         </StackPanel>
                     </Border>
                 </StackPanel>
@@ -137,8 +123,8 @@
             </Grid.RowDefinitions>
 
             <!-- Top Header Bar -->
-            <Border Grid.Row="0" Background="{StaticResource DarkGrayBrush}"
-                   BorderBrush="{StaticResource GoldBrightBrush}" BorderThickness="0,0,0,2"
+            <Border Grid.Row="0" Background="{DynamicResource DarkGrayBrush}"
+                   BorderBrush="{DynamicResource GoldBrightBrush}" BorderThickness="0,0,0,2"
                    Padding="24,16">
                 <Grid>
                     <Grid.ColumnDefinitions>
@@ -149,25 +135,25 @@
                     <!-- Title -->
                     <StackPanel Grid.Column="0" VerticalAlignment="Center">
                         <TextBlock x:Name="PageTitleText" Text="Dashboard"
-                                  Style="{StaticResource H2TextBlockStyle}"
+                                  Style="{DynamicResource H2TextBlockStyle}"
                                   Margin="0,0,0,4" />
                         <TextBlock x:Name="PageSubtitleText"
                                   Text="Real-time system monitoring"
-                                  Style="{StaticResource SecondaryTextBlockStyle}" />
+                                  Style="{DynamicResource SecondaryTextBlockStyle}" />
                     </StackPanel>
 
                     <!-- Monitoring Status -->
                     <StackPanel Grid.Column="1" VerticalAlignment="Center" HorizontalAlignment="Right">
                         <StackPanel Orientation="Horizontal">
-                            <Ellipse Width="12" Height="12" Fill="{StaticResource SuccessBrush}"
+                            <Ellipse Width="12" Height="12" Fill="{DynamicResource SuccessBrush}"
                                     Margin="0,0,8,0" />
                             <TextBlock Text="Active Mode"
-                                      Style="{StaticResource BodyTextBlockStyle}"
-                                      Foreground="{StaticResource SuccessBrush}" />
+                                      Style="{DynamicResource BodyTextBlockStyle}"
+                                      Foreground="{DynamicResource SuccessBrush}" />
                         </StackPanel>
                         <TextBlock x:Name="TimeText"
                                   Text=""
-                                  Style="{StaticResource SmallTextBlockStyle}"
+                                  Style="{DynamicResource SmallTextBlockStyle}"
                                   TextAlignment="Right"
                                   Margin="0,4,0,0" />
                     </StackPanel>
@@ -175,7 +161,7 @@
             </Border>
 
             <!-- Content Frame -->
-            <Border Grid.Row="1" Background="{StaticResource DeepBlackBrush}">
+            <Border Grid.Row="1" Background="{DynamicResource DeepBlackBrush}">
                 <Frame x:Name="ContentFrame" NavigationUIVisibility="Hidden" />
             </Border>
         </Grid>
