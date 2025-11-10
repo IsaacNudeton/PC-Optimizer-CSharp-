@@ -1,0 +1,3501 @@
+PC OPTIMIZER - Professional UI/UX Design Brief
+
+Powered by Event Horizon Design System
+
+Application Overview
+
+Design a premium Windows desktop application for PC performance optimization and monitoring. This is a
+
+professional-grade tool targeting gamers, software developers, engineers, video editors, and power users who
+
+demand precise control over their system performance.
+
+Brand Identity: Part of the Event Horizon ecosystem - automation, optimization, and configuration tools with a
+
+physics-inspired professional aesthetic.
+
+---
+
+Design System Integration
+
+Color Palette (Event Horizon Brand)
+
+Primary Colors - Gold/Copper Theme:
+
+- Gold Bright: #FFD699 - Primary accent, interactive elements, headers
+
+- Gold Medium: #FFC266 - Secondary accent, borders, highlights
+
+- Copper Accent: #B87333 - Primary buttons, call-to-action elements
+
+- Gold Dark: #D4A574 - Subtle accents, inactive states
+
+Secondary Colors - Electric Blue:
+
+- Electric Blue: #00D4FF - Technology indicators, data visualization, progress elements
+
+- Dark Blue: #0077B6 - Hover states, secondary data
+
+Backgrounds:
+
+- Deep Black: #0A0A0A - Primary app background
+
+- Dark Gray: #1A1A1A - Cards, panels, modals
+
+- Lighter Charcoal: #2A2A2A - Hover states, input fields
+
+Text Colors:
+
+- Primary: #FFFFFF - Headings, primary content
+
+- Secondary: #B3B3B3 - Body text, descriptions
+
+- Tertiary: #808080 - Labels, disabled text
+
+Semantic Colors (for metrics):
+
+- Success/Good Performance: #00D4FF (electric blue, <60% usage)
+
+- Warning/Moderate: #FFC266 (gold medium, 60-85% usage)
+
+- Danger/Critical: #FF3366 (red, >85% usage)
+
+Typography
+
+- Headings: Segoe UI / SF Pro Display / Inter
+
+- H1 (App Title): 48px, Black weight, Gold gradient (linear-gradient(90deg, #FFD699 0%, #FFC266 100%))
+
+- H2 (Section): 32px, Bold, #FFD699
+
+- H3 (Subsection): 24px, Semibold, #FFC266
+
+- Body Text:
+
+- Primary: 16px, Regular, #FFFFFF
+
+- Secondary: 14px, Regular, #B3B3B3
+
+- Small/Labels: 12px, Regular, #808080
+
+- Metrics/Data: JetBrains Mono / Fira Code (monospace)
+
+- Large Numbers: 36px, Bold, gold gradient
+
+- Percentages: 24px, Medium, #FFD699
+
+Visual Style
+
+- Accretion Disk Aesthetic: Concentric rings, orbital motion, convergence toward center
+
+- Professional Industrial: Engineering-grade, technical precision, no gaming flare
+
+- Gold + Black Palette: Warm professional gold against deep black backgrounds
+
+- Geometric Line Icons: Stroke-based (no fills), 2.5px primary / 2px secondary / 1.5px tertiary
+
+- Glow Effects: Subtle drop-shadows on gold elements (drop-shadow(0 0 4px rgba(255, 214, 153, 0.3)))
+
+- Glassmorphism: Subtle frosted glass on overlays (optional, not required)
+
+---
+
+Core Features & Screens
+
+1. Dashboard (Home Screen)
+
+Layout:
+
+- Header Bar:
+
+- Left: App logo (small accretion disk icon) + "PC Optimizer" title (gold gradient)
+
+- Center: Current time and date
+
+- Right: Monitoring mode badge, minimize/maximize/close buttons
+
+- Left Sidebar (collapsible, 220px wide):
+
+- Navigation icons (using Event Horizon icon style):
+
+- 🏠 Dashboard (grid icon)
+
+- ⚡ Advanced Optimizer (automation/gear icon)
+
+- 📊 Performance Analytics (system view icon)
+
+- ⚙️ Settings (devices icon)
+
+- ℹ️ About (logs/document icon)
+
+- Active state: Gold border-left (3px), gold background tint
+
+- Hover: Subtle gold glow
+
+- Main Content (grid layout, 3-column responsive):
+
+Widget 1: System Performance Overview (Hero Section, spans 2 columns)
+
+Circular Gauges (inspired by accretion disk design):
+
+- CPU Usage:
+
+- Large circular gauge (120px diameter)
+
+- Concentric rings showing usage (0-100%)
+
+- Center: Large percentage number (#FFD699, 36px monospace)
+
+- Ring colors: Blue (<60%), Gold (60-85%), Red (>85%)
+
+- Outer ring: Faint orbital lines (dashed, #FFD699 opacity 0.4)
+
+- GPU Usage: Same design, positioned next to CPU
+
+- RAM Usage: Same design, positioned next to GPU
+
+Below gauges: Mini sparkline charts (last 60 seconds) for each metric
+
+- Line thickness: 2px
+
+- Colors: CPU=#00D4FF, GPU=#FFC266, RAM=#B87333
+
+Widget 2: Real-Time Monitoring Graph
+
+Multi-line chart (LiveCharts.Wpf):
+
+- Background: #1A1A1A, border 2px solid #FFD699, rounded 12px
+
+- Grid: Subtle dotted lines (#2A2A2A)
+
+- Lines:
+
+- CPU: #00D4FF (electric blue), 2.5px thickness
+
+- GPU: #FFC266 (gold medium), 2.5px thickness
+
+- RAM: #B87333 (copper), 2.5px thickness
+
+- CPU Temp: #FFD699 (gold bright), 2px thickness, dashed
+
+- Y-axis: 0-100%, white text 12px
+
+- X-axis: Time labels (monospace, 12px, #808080)
+
+- Hover tooltip: Dark background (#0A0A0A), white text, shows exact value
+
+- Time range selector (buttons top-right):
+
+- 1 Min | 5 Min | 1 Hour (gold border when active)
+
+Widget 3: ML Anomaly Detection Panel ⭐ (UNIQUE FEATURE)
+
+Card Design:
+
+- Header: "🔍 Anomaly Detection" (gold icon + text)
+
+- Status Badge:
+
+- READY (green) if 20+ data points
+
+- TRAINING (12/20) (amber) if collecting data
+
+- DISABLED (gray) if turned off
+
+- Recent Anomalies List (max 5 visible, scrollable):
+
+- Each entry shows:
+
+⚡ CPU Spike 2 min ago
+
+94.2% (Confidence: 98.7%)
+
+[Dismiss] [Details]
+
+- Icon: ⚡ for Spike (amber), 📈 for Change Point (red)
+
+- Metric name: Bold, #FFD699
+
+- Value: Monospace, color-coded by severity
+
+- Confidence: Small text, #B3B3B3
+
+- Timestamp: Relative ("2 min ago"), #808080
+
+- Actions:
+
+- "View All Anomalies" button (gold outline)
+
+- "Configure" button (secondary)
+
+Widget 4: Quick Actions Panel
+
+Large Button Grid (2x3 layout):
+
+Each button:
+
+- Size: 180px x 80px
+
+- Background: #1A1A1A
+
+- Border: 2px solid #FFD699
+
+- Border radius: 12px
+
+- Hover: Gold glow (box-shadow: 0 0 20px rgba(255, 214, 153, 0.5))
+
+- Active state: Background #B87333, white text
+
+Buttons:
+
+1. 🎮 Gaming Mode
+
+- Icon: Controller/flame
+
+- Label: "Gaming Mode"
+
+- Status indicator: ON (green dot) / OFF (gray dot)
+
+2. ⚡ Balanced Mode (default)
+
+- Icon: Scales
+
+- Label: "Balanced"
+
+3. 🌿 Power Saver
+
+- Icon: Leaf/battery
+
+- Label: "Eco Mode"
+
+4. 🧹 Clean Temp Files
+
+- Icon: Broom
+
+- Label: "Disk Cleanup"
+
+- Shows size: "2.3 GB available" (small text)
+
+5. 🔧 Advanced Optimizer
+
+- Icon: Wrench/gear
+
+- Label: "Advanced Tweaks"
+
+6. 🛡️ Create Restore Point
+
+- Icon: Shield/checkpoint
+
+- Label: "System Backup"
+
+Widget 5: Temperature Monitor
+
+Card Layout:
+
+- CPU Temp:
+
+- Large number: "62°C" (color-coded)
+
+- Color gradient:
+
+- Blue #00D4FF (<50°C)
+
+- Gold #FFC266 (50-70°C)
+
+- Amber #FFD699 (70-85°C)
+
+- Red #FF3366 (>85°C)
+
+- Icon: Thermometer with fluid level matching temp
+
+- Max temp in session: "Peak: 74°C" (small gray text)
+
+- GPU Temp: Same design
+
+Widget 6: System Health Scorecard
+
+Overall Health Score:
+
+- Large circular progress ring (150px)
+
+- Score: 0-100 (large number in center, 48px)
+
+- Color: Blue (>80), Gold (60-80), Red (<60)
+
+Breakdown bars (below score):
+
+- CPU Health: Horizontal bar + percentage
+
+- RAM Health: Horizontal bar + percentage
+
+- Storage Health: Horizontal bar + percentage
+
+- Network Health: Horizontal bar + percentage
+
+Each bar: 4px height, rounded ends, gold fill
+
+---
+
+2. Advanced Optimizer Screen
+
+Layout: Tabbed interface with vertical tab bar on left
+
+Tab List (Vertical, left side, 200px wide):
+
+1. ⚡ Performance
+
+2. 🎮 Gaming
+
+3. 🔒 Privacy
+
+4. 🌐 Network
+
+5. 💾 Storage
+
+6. ⚙️ Services
+
+7. 🚀 Startup
+
+8. 🔋 Power
+
+Active tab: Gold left border (4px), gold background tint
+
+Tab Content Area:
+
+Tab 1: Performance Tweaks
+
+Section: Visual Effects (collapsible accordion):
+
+- Header: "Windows Visual Effects" + toggle count badge "(12 active)"
+
+- Checklist items (scrollable):
+
+☑️ Disable menu animations
+
+Removes fade-in effect from Start menu and context menus
+
+[Toggle Switch] ●○○ ON
+
+☐ Disable taskbar animations
+
+Removes minimize/maximize window animations
+
+[Toggle Switch] ○○○ OFF (requires admin 🛡️)
+
+Each item shows:
+
+- Checkbox icon (☑️ checked, ☐ unchecked)
+
+- Name (16px bold, #FFD699)
+
+- Description tooltip (14px, #B3B3B3)
+
+- Toggle switch (right-aligned)
+
+- Admin shield icon 🛡️ if requires elevation
+
+Quick Actions (bottom of section):
+
+- "Apply All Performance Tweaks" (primary button, copper #B87333)
+
+- "Restore Windows Defaults" (secondary button, outlined gold)
+
+Other sections in Performance tab:
+
+- Windows Search Indexing
+
+- Superfetch/Prefetch
+
+- Game Mode
+
+- Hardware Accelerated GPU Scheduling (HAGS)
+
+Tab 2: Gaming Optimizations
+
+- Mouse Polling Rate (slider: 125Hz - 1000Hz)
+
+- USB Polling optimization
+
+- Network latency tweaks
+
+- Reduce input lag
+
+- Disable Game DVR
+
+- Fullscreen optimizations toggle
+
+Tab 3: Privacy & Telemetry
+
+Grouped toggles:
+
+- Telemetry Level:
+
+- ○ Full (default)
+
+- ○ Basic
+
+- ● Security Only (recommended)
+
+- Individual Privacy Toggles:
+
+- Disable activity history
+
+- Disable location tracking
+
+- Disable Cortana
+
+- Disable Start menu ads
+
+- Disable lock screen ads
+
+- App permissions manager
+
+Tab 4: Network Optimizations
+
+- DNS Settings:
+
+- Radio buttons: Auto / Cloudflare (1.1.1.1) / Google (8.8.8.8) / Custom
+
+- Custom input fields if selected
+
+- TCP Optimization:
+
+- Dropdown: Gaming / Streaming / Balanced / Default
+
+- Network Adapter Settings (advanced, collapsible)
+
+Tab 5: Storage & Cleanup
+
+Disk Analyzer (top section):
+
+- "Scan for reclaimable space" button
+
+- After scan, shows:
+
+Total Space Available: 12.4 GB
+
+☑️ Temp Files 4.2 GB
+
+☑️ Windows Update Cache 3.1 GB
+
+☑️ Recycle Bin 2.8 GB
+
+☑️ Download Folder 1.5 GB
+
+☐ Thumbnail Cache 0.6 GB
+
+☐ Log Files 0.2 GB
+
+- "Clean Selected" button (shows total: "Clean 10.1 GB")
+
+- Progress bar during cleanup
+
+Storage Features:
+
+- TRIM enable/disable (SSD only, shows warning if HDD)
+
+- Storage Sense configuration
+
+Tab 6: Services Manager
+
+Filter Bar (top):
+
+- Search box: "Filter by name..."
+
+- Filter buttons:
+
+- "All Services"
+
+- "Safe to Disable" (green badge)
+
+- "Gaming Impact" (blue badge)
+
+- "Running Only"
+
+Services Table:
+
+| Service Name | Display Name | Status | Startup | Category | Action |
+
+|--------------|----------------|-----------|---------|-------------|------------------|
+
+| wuauserv | Windows Update | ● Running | Auto | System | [Stop] [Disable] |
+
+| SysMain | Superfetch | ○ Stopped | Manual | Performance | [Start] [Enable] |
+
+- Status indicators:
+
+- ● Green dot (Running)
+
+- ○ Gray dot (Stopped)
+
+- ⊗ Red X (Disabled)
+
+- Startup types: Auto / Manual / Disabled / Auto (Delayed)
+
+- Category badges: Color-coded pills
+
+- Action buttons: Small, gold outline
+
+Bulk Actions Bar (bottom):
+
+- "Disable Selected" | "Enable Selected" | "Set to Manual" | "Restore Defaults"
+
+Tab 7: Startup Programs
+
+Table:
+
+| Program | Publisher | Impact | Location | Status |
+
+|---------|--------------|-----------|--------------------|---------|
+
+| Discord | Discord Inc. | 🔴 High | %AppData%.. | ●○○ ON |
+
+| Steam | Valve | 🟡 Medium | C:\Program Files.. | ○○○ OFF |
+
+- Impact badges:
+
+- 🔴 High (red pill)
+
+- 🟡 Medium (amber pill)
+
+- 🟢 Low (green pill)
+
+- Quick action: "Disable All High Impact" (top-right)
+
+Tab 8: Power Settings
+
+Power Plan Selector (large radio cards):
+
+○ 🔋 Power Saver
+
+Reduces performance to extend battery life
+
+● ⚡ Balanced (Recommended)
+
+Automatically balances performance and energy
+
+○ ⚡⚡ High Performance
+
+Maximum performance, higher energy consumption
+
+○ 🔥 Ultimate Performance
+
+Unlocks all CPU cores, disables power management
+
+Advanced Power Settings (expandable):
+
+- Processor power management (sliders for min/max %)
+
+- PCI Express link state
+
+- USB selective suspend
+
+- Hard disk turn off timer
+
+---
+
+3. Performance Analytics Screen
+
+Full-screen chart dashboard
+
+Time Range Selector (top bar):
+
+- Buttons: 1H | 6H | 24H | 7D | 30D
+
+- Active button: Gold background
+
+Section 1: Historical Performance
+
+Large multi-metric chart:
+
+- Same design as dashboard graph but larger (full width)
+
+- Metric toggles (checkboxes to show/hide lines):
+
+- ☑️ CPU Usage
+
+- ☑️ GPU Usage
+
+- ☑️ RAM Usage
+
+- ☐ CPU Temp
+
+- ☐ GPU Temp
+
+- Zoom controls: +/- buttons
+
+- Export button: "Export CSV" (downloads data)
+
+Section 2: Anomaly Detection Timeline
+
+Vertical timeline (left-aligned):
+
+┃
+
+┣━ [2024-01-15 14:32] ⚡ CPU Spike
+
+┃ 94.2% usage (Confidence: 98.7%)
+
+┃ [View Details] [Dismiss]
+
+┃
+
+┣━ [2024-01-15 12:18] 📈 RAM Change Point
+
+┃ Pattern shifted to 76.5% baseline
+
+┃ [View Details] [Dismiss]
+
+┃
+
+┣━ [2024-01-14 18:45] ⚡ GPU Spike
+
+┃ 99.1% usage (Confidence: 99.2%)
+
+┃ [View Details] [Dismiss]
+
+- Gold line with dots at each event
+
+- Expandable entries (click to see mini graph)
+
+- Filter dropdown: "All" | "Spikes Only" | "Change Points Only"
+
+- Filter by metric: "All" | "CPU" | "GPU" | "RAM"
+
+Section 3: Performance Trends
+
+Statistics Cards (3-column grid):
+
+Card 1: Average Usage (Last 7 Days)
+
+- CPU Avg: 42.3%
+
+- GPU Avg: 38.7%
+
+- RAM Avg: 64.2%
+
+Card 2: Peak Usage
+
+- CPU Peak: 98.4% (timestamp)
+
+- GPU Peak: 99.8% (timestamp)
+
+- RAM Peak: 87.1% (timestamp)
+
+Card 3: Anomaly Summary
+
+- Total Anomalies Detected: 47
+
+- Spikes: 32
+
+- Change Points: 15
+
+- Most Frequent: CPU (22)
+
+---
+
+4. Settings Screen
+
+Layout: Two-column (sidebar menu + content)
+
+Sidebar Menu (left, 180px):
+
+- Monitoring
+
+- Visual
+
+- Notifications
+
+- Advanced
+
+- About
+
+Section: Monitoring Settings
+
+Monitoring Mode:
+
+- Large radio cards:
+
+● 🟢 Active Mode
+
+Poll every 1-2 seconds, full hardware monitoring
+
+CPU Usage: Moderate
+
+○ 🟡 Background Mode
+
+Poll every 5-10 seconds, essential metrics only
+
+CPU Usage: Low
+
+○ ⚪ Paused Mode
+
+No polling, zero overhead
+
+CPU Usage: None
+
+Update Interval (slider):
+
+- Range: 1s - 10s
+
+- Current value shown: "2s"
+
+Hardware Monitoring (toggles):
+
+- ☑️ Enable GPU monitoring
+
+- ☑️ Enable temperature sensors
+
+- ☑️ Enable ML anomaly detection
+
+- Badge: "READY (82/100 data points)"
+
+Section: Visual Settings
+
+Theme Selector:
+
+- ● Dark (Default)
+
+- ○ Light
+
+- ○ OLED Black
+
+Accent Color (color picker showing current brand gold)
+
+Effects:
+
+- ☑️ Enable glassmorphism
+
+- ☑️ Enable glow effects
+
+- Animation speed: [Slider: Slow - Normal - Fast]
+
+Section: Notifications
+
+Alert Thresholds (sliders):
+
+- CPU Alert at: 85% [======●===]
+
+- GPU Alert at: 90% [=======●==]
+
+- RAM Alert at: 80% [=====●====]
+
+- CPU Temp Alert at: 80°C [=====●====]
+
+Alert Types (toggles):
+
+- ☑️ Desktop notifications
+
+- ☑️ In-app toasts
+
+- ☑️ Anomaly detection alerts
+
+- ☑️ Sound notifications
+
+Section: Advanced
+
+System Integration:
+
+- ☑️ Run on Windows startup
+
+- ☑️ Minimize to system tray
+
+- ☑️ Start minimized
+
+- ☐ Administrator mode (requires UAC)
+
+Safety:
+
+- ☑️ Create restore point before optimizations
+
+- ☑️ Confirm dangerous actions
+
+- ☐ Don't show warnings (expert mode)
+
+Data Management:
+
+- "Export Configuration" button → saves JSON
+
+- "Import Configuration" button → loads JSON
+
+- "Reset All Settings" button (red, requires confirmation)
+
+Section: About
+
+App Info:
+
+- Logo (accretion disk icon, 100px)
+
+- App Name: "PC Optimizer"
+
+- Version: "1.0.0 (Build 2025.01.15)"
+
+- Powered by Event Horizon
+
+System Specifications:
+
+- CPU: Intel Core i7-9700K @ 3.60GHz
+
+- RAM: 16.0 GB DDR4-3200
+
+- GPU: NVIDIA GeForce RTX 3070 (8GB)
+
+- OS: Windows 11 Pro (Build 22621)
+
+Backend Status:
+
+- ML Model: ✓ Ready (82 data points)
+
+- History Buffer: 82/100 metrics stored
+
+- Anomaly Detection: ✓ Enabled
+
+- Total Optimizations Active: 47
+
+Actions:
+
+- "Check for Updates" button
+
+- "View Changelog" link
+
+- "Open Source Licenses" link
+
+- "Report Issue" link
+
+---
+
+5. Operation History Log Screen (NEW)
+
+Timeline View:
+
+📅 January 15, 2025
+
+┃
+
+┣━ [14:30:12] 🎮 Activated Gaming Profile
+
+┃ Applied 12 optimizations (Services, Visual Effects, Power)
+
+┃ [View Details] [Rollback]
+
+┃
+
+┣━ [13:00:45] 🧹 Cleaned Temp Files
+
+┃ Removed 2.3 GB (Temp, Cache, Recycle Bin)
+
+┃ [View Details]
+
+┃
+
+┗━ [10:22:18] 🛡️ Created System Restore Point
+
+"Before Gaming Optimizations"
+
+[Restore Now]
+
+📅 January 14, 2025
+
+┃
+
+┣━ [18:45:30] ⚙️ Modified 8 Services
+
+┃ Disabled: wuauserv, SysMain, DiagTrack, ...
+
+┃ [View Details] [Rollback]
+
+Filters (top bar):
+
+- Date range picker
+
+- Action type dropdown: All / Profiles / Optimizations / Cleanup / Backups
+
+- Search box
+
+Export: "Export Log as CSV" button
+
+---
+
+Modal Dialogs
+
+Progress Overlay
+
+During long operations (disk cleanup, service changes, registry tweaks):
+
+┌─────────────────────────────────────┐
+
+│ Applying Performance Tweaks... │
+
+│ │
+
+│ [████████████░░░░░░░░░░] 62% │
+
+│ │
+
+│ Current step: │
+
+│ Modifying registry key: │
+
+│ HKCU\Software\Microsoft\... │
+
+│ │
+
+│ Elapsed time: 00:12 │
+
+│ │
+
+│ [Cancel Operation] │
+
+└─────────────────────────────────────┘
+
+- Background: #1A1A1A with slight transparency
+
+- Border: 2px solid #FFD699
+
+- Progress bar: Gold gradient fill
+
+- Monospace font for registry paths
+
+Confirmation Dialog (Dangerous Actions)
+
+┌─────────────────────────────────────┐
+
+│ ⚠️ WARNING │
+
+│ │
+
+│ Disable Windows Defender? │
+
+│ │
+
+│ This will reduce system security. │
+
+│ Only proceed if you have │
+
+│ alternative antivirus protection. │
+
+│ │
+
+│ ☑️ Create restore point before │
+
+│ applying (recommended) │
+
+│ │
+
+│ ☐ Don't show this warning again │
+
+│ │
+
+│ [Cancel] [Proceed] │
+
+└─────────────────────────────────────┘
+
+- Warning icon: Amber #FFD699
+
+- Cancel button: Secondary (outlined)
+
+- Proceed button: Red #FF3366 (danger color)
+
+Anomaly Detail Modal
+
+When clicking on anomaly alert:
+
+┌─────────────────────────────────────┐
+
+│ ⚡ CPU Spike Detected │
+
+│ │
+
+│ [Mini graph showing spike] │
+
+│ ▲ │
+
+│ │ ╱╲ │
+
+│ │ ╱ ╲ │
+
+│ │───╱────╲───────── │
+
+│ └─────────────────→ Time │
+
+│ │
+
+│ Timestamp: 2024-01-15 14:32:18 │
+
+│ Value: 94.2% │
+
+│ Confidence: 98.7% │
+
+│ P-value: 0.013 │
+
+│ │
+
+│ Possible Causes: │
+
+│ • Temporary process burst │
+
+│ • Background Windows Update │
+
+│ • Antivirus scan started │
+
+│ │
+
+│ [View Process List] [Dismiss] │
+
+│ [Ignore CPU Alerts] │
+
+└─────────────────────────────────────┘
+
+- Graph: Small sparkline chart with spike highlighted
+
+- Monospace for values
+
+- Bullet list for causes
+
+Toast Notifications (Bottom-right corner)
+
+Success:
+
+┌─────────────────────────┐
+
+│ ✅ Gaming Mode Activated │
+
+│ 12 optimizations applied │
+
+└─────────────────────────┘
+
+- Background: #1A1A1A
+
+- Border-left: 4px solid #00D4FF (blue for success)
+
+- Auto-dismiss after 3 seconds
+
+- Slide-in animation from right
+
+Warning:
+
+┌──────────────────────────────────┐
+
+│ ⚠️ Failed to disable 2 services │
+
+│ Administrator privileges required │
+
+│ [Retry as Admin] [Dismiss] │
+
+└──────────────────────────────────┘
+
+- Border-left: 4px solid #FFC266 (amber)
+
+- Dismissible manually
+
+Error:
+
+┌─────────────────────────────────┐
+
+│ ❌ Registry backup failed │
+
+│ Check permissions and try again │
+
+│ [View Details] [Dismiss] │
+
+└─────────────────────────────────┘
+
+- Border-left: 4px solid #FF3366 (red)
+
+- Dismissible manually
+
+---
+
+UI Components Library
+
+Buttons
+
+Primary Button (Call-to-action):
+
+- Background: #B87333 (copper)
+
+- Text: #0A0A0A (dark, high contrast)
+
+- Border radius: 8px
+
+- Padding: 12px 24px
+
+- Font: 16px, Bold
+
+- Hover: Glow effect (box-shadow: 0 0 20px rgba(184, 115, 51, 0.8)), scale 1.02
+
+- Active: Scale 0.98
+
+Secondary Button (Outlined):
+
+- Background: Transparent
+
+- Border: 2px solid #FFD699
+
+- Text: #FFD699
+
+- Border radius: 8px
+
+- Padding: 12px 24px
+
+- Hover: Background #FFD699, text #0A0A0A, glow
+
+Danger Button (Destructive):
+
+- Background: #FF3366 (red)
+
+- Text: #FFFFFF
+
+- Border radius: 8px
+
+- Hover: Darker red, glow
+
+Icon Button (Circular):
+
+- Size: 40px x 40px
+
+- Background: #1A1A1A
+
+- Icon: #FFD699, 20px
+
+- Hover: Gold glow
+
+Cards/Panels
+
+Standard Card:
+
+- Background: #1A1A1A
+
+- Border: 2px solid #FFD699
+
+- Border radius: 12px
+
+- Padding: 24px
+
+- Box shadow: 0 4px 12px rgba(0, 0, 0, 0.5)
+
+Glassmorphism Card (Optional):
+
+- Background: rgba(26, 26, 26, 0.7)
+
+- Backdrop filter: blur(10px)
+
+- Border: 1px solid rgba(255, 214, 153, 0.2)
+
+Toggle Switches
+
+3-State Toggle:
+
+OFF State:
+
+- Track: #2A2A2A (dark gray)
+
+- Knob: #FFFFFF (white), positioned left
+
+- Width: 48px, Height: 24px
+
+ON State:
+
+- Track: #B87333 (copper)
+
+- Knob: #FFFFFF, positioned right
+
+DISABLED/LOCKED State (requires admin):
+
+- Track: #808080 (medium gray)
+
+- Lock icon: 🔒 overlaid on knob
+
+- Tooltip: "Requires Administrator privileges"
+
+Transition: Smooth 200ms ease
+
+Progress Bars
+
+Linear Progress:
+
+- Height: 8px
+
+- Background: #2A2A2A
+
+- Fill: Gradient based on value
+
+- 0-60%: #00D4FF (blue)
+
+- 60-85%: #FFC266 (gold)
+
+- 85-100%: #FF3366 (red)
+
+- Border radius: Full (4px)
+
+- Animated: Smooth transition on value change
+
+Circular Progress (Accretion Disk Style):
+
+- Concentric rings design
+
+- Inner ring: Current value (thick stroke)
+
+- Outer ring: Background (thin stroke, faded)
+
+- Center: Large number + label
+
+- Glow effect on active ring
+
+Charts/Graphs
+
+Line Charts (LiveCharts.Wpf):
+
+- Line thickness: 2.5px (primary), 2px (secondary)
+
+- Grid: Dotted lines, #2A2A2A
+
+- Axis labels: #808080, 12px
+
+- Smooth curves (bezier interpolation, not jagged)
+
+- Area fill: Optional gradient (solid to transparent)
+
+- Animated entry: Lines draw from left to right (500ms)
+
+Sparkline Charts (Mini):
+
+- Height: 40px
+
+- No axes, no labels
+
+- Single color line
+
+- Area fill with gradient
+
+Tooltips
+
+Standard Tooltip:
+
+- Background: #0A0A0A
+
+- Border: 1px solid #FFD699
+
+- Text: #FFFFFF, 14px
+
+- Padding: 8px 12px
+
+- Border radius: 6px
+
+- Arrow pointing to element
+
+- Animation: Fade in 150ms, fade out 100ms
+
+- Max width: 250px
+
+Badges/Pills
+
+Status Badges:
+
+- Border radius: Full (12px)
+
+- Padding: 4px 12px
+
+- Font: 12px, Bold, uppercase
+
+- Colors:
+
+- Success: Background #00D4FF, text #0A0A0A
+
+- Warning: Background #FFC266, text #0A0A0A
+
+- Danger: Background #FF3366, text #FFFFFF
+
+- Info: Background #B87333, text #0A0A0A
+
+Count Badges (notification bubbles):
+
+- Circular, 20px diameter
+
+- Background: #FF3366 (red)
+
+- Text: #FFFFFF, 10px bold
+
+- Positioned top-right of parent element
+
+Input Fields
+
+Text Input:
+
+- Background: #1A1A1A
+
+- Border: 2px solid #2A2A2A
+
+- Text: #FFFFFF, 16px
+
+- Padding: 12px 16px
+
+- Border radius: 8px
+
+- Focus: Border color #FFD699, subtle gold glow
+
+- Error state: Border #FF3366, red glow
+
+Dropdown/Select:
+
+- Same styling as text input
+
+- Chevron icon: #FFD699
+
+- Dropdown menu:
+
+- Background: #1A1A1A
+
+- Border: 2px solid #FFD699
+
+- Items: 16px, padding 12px
+
+- Hover: Background #2A2A2A
+
+- Selected: Background #B87333, text #0A0A0A
+
+Slider:
+
+- Track: #2A2A2A, height 4px
+
+- Fill: linear-gradient(90deg, #FFD699, #FFC266) (gold gradient)
+
+- Thumb: Circular, 16px, #FFD699, gold glow
+
+- Value label: Above thumb, monospace
+
+Tables
+
+Data Table:
+
+- Header row: Background #1A1A1A, border-bottom 2px solid #FFD699
+
+- Header text: #FFD699, 14px, bold, uppercase
+
+- Body rows: Background #0A0A0A, border-bottom 1px solid #2A2A2A
+
+- Hover row: Background #1A1A1A
+
+- Selected row: Background #2A2A2A, left border 3px solid #B87333
+
+- Cell padding: 12px 16px
+
+- Sortable columns: Chevron icon in header
+
+Navigation Sidebar
+
+Collapsed State (icon-only, 60px wide):
+
+- Icons: 24px, #FFD699
+
+- Hover: Icon scale 1.1, gold glow
+
+- Active: Background #1A1A1A, left border 4px solid #FFD699
+
+Expanded State (220px wide):
+
+- Icons + labels
+
+- Label: 16px, #FFFFFF
+
+- Hover: Background #1A1A1A
+
+- Active: Background #1A1A1A, left border 4px solid #FFD699, icon + text gold
+
+Transition: Smooth 300ms width change
+
+---
+
+Interactions & Animations
+
+Hover States:
+
+- Buttons: Glow + scale (1.02x)
+
+- Cards: Subtle lift (translateY(-4px))
+
+- Icons: Scale (1.1x) + glow
+
+- Toggle switches: Track brightens slightly
+
+Click Feedback:
+
+- Scale down (0.98x) then return
+
+- Ripple effect on large buttons (optional)
+
+Loading States:
+
+- Skeleton screens: Animated gradient shimmer (#1A1A1A → #2A2A2A → #1A1A1A)
+
+- Spinner: Circular accretion disk animation (rotating gold rings)
+
+Success Animations:
+
+- Checkmark: Draw animation (stroke-dasharray)
+
+- Confetti burst (subtle, optional)
+
+Error Shake:
+
+- Horizontal shake (5px left, 5px right, 2 cycles, 400ms)
+
+Number Transitions:
+
+- Animated counting (increments smoothly, not instant)
+
+- Example: 42% → 68% counts up over 500ms
+
+Chart Updates:
+
+- Smooth line transitions (bezier easing)
+
+- New data points fade in
+
+- No jumpy updates
+
+---
+
+Icon Library (Event Horizon Style)
+
+Use the provided NavigationIcons.svg as reference:
+
+- Dashboard: 4-square grid icon
+
+- Optimizer: Gear/automation icon
+
+- Analytics: Hub with radiating lines (system view)
+
+- Settings: Devices/chip icon
+
+- About/Info: Document/logs icon
+
+- Debugger: Magnifying glass with code brackets
+
+Style Guidelines:
+
+- Stroke-based (no fills), 2.5px thick (primary), 2px (secondary), 1.5px (tertiary)
+
+- Colors: #FFD699 (primary), #FFC266 (secondary), #00D4FF (interactive)
+
+- Rounded line caps and joins
+
+- Minimal geometric shapes
+
+- Glow filter on active/hover states
+
+Additional Icons Needed:
+
+- Gaming: Controller or flame
+
+- Power: Battery or lightning bolt
+
+- Cleanup: Broom or trash can
+
+- Backup: Shield or checkpoint flag
+
+- CPU/GPU/RAM: Chip icons
+
+- Temperature: Thermometer
+
+- Anomaly: Lightning bolt (spike) / Chart trending (change point)
+
+---
+
+Responsive Behavior
+
+Minimum Window Size: 1280x720px
+
+Optimal: 1920x1080px (Full HD)
+
+Breakpoints:
+
+- <1280px: Sidebar auto-collapses to icon-only
+
+- <1400px: Dashboard grid: 3 columns → 2 columns
+
+- <1024px: Dashboard grid: 2 columns → 1 column (stacked)
+
+Sidebar Behavior:
+
+- User can manually toggle collapse/expand
+
+- State persists across sessions
+
+- Hamburger menu icon (top-left) to toggle
+
+Charts:
+
+- Responsive width (always 100% of container)
+
+- Height fixed or aspect ratio maintained
+
+---
+
+Technical Constraints
+
+Framework: WPF (.NET 9.0) with ModernWPF library
+
+Chart Library: LiveCharts.Wpf
+
+Icons: Material Design Icons or Fluent System Icons (supplement with custom Event Horizon icons)
+
+Fonts: Segoe UI (system default), JetBrains Mono (data/metrics)
+
+XAML Compatibility: Avoid complex SVG filters that don't translate to WPF DrawingBrush
+
+Resources: Use the provided LogoAssets.xaml for colors and logo
+
+Performance:
+
+- Animations must be GPU-accelerated (use CompositionTarget)
+
+- Charts should handle 100+ data points smoothly
+
+- UI thread must never block (async operations for long tasks)
+
+---
+
+Accessibility
+
+High Contrast Mode:
+
+- Gold colors remain visible
+
+- Increase stroke thickness to 3px
+
+- Remove glow effects (reduce visual noise)
+
+Keyboard Navigation:
+
+- All interactive elements must be keyboard accessible
+
+- Tab order: Top to bottom, left to right
+
+- Focus indicators: Gold outline (2px solid #FFD699)
+
+Screen Readers:
+
+- Proper ARIA labels for all controls
+
+- Announce state changes (e.g., "Gaming Mode activated")
+
+---
+
+Reference Inspiration
+
+Combine aesthetics from:
+
+- Event Horizon Design (your brand system - primary reference)
+
+- MSI Afterburner (hardware monitoring UI, data density)
+
+- NZXT CAM (modern system monitoring, clean cards)
+
+- Microsoft PowerToys (professional Windows utilities)
+
+- Task Manager (Windows 11) (clean Microsoft design language)
+
+- Industrial control panels (professional engineering aesthetic)
+
+Avoid:
+
+- Gaming RGB rainbow chaos
+
+- Childish/playful elements
+
+- Overly complex decorations
+
+- Distracting animations
+
+---
+
+Deliverables Requested
+
+1. High-Fidelity Mockups for all 6 screens:
+
+- Dashboard
+
+- Advanced Optimizer (with 8 tabs)
+
+- Performance Analytics
+
+- Settings
+
+- About
+
+- Operation History Log
+
+2. Modal Dialogs:
+
+- Progress overlay
+
+- Confirmation dialog
+
+- Anomaly detail modal
+
+3. Toast Notifications (3 variants: success/warning/error)
+
+4. Component Library:
+
+- Buttons (primary, secondary, danger, icon)
+
+- Cards/panels
+
+- Toggle switches (3-state)
+
+- Progress bars (linear + circular)
+
+- Charts (line, sparkline)
+
+- Tooltips
+
+- Badges/pills
+
+- Input fields
+
+- Dropdowns
+
+- Sliders
+
+- Tables
+
+- Navigation sidebar
+
+5. Icon Set (Event Horizon style):
+
+- All navigation icons
+
+- Feature icons (gaming, power, cleanup, backup, anomaly)
+
+- Hardware icons (CPU, GPU, RAM, temp)
+
+6. Typography System:
+
+- Font families, sizes, weights
+
+- Hierarchy (H1, H2, H3, body, small)
+
+7. Color System:
+
+- All brand colors with hex codes
+
+- Semantic colors (success/warning/error)
+
+- Gradients
+
+8. Interaction States:
+
+- Hover, active, focus, disabled, loading
+
+9. Responsive Layouts:
+
+- Minimum (1280x720), Optimal (1920x1080)
+
+10. Export Formats:
+
+- Figma file (.fig)
+
+- PNG previews (2x resolution for all screens)
+
+- SVG icon library
+
+- XAML resource dictionary (colors, gradients, brushes)
+
+---
+
+Priority Features to Highlight
+
+1. ✅ Real-time performance monitoring (CPU/GPU/RAM/Temp)
+
+2. ✅ ML-powered anomaly detection ⭐ (UNIQUE SELLING POINT)
+
+3. ✅ Accretion disk visual language (brand identity)
+
+4. ✅ Professional industrial aesthetic (not gaming-focused)
+
+5. ✅ One-click optimization profiles (Gaming/Balanced/Eco)
+
+6. ✅ Advanced system tweaking (services, startup, registry)
+
+7. ✅ System protection (restore points, backups, rollback)
+
+8. ✅ Historical analytics with beautiful charts
+
+9. ✅ Three monitoring modes (Active/Background/Paused for efficiency)
+
+10. ✅ Administrator privilege handling (clear indicators, safe defaults)
+
+---
+
+Design a UI that embodies the Event Horizon philosophy: Everything converges toward the center. All system data,
+
+optimizations, and control flow into a unified command center. Professional, precise, powerful.
+
+---
+
+Brand Assets to Include
+
+- Logo: Use UniversalEDA_Logo.svg (accretion disk design)
+
+- Colors: Use exact palette from LogoAssets.xaml
+
+- Icons: Match style from NavigationIcons.svg
+
+- Preview: Reference DESIGN_PREVIEW.html for brand aesthetic
+
+Company: Event Horizon / Universal EDA
+
+Product: PC Optimizer PC OPTIMIZER - Professional UI/UX Design Brief
+
+Powered by Event Horizon Design System
+
+Application Overview
+
+Design a premium Windows desktop application for PC performance optimization and monitoring. This is a
+
+professional-grade tool targeting gamers, software developers, engineers, video editors, and power users who
+
+demand precise control over their system performance.
+
+Brand Identity: Part of the Event Horizon ecosystem - automation, optimization, and configuration tools with a
+
+physics-inspired professional aesthetic.
+
+---
+
+Design System Integration
+
+Color Palette (Event Horizon Brand)
+
+Primary Colors - Gold/Copper Theme:
+
+- Gold Bright: #FFD699 - Primary accent, interactive elements, headers
+
+- Gold Medium: #FFC266 - Secondary accent, borders, highlights
+
+- Copper Accent: #B87333 - Primary buttons, call-to-action elements
+
+- Gold Dark: #D4A574 - Subtle accents, inactive states
+
+Secondary Colors - Electric Blue:
+
+- Electric Blue: #00D4FF - Technology indicators, data visualization, progress elements
+
+- Dark Blue: #0077B6 - Hover states, secondary data
+
+Backgrounds:
+
+- Deep Black: #0A0A0A - Primary app background
+
+- Dark Gray: #1A1A1A - Cards, panels, modals
+
+- Lighter Charcoal: #2A2A2A - Hover states, input fields
+
+Text Colors:
+
+- Primary: #FFFFFF - Headings, primary content
+
+- Secondary: #B3B3B3 - Body text, descriptions
+
+- Tertiary: #808080 - Labels, disabled text
+
+Semantic Colors (for metrics):
+
+- Success/Good Performance: #00D4FF (electric blue, <60% usage)
+
+- Warning/Moderate: #FFC266 (gold medium, 60-85% usage)
+
+- Danger/Critical: #FF3366 (red, >85% usage)
+
+Typography
+
+- Headings: Segoe UI / SF Pro Display / Inter
+
+- H1 (App Title): 48px, Black weight, Gold gradient (linear-gradient(90deg, #FFD699 0%, #FFC266 100%))
+
+- H2 (Section): 32px, Bold, #FFD699
+
+- H3 (Subsection): 24px, Semibold, #FFC266
+
+- Body Text:
+
+- Primary: 16px, Regular, #FFFFFF
+
+- Secondary: 14px, Regular, #B3B3B3
+
+- Small/Labels: 12px, Regular, #808080
+
+- Metrics/Data: JetBrains Mono / Fira Code (monospace)
+
+- Large Numbers: 36px, Bold, gold gradient
+
+- Percentages: 24px, Medium, #FFD699
+
+Visual Style
+
+- Accretion Disk Aesthetic: Concentric rings, orbital motion, convergence toward center
+
+- Professional Industrial: Engineering-grade, technical precision, no gaming flare
+
+- Gold + Black Palette: Warm professional gold against deep black backgrounds
+
+- Geometric Line Icons: Stroke-based (no fills), 2.5px primary / 2px secondary / 1.5px tertiary
+
+- Glow Effects: Subtle drop-shadows on gold elements (drop-shadow(0 0 4px rgba(255, 214, 153, 0.3)))
+
+- Glassmorphism: Subtle frosted glass on overlays (optional, not required)
+
+---
+
+Core Features & Screens
+
+1. Dashboard (Home Screen)
+
+Layout:
+
+- Header Bar:
+
+- Left: App logo (small accretion disk icon) + "PC Optimizer" title (gold gradient)
+
+- Center: Current time and date
+
+- Right: Monitoring mode badge, minimize/maximize/close buttons
+
+- Left Sidebar (collapsible, 220px wide):
+
+- Navigation icons (using Event Horizon icon style):
+
+- 🏠 Dashboard (grid icon)
+
+- ⚡ Advanced Optimizer (automation/gear icon)
+
+- 📊 Performance Analytics (system view icon)
+
+- ⚙️ Settings (devices icon)
+
+- ℹ️ About (logs/document icon)
+
+- Active state: Gold border-left (3px), gold background tint
+
+- Hover: Subtle gold glow
+
+- Main Content (grid layout, 3-column responsive):
+
+Widget 1: System Performance Overview (Hero Section, spans 2 columns)
+
+Circular Gauges (inspired by accretion disk design):
+
+- CPU Usage:
+
+- Large circular gauge (120px diameter)
+
+- Concentric rings showing usage (0-100%)
+
+- Center: Large percentage number (#FFD699, 36px monospace)
+
+- Ring colors: Blue (<60%), Gold (60-85%), Red (>85%)
+
+- Outer ring: Faint orbital lines (dashed, #FFD699 opacity 0.4)
+
+- GPU Usage: Same design, positioned next to CPU
+
+- RAM Usage: Same design, positioned next to GPU
+
+Below gauges: Mini sparkline charts (last 60 seconds) for each metric
+
+- Line thickness: 2px
+
+- Colors: CPU=#00D4FF, GPU=#FFC266, RAM=#B87333
+
+Widget 2: Real-Time Monitoring Graph
+
+Multi-line chart (LiveCharts.Wpf):
+
+- Background: #1A1A1A, border 2px solid #FFD699, rounded 12px
+
+- Grid: Subtle dotted lines (#2A2A2A)
+
+- Lines:
+
+- CPU: #00D4FF (electric blue), 2.5px thickness
+
+- GPU: #FFC266 (gold medium), 2.5px thickness
+
+- RAM: #B87333 (copper), 2.5px thickness
+
+- CPU Temp: #FFD699 (gold bright), 2px thickness, dashed
+
+- Y-axis: 0-100%, white text 12px
+
+- X-axis: Time labels (monospace, 12px, #808080)
+
+- Hover tooltip: Dark background (#0A0A0A), white text, shows exact value
+
+- Time range selector (buttons top-right):
+
+- 1 Min | 5 Min | 1 Hour (gold border when active)
+
+Widget 3: ML Anomaly Detection Panel ⭐ (UNIQUE FEATURE)
+
+Card Design:
+
+- Header: "🔍 Anomaly Detection" (gold icon + text)
+
+- Status Badge:
+
+- READY (green) if 20+ data points
+
+- TRAINING (12/20) (amber) if collecting data
+
+- DISABLED (gray) if turned off
+
+- Recent Anomalies List (max 5 visible, scrollable):
+
+- Each entry shows:
+
+⚡ CPU Spike 2 min ago
+
+94.2% (Confidence: 98.7%)
+
+[Dismiss] [Details]
+
+- Icon: ⚡ for Spike (amber), 📈 for Change Point (red)
+
+- Metric name: Bold, #FFD699
+
+- Value: Monospace, color-coded by severity
+
+- Confidence: Small text, #B3B3B3
+
+- Timestamp: Relative ("2 min ago"), #808080
+
+- Actions:
+
+- "View All Anomalies" button (gold outline)
+
+- "Configure" button (secondary)
+
+Widget 4: Quick Actions Panel
+
+Large Button Grid (2x3 layout):
+
+Each button:
+
+- Size: 180px x 80px
+
+- Background: #1A1A1A
+
+- Border: 2px solid #FFD699
+
+- Border radius: 12px
+
+- Hover: Gold glow (box-shadow: 0 0 20px rgba(255, 214, 153, 0.5))
+
+- Active state: Background #B87333, white text
+
+Buttons:
+
+1. 🎮 Gaming Mode
+
+- Icon: Controller/flame
+
+- Label: "Gaming Mode"
+
+- Status indicator: ON (green dot) / OFF (gray dot)
+
+2. ⚡ Balanced Mode (default)
+
+- Icon: Scales
+
+- Label: "Balanced"
+
+3. 🌿 Power Saver
+
+- Icon: Leaf/battery
+
+- Label: "Eco Mode"
+
+4. 🧹 Clean Temp Files
+
+- Icon: Broom
+
+- Label: "Disk Cleanup"
+
+- Shows size: "2.3 GB available" (small text)
+
+5. 🔧 Advanced Optimizer
+
+- Icon: Wrench/gear
+
+- Label: "Advanced Tweaks"
+
+6. 🛡️ Create Restore Point
+
+- Icon: Shield/checkpoint
+
+- Label: "System Backup"
+
+Widget 5: Temperature Monitor
+
+Card Layout:
+
+- CPU Temp:
+
+- Large number: "62°C" (color-coded)
+
+- Color gradient:
+
+- Blue #00D4FF (<50°C)
+
+- Gold #FFC266 (50-70°C)
+
+- Amber #FFD699 (70-85°C)
+
+- Red #FF3366 (>85°C)
+
+- Icon: Thermometer with fluid level matching temp
+
+- Max temp in session: "Peak: 74°C" (small gray text)
+
+- GPU Temp: Same design
+
+Widget 6: System Health Scorecard
+
+Overall Health Score:
+
+- Large circular progress ring (150px)
+
+- Score: 0-100 (large number in center, 48px)
+
+- Color: Blue (>80), Gold (60-80), Red (<60)
+
+Breakdown bars (below score):
+
+- CPU Health: Horizontal bar + percentage
+
+- RAM Health: Horizontal bar + percentage
+
+- Storage Health: Horizontal bar + percentage
+
+- Network Health: Horizontal bar + percentage
+
+Each bar: 4px height, rounded ends, gold fill
+
+---
+
+2. Advanced Optimizer Screen
+
+Layout: Tabbed interface with vertical tab bar on left
+
+Tab List (Vertical, left side, 200px wide):
+
+1. ⚡ Performance
+
+2. 🎮 Gaming
+
+3. 🔒 Privacy
+
+4. 🌐 Network
+
+5. 💾 Storage
+
+6. ⚙️ Services
+
+7. 🚀 Startup
+
+8. 🔋 Power
+
+Active tab: Gold left border (4px), gold background tint
+
+Tab Content Area:
+
+Tab 1: Performance Tweaks
+
+Section: Visual Effects (collapsible accordion):
+
+- Header: "Windows Visual Effects" + toggle count badge "(12 active)"
+
+- Checklist items (scrollable):
+
+☑️ Disable menu animations
+
+Removes fade-in effect from Start menu and context menus
+
+[Toggle Switch] ●○○ ON
+
+☐ Disable taskbar animations
+
+Removes minimize/maximize window animations
+
+[Toggle Switch] ○○○ OFF (requires admin 🛡️)
+
+Each item shows:
+
+- Checkbox icon (☑️ checked, ☐ unchecked)
+
+- Name (16px bold, #FFD699)
+
+- Description tooltip (14px, #B3B3B3)
+
+- Toggle switch (right-aligned)
+
+- Admin shield icon 🛡️ if requires elevation
+
+Quick Actions (bottom of section):
+
+- "Apply All Performance Tweaks" (primary button, copper #B87333)
+
+- "Restore Windows Defaults" (secondary button, outlined gold)
+
+Other sections in Performance tab:
+
+- Windows Search Indexing
+
+- Superfetch/Prefetch
+
+- Game Mode
+
+- Hardware Accelerated GPU Scheduling (HAGS)
+
+Tab 2: Gaming Optimizations
+
+- Mouse Polling Rate (slider: 125Hz - 1000Hz)
+
+- USB Polling optimization
+
+- Network latency tweaks
+
+- Reduce input lag
+
+- Disable Game DVR
+
+- Fullscreen optimizations toggle
+
+Tab 3: Privacy & Telemetry
+
+Grouped toggles:
+
+- Telemetry Level:
+
+- ○ Full (default)
+
+- ○ Basic
+
+- ● Security Only (recommended)
+
+- Individual Privacy Toggles:
+
+- Disable activity history
+
+- Disable location tracking
+
+- Disable Cortana
+
+- Disable Start menu ads
+
+- Disable lock screen ads
+
+- App permissions manager
+
+Tab 4: Network Optimizations
+
+- DNS Settings:
+
+- Radio buttons: Auto / Cloudflare (1.1.1.1) / Google (8.8.8.8) / Custom
+
+- Custom input fields if selected
+
+- TCP Optimization:
+
+- Dropdown: Gaming / Streaming / Balanced / Default
+
+- Network Adapter Settings (advanced, collapsible)
+
+Tab 5: Storage & Cleanup
+
+Disk Analyzer (top section):
+
+- "Scan for reclaimable space" button
+
+- After scan, shows:
+
+Total Space Available: 12.4 GB
+
+☑️ Temp Files 4.2 GB
+
+☑️ Windows Update Cache 3.1 GB
+
+☑️ Recycle Bin 2.8 GB
+
+☑️ Download Folder 1.5 GB
+
+☐ Thumbnail Cache 0.6 GB
+
+☐ Log Files 0.2 GB
+
+- "Clean Selected" button (shows total: "Clean 10.1 GB")
+
+- Progress bar during cleanup
+
+Storage Features:
+
+- TRIM enable/disable (SSD only, shows warning if HDD)
+
+- Storage Sense configuration
+
+Tab 6: Services Manager
+
+Filter Bar (top):
+
+- Search box: "Filter by name..."
+
+- Filter buttons:
+
+- "All Services"
+
+- "Safe to Disable" (green badge)
+
+- "Gaming Impact" (blue badge)
+
+- "Running Only"
+
+Services Table:
+
+| Service Name | Display Name | Status | Startup | Category | Action |
+
+|--------------|----------------|-----------|---------|-------------|------------------|
+
+| wuauserv | Windows Update | ● Running | Auto | System | [Stop] [Disable] |
+
+| SysMain | Superfetch | ○ Stopped | Manual | Performance | [Start] [Enable] |
+
+- Status indicators:
+
+- ● Green dot (Running)
+
+- ○ Gray dot (Stopped)
+
+- ⊗ Red X (Disabled)
+
+- Startup types: Auto / Manual / Disabled / Auto (Delayed)
+
+- Category badges: Color-coded pills
+
+- Action buttons: Small, gold outline
+
+Bulk Actions Bar (bottom):
+
+- "Disable Selected" | "Enable Selected" | "Set to Manual" | "Restore Defaults"
+
+Tab 7: Startup Programs
+
+Table:
+
+| Program | Publisher | Impact | Location | Status |
+
+|---------|--------------|-----------|--------------------|---------|
+
+| Discord | Discord Inc. | 🔴 High | %AppData%.. | ●○○ ON |
+
+| Steam | Valve | 🟡 Medium | C:\Program Files.. | ○○○ OFF |
+
+- Impact badges:
+
+- 🔴 High (red pill)
+
+- 🟡 Medium (amber pill)
+
+- 🟢 Low (green pill)
+
+- Quick action: "Disable All High Impact" (top-right)
+
+Tab 8: Power Settings
+
+Power Plan Selector (large radio cards):
+
+○ 🔋 Power Saver
+
+Reduces performance to extend battery life
+
+● ⚡ Balanced (Recommended)
+
+Automatically balances performance and energy
+
+○ ⚡⚡ High Performance
+
+Maximum performance, higher energy consumption
+
+○ 🔥 Ultimate Performance
+
+Unlocks all CPU cores, disables power management
+
+Advanced Power Settings (expandable):
+
+- Processor power management (sliders for min/max %)
+
+- PCI Express link state
+
+- USB selective suspend
+
+- Hard disk turn off timer
+
+---
+
+3. Performance Analytics Screen
+
+Full-screen chart dashboard
+
+Time Range Selector (top bar):
+
+- Buttons: 1H | 6H | 24H | 7D | 30D
+
+- Active button: Gold background
+
+Section 1: Historical Performance
+
+Large multi-metric chart:
+
+- Same design as dashboard graph but larger (full width)
+
+- Metric toggles (checkboxes to show/hide lines):
+
+- ☑️ CPU Usage
+
+- ☑️ GPU Usage
+
+- ☑️ RAM Usage
+
+- ☐ CPU Temp
+
+- ☐ GPU Temp
+
+- Zoom controls: +/- buttons
+
+- Export button: "Export CSV" (downloads data)
+
+Section 2: Anomaly Detection Timeline
+
+Vertical timeline (left-aligned):
+
+┃
+
+┣━ [2024-01-15 14:32] ⚡ CPU Spike
+
+┃ 94.2% usage (Confidence: 98.7%)
+
+┃ [View Details] [Dismiss]
+
+┃
+
+┣━ [2024-01-15 12:18] 📈 RAM Change Point
+
+┃ Pattern shifted to 76.5% baseline
+
+┃ [View Details] [Dismiss]
+
+┃
+
+┣━ [2024-01-14 18:45] ⚡ GPU Spike
+
+┃ 99.1% usage (Confidence: 99.2%)
+
+┃ [View Details] [Dismiss]
+
+- Gold line with dots at each event
+
+- Expandable entries (click to see mini graph)
+
+- Filter dropdown: "All" | "Spikes Only" | "Change Points Only"
+
+- Filter by metric: "All" | "CPU" | "GPU" | "RAM"
+
+Section 3: Performance Trends
+
+Statistics Cards (3-column grid):
+
+Card 1: Average Usage (Last 7 Days)
+
+- CPU Avg: 42.3%
+
+- GPU Avg: 38.7%
+
+- RAM Avg: 64.2%
+
+Card 2: Peak Usage
+
+- CPU Peak: 98.4% (timestamp)
+
+- GPU Peak: 99.8% (timestamp)
+
+- RAM Peak: 87.1% (timestamp)
+
+Card 3: Anomaly Summary
+
+- Total Anomalies Detected: 47
+
+- Spikes: 32
+
+- Change Points: 15
+
+- Most Frequent: CPU (22)
+
+---
+
+4. Settings Screen
+
+Layout: Two-column (sidebar menu + content)
+
+Sidebar Menu (left, 180px):
+
+- Monitoring
+
+- Visual
+
+- Notifications
+
+- Advanced
+
+- About
+
+Section: Monitoring Settings
+
+Monitoring Mode:
+
+- Large radio cards:
+
+● 🟢 Active Mode
+
+Poll every 1-2 seconds, full hardware monitoring
+
+CPU Usage: Moderate
+
+○ 🟡 Background Mode
+
+Poll every 5-10 seconds, essential metrics only
+
+CPU Usage: Low
+
+○ ⚪ Paused Mode
+
+No polling, zero overhead
+
+CPU Usage: None
+
+Update Interval (slider):
+
+- Range: 1s - 10s
+
+- Current value shown: "2s"
+
+Hardware Monitoring (toggles):
+
+- ☑️ Enable GPU monitoring
+
+- ☑️ Enable temperature sensors
+
+- ☑️ Enable ML anomaly detection
+
+- Badge: "READY (82/100 data points)"
+
+Section: Visual Settings
+
+Theme Selector:
+
+- ● Dark (Default)
+
+- ○ Light
+
+- ○ OLED Black
+
+Accent Color (color picker showing current brand gold)
+
+Effects:
+
+- ☑️ Enable glassmorphism
+
+- ☑️ Enable glow effects
+
+- Animation speed: [Slider: Slow - Normal - Fast]
+
+Section: Notifications
+
+Alert Thresholds (sliders):
+
+- CPU Alert at: 85% [======●===]
+
+- GPU Alert at: 90% [=======●==]
+
+- RAM Alert at: 80% [=====●====]
+
+- CPU Temp Alert at: 80°C [=====●====]
+
+Alert Types (toggles):
+
+- ☑️ Desktop notifications
+
+- ☑️ In-app toasts
+
+- ☑️ Anomaly detection alerts
+
+- ☑️ Sound notifications
+
+Section: Advanced
+
+System Integration:
+
+- ☑️ Run on Windows startup
+
+- ☑️ Minimize to system tray
+
+- ☑️ Start minimized
+
+- ☐ Administrator mode (requires UAC)
+
+Safety:
+
+- ☑️ Create restore point before optimizations
+
+- ☑️ Confirm dangerous actions
+
+- ☐ Don't show warnings (expert mode)
+
+Data Management:
+
+- "Export Configuration" button → saves JSON
+
+- "Import Configuration" button → loads JSON
+
+- "Reset All Settings" button (red, requires confirmation)
+
+Section: About
+
+App Info:
+
+- Logo (accretion disk icon, 100px)
+
+- App Name: "PC Optimizer"
+
+- Version: "1.0.0 (Build 2025.01.15)"
+
+- Powered by Event Horizon
+
+System Specifications:
+
+- CPU: Intel Core i7-9700K @ 3.60GHz
+
+- RAM: 16.0 GB DDR4-3200
+
+- GPU: NVIDIA GeForce RTX 3070 (8GB)
+
+- OS: Windows 11 Pro (Build 22621)
+
+Backend Status:
+
+- ML Model: ✓ Ready (82 data points)
+
+- History Buffer: 82/100 metrics stored
+
+- Anomaly Detection: ✓ Enabled
+
+- Total Optimizations Active: 47
+
+Actions:
+
+- "Check for Updates" button
+
+- "View Changelog" link
+
+- "Open Source Licenses" link
+
+- "Report Issue" link
+
+---
+
+5. Operation History Log Screen (NEW)
+
+Timeline View:
+
+📅 January 15, 2025
+
+┃
+
+┣━ [14:30:12] 🎮 Activated Gaming Profile
+
+┃ Applied 12 optimizations (Services, Visual Effects, Power)
+
+┃ [View Details] [Rollback]
+
+┃
+
+┣━ [13:00:45] 🧹 Cleaned Temp Files
+
+┃ Removed 2.3 GB (Temp, Cache, Recycle Bin)
+
+┃ [View Details]
+
+┃
+
+┗━ [10:22:18] 🛡️ Created System Restore Point
+
+"Before Gaming Optimizations"
+
+[Restore Now]
+
+📅 January 14, 2025
+
+┃
+
+┣━ [18:45:30] ⚙️ Modified 8 Services
+
+┃ Disabled: wuauserv, SysMain, DiagTrack, ...
+
+┃ [View Details] [Rollback]
+
+Filters (top bar):
+
+- Date range picker
+
+- Action type dropdown: All / Profiles / Optimizations / Cleanup / Backups
+
+- Search box
+
+Export: "Export Log as CSV" button
+
+---
+
+Modal Dialogs
+
+Progress Overlay
+
+During long operations (disk cleanup, service changes, registry tweaks):
+
+┌─────────────────────────────────────┐
+
+│ Applying Performance Tweaks... │
+
+│ │
+
+│ [████████████░░░░░░░░░░] 62% │
+
+│ │
+
+│ Current step: │
+
+│ Modifying registry key: │
+
+│ HKCU\Software\Microsoft\... │
+
+│ │
+
+│ Elapsed time: 00:12 │
+
+│ │
+
+│ [Cancel Operation] │
+
+└─────────────────────────────────────┘
+
+- Background: #1A1A1A with slight transparency
+
+- Border: 2px solid #FFD699
+
+- Progress bar: Gold gradient fill
+
+- Monospace font for registry paths
+
+Confirmation Dialog (Dangerous Actions)
+
+┌─────────────────────────────────────┐
+
+│ ⚠️ WARNING │
+
+│ │
+
+│ Disable Windows Defender? │
+
+│ │
+
+│ This will reduce system security. │
+
+│ Only proceed if you have │
+
+│ alternative antivirus protection. │
+
+│ │
+
+│ ☑️ Create restore point before │
+
+│ applying (recommended) │
+
+│ │
+
+│ ☐ Don't show this warning again │
+
+│ │
+
+│ [Cancel] [Proceed] │
+
+└─────────────────────────────────────┘
+
+- Warning icon: Amber #FFD699
+
+- Cancel button: Secondary (outlined)
+
+- Proceed button: Red #FF3366 (danger color)
+
+Anomaly Detail Modal
+
+When clicking on anomaly alert:
+
+┌─────────────────────────────────────┐
+
+│ ⚡ CPU Spike Detected │
+
+│ │
+
+│ [Mini graph showing spike] │
+
+│ ▲ │
+
+│ │ ╱╲ │
+
+│ │ ╱ ╲ │
+
+│ │───╱────╲───────── │
+
+│ └─────────────────→ Time │
+
+│ │
+
+│ Timestamp: 2024-01-15 14:32:18 │
+
+│ Value: 94.2% │
+
+│ Confidence: 98.7% │
+
+│ P-value: 0.013 │
+
+│ │
+
+│ Possible Causes: │
+
+│ • Temporary process burst │
+
+│ • Background Windows Update │
+
+│ • Antivirus scan started │
+
+│ │
+
+│ [View Process List] [Dismiss] │
+
+│ [Ignore CPU Alerts] │
+
+└─────────────────────────────────────┘
+
+- Graph: Small sparkline chart with spike highlighted
+
+- Monospace for values
+
+- Bullet list for causes
+
+Toast Notifications (Bottom-right corner)
+
+Success:
+
+┌─────────────────────────┐
+
+│ ✅ Gaming Mode Activated │
+
+│ 12 optimizations applied │
+
+└─────────────────────────┘
+
+- Background: #1A1A1A
+
+- Border-left: 4px solid #00D4FF (blue for success)
+
+- Auto-dismiss after 3 seconds
+
+- Slide-in animation from right
+
+Warning:
+
+┌──────────────────────────────────┐
+
+│ ⚠️ Failed to disable 2 services │
+
+│ Administrator privileges required │
+
+│ [Retry as Admin] [Dismiss] │
+
+└──────────────────────────────────┘
+
+- Border-left: 4px solid #FFC266 (amber)
+
+- Dismissible manually
+
+Error:
+
+┌─────────────────────────────────┐
+
+│ ❌ Registry backup failed │
+
+│ Check permissions and try again │
+
+│ [View Details] [Dismiss] │
+
+└─────────────────────────────────┘
+
+- Border-left: 4px solid #FF3366 (red)
+
+- Dismissible manually
+
+---
+
+UI Components Library
+
+Buttons
+
+Primary Button (Call-to-action):
+
+- Background: #B87333 (copper)
+
+- Text: #0A0A0A (dark, high contrast)
+
+- Border radius: 8px
+
+- Padding: 12px 24px
+
+- Font: 16px, Bold
+
+- Hover: Glow effect (box-shadow: 0 0 20px rgba(184, 115, 51, 0.8)), scale 1.02
+
+- Active: Scale 0.98
+
+Secondary Button (Outlined):
+
+- Background: Transparent
+
+- Border: 2px solid #FFD699
+
+- Text: #FFD699
+
+- Border radius: 8px
+
+- Padding: 12px 24px
+
+- Hover: Background #FFD699, text #0A0A0A, glow
+
+Danger Button (Destructive):
+
+- Background: #FF3366 (red)
+
+- Text: #FFFFFF
+
+- Border radius: 8px
+
+- Hover: Darker red, glow
+
+Icon Button (Circular):
+
+- Size: 40px x 40px
+
+- Background: #1A1A1A
+
+- Icon: #FFD699, 20px
+
+- Hover: Gold glow
+
+Cards/Panels
+
+Standard Card:
+
+- Background: #1A1A1A
+
+- Border: 2px solid #FFD699
+
+- Border radius: 12px
+
+- Padding: 24px
+
+- Box shadow: 0 4px 12px rgba(0, 0, 0, 0.5)
+
+Glassmorphism Card (Optional):
+
+- Background: rgba(26, 26, 26, 0.7)
+
+- Backdrop filter: blur(10px)
+
+- Border: 1px solid rgba(255, 214, 153, 0.2)
+
+Toggle Switches
+
+3-State Toggle:
+
+OFF State:
+
+- Track: #2A2A2A (dark gray)
+
+- Knob: #FFFFFF (white), positioned left
+
+- Width: 48px, Height: 24px
+
+ON State:
+
+- Track: #B87333 (copper)
+
+- Knob: #FFFFFF, positioned right
+
+DISABLED/LOCKED State (requires admin):
+
+- Track: #808080 (medium gray)
+
+- Lock icon: 🔒 overlaid on knob
+
+- Tooltip: "Requires Administrator privileges"
+
+Transition: Smooth 200ms ease
+
+Progress Bars
+
+Linear Progress:
+
+- Height: 8px
+
+- Background: #2A2A2A
+
+- Fill: Gradient based on value
+
+- 0-60%: #00D4FF (blue)
+
+- 60-85%: #FFC266 (gold)
+
+- 85-100%: #FF3366 (red)
+
+- Border radius: Full (4px)
+
+- Animated: Smooth transition on value change
+
+Circular Progress (Accretion Disk Style):
+
+- Concentric rings design
+
+- Inner ring: Current value (thick stroke)
+
+- Outer ring: Background (thin stroke, faded)
+
+- Center: Large number + label
+
+- Glow effect on active ring
+
+Charts/Graphs
+
+Line Charts (LiveCharts.Wpf):
+
+- Line thickness: 2.5px (primary), 2px (secondary)
+
+- Grid: Dotted lines, #2A2A2A
+
+- Axis labels: #808080, 12px
+
+- Smooth curves (bezier interpolation, not jagged)
+
+- Area fill: Optional gradient (solid to transparent)
+
+- Animated entry: Lines draw from left to right (500ms)
+
+Sparkline Charts (Mini):
+
+- Height: 40px
+
+- No axes, no labels
+
+- Single color line
+
+- Area fill with gradient
+
+Tooltips
+
+Standard Tooltip:
+
+- Background: #0A0A0A
+
+- Border: 1px solid #FFD699
+
+- Text: #FFFFFF, 14px
+
+- Padding: 8px 12px
+
+- Border radius: 6px
+
+- Arrow pointing to element
+
+- Animation: Fade in 150ms, fade out 100ms
+
+- Max width: 250px
+
+Badges/Pills
+
+Status Badges:
+
+- Border radius: Full (12px)
+
+- Padding: 4px 12px
+
+- Font: 12px, Bold, uppercase
+
+- Colors:
+
+- Success: Background #00D4FF, text #0A0A0A
+
+- Warning: Background #FFC266, text #0A0A0A
+
+- Danger: Background #FF3366, text #FFFFFF
+
+- Info: Background #B87333, text #0A0A0A
+
+Count Badges (notification bubbles):
+
+- Circular, 20px diameter
+
+- Background: #FF3366 (red)
+
+- Text: #FFFFFF, 10px bold
+
+- Positioned top-right of parent element
+
+Input Fields
+
+Text Input:
+
+- Background: #1A1A1A
+
+- Border: 2px solid #2A2A2A
+
+- Text: #FFFFFF, 16px
+
+- Padding: 12px 16px
+
+- Border radius: 8px
+
+- Focus: Border color #FFD699, subtle gold glow
+
+- Error state: Border #FF3366, red glow
+
+Dropdown/Select:
+
+- Same styling as text input
+
+- Chevron icon: #FFD699
+
+- Dropdown menu:
+
+- Background: #1A1A1A
+
+- Border: 2px solid #FFD699
+
+- Items: 16px, padding 12px
+
+- Hover: Background #2A2A2A
+
+- Selected: Background #B87333, text #0A0A0A
+
+Slider:
+
+- Track: #2A2A2A, height 4px
+
+- Fill: linear-gradient(90deg, #FFD699, #FFC266) (gold gradient)
+
+- Thumb: Circular, 16px, #FFD699, gold glow
+
+- Value label: Above thumb, monospace
+
+Tables
+
+Data Table:
+
+- Header row: Background #1A1A1A, border-bottom 2px solid #FFD699
+
+- Header text: #FFD699, 14px, bold, uppercase
+
+- Body rows: Background #0A0A0A, border-bottom 1px solid #2A2A2A
+
+- Hover row: Background #1A1A1A
+
+- Selected row: Background #2A2A2A, left border 3px solid #B87333
+
+- Cell padding: 12px 16px
+
+- Sortable columns: Chevron icon in header
+
+Navigation Sidebar
+
+Collapsed State (icon-only, 60px wide):
+
+- Icons: 24px, #FFD699
+
+- Hover: Icon scale 1.1, gold glow
+
+- Active: Background #1A1A1A, left border 4px solid #FFD699
+
+Expanded State (220px wide):
+
+- Icons + labels
+
+- Label: 16px, #FFFFFF
+
+- Hover: Background #1A1A1A
+
+- Active: Background #1A1A1A, left border 4px solid #FFD699, icon + text gold
+
+Transition: Smooth 300ms width change
+
+---
+
+Interactions & Animations
+
+Hover States:
+
+- Buttons: Glow + scale (1.02x)
+
+- Cards: Subtle lift (translateY(-4px))
+
+- Icons: Scale (1.1x) + glow
+
+- Toggle switches: Track brightens slightly
+
+Click Feedback:
+
+- Scale down (0.98x) then return
+
+- Ripple effect on large buttons (optional)
+
+Loading States:
+
+- Skeleton screens: Animated gradient shimmer (#1A1A1A → #2A2A2A → #1A1A1A)
+
+- Spinner: Circular accretion disk animation (rotating gold rings)
+
+Success Animations:
+
+- Checkmark: Draw animation (stroke-dasharray)
+
+- Confetti burst (subtle, optional)
+
+Error Shake:
+
+- Horizontal shake (5px left, 5px right, 2 cycles, 400ms)
+
+Number Transitions:
+
+- Animated counting (increments smoothly, not instant)
+
+- Example: 42% → 68% counts up over 500ms
+
+Chart Updates:
+
+- Smooth line transitions (bezier easing)
+
+- New data points fade in
+
+- No jumpy updates
+
+---
+
+Icon Library (Event Horizon Style)
+
+Use the provided NavigationIcons.svg as reference:
+
+- Dashboard: 4-square grid icon
+
+- Optimizer: Gear/automation icon
+
+- Analytics: Hub with radiating lines (system view)
+
+- Settings: Devices/chip icon
+
+- About/Info: Document/logs icon
+
+- Debugger: Magnifying glass with code brackets
+
+Style Guidelines:
+
+- Stroke-based (no fills), 2.5px thick (primary), 2px (secondary), 1.5px (tertiary)
+
+- Colors: #FFD699 (primary), #FFC266 (secondary), #00D4FF (interactive)
+
+- Rounded line caps and joins
+
+- Minimal geometric shapes
+
+- Glow filter on active/hover states
+
+Additional Icons Needed:
+
+- Gaming: Controller or flame
+
+- Power: Battery or lightning bolt
+
+- Cleanup: Broom or trash can
+
+- Backup: Shield or checkpoint flag
+
+- CPU/GPU/RAM: Chip icons
+
+- Temperature: Thermometer
+
+- Anomaly: Lightning bolt (spike) / Chart trending (change point)
+
+---
+
+Responsive Behavior
+
+Minimum Window Size: 1280x720px
+
+Optimal: 1920x1080px (Full HD)
+
+Breakpoints:
+
+- <1280px: Sidebar auto-collapses to icon-only
+
+- <1400px: Dashboard grid: 3 columns → 2 columns
+
+- <1024px: Dashboard grid: 2 columns → 1 column (stacked)
+
+Sidebar Behavior:
+
+- User can manually toggle collapse/expand
+
+- State persists across sessions
+
+- Hamburger menu icon (top-left) to toggle
+
+Charts:
+
+- Responsive width (always 100% of container)
+
+- Height fixed or aspect ratio maintained
+
+---
+
+Technical Constraints
+
+Framework: WPF (.NET 9.0) with ModernWPF library
+
+Chart Library: LiveCharts.Wpf
+
+Icons: Material Design Icons or Fluent System Icons (supplement with custom Event Horizon icons)
+
+Fonts: Segoe UI (system default), JetBrains Mono (data/metrics)
+
+XAML Compatibility: Avoid complex SVG filters that don't translate to WPF DrawingBrush
+
+Resources: Use the provided LogoAssets.xaml for colors and logo
+
+Performance:
+
+- Animations must be GPU-accelerated (use CompositionTarget)
+
+- Charts should handle 100+ data points smoothly
+
+- UI thread must never block (async operations for long tasks)
+
+---
+
+Accessibility
+
+High Contrast Mode:
+
+- Gold colors remain visible
+
+- Increase stroke thickness to 3px
+
+- Remove glow effects (reduce visual noise)
+
+Keyboard Navigation:
+
+- All interactive elements must be keyboard accessible
+
+- Tab order: Top to bottom, left to right
+
+- Focus indicators: Gold outline (2px solid #FFD699)
+
+Screen Readers:
+
+- Proper ARIA labels for all controls
+
+- Announce state changes (e.g., "Gaming Mode activated")
+
+---
+
+Reference Inspiration
+
+Combine aesthetics from:
+
+- Event Horizon Design (your brand system - primary reference)
+
+- MSI Afterburner (hardware monitoring UI, data density)
+
+- NZXT CAM (modern system monitoring, clean cards)
+
+- Microsoft PowerToys (professional Windows utilities)
+
+- Task Manager (Windows 11) (clean Microsoft design language)
+
+- Industrial control panels (professional engineering aesthetic)
+
+Avoid:
+
+- Gaming RGB rainbow chaos
+
+- Childish/playful elements
+
+- Overly complex decorations
+
+- Distracting animations
+
+---
+
+Deliverables Requested
+
+1. High-Fidelity Mockups for all 6 screens:
+
+- Dashboard
+
+- Advanced Optimizer (with 8 tabs)
+
+- Performance Analytics
+
+- Settings
+
+- About
+
+- Operation History Log
+
+2. Modal Dialogs:
+
+- Progress overlay
+
+- Confirmation dialog
+
+- Anomaly detail modal
+
+3. Toast Notifications (3 variants: success/warning/error)
+
+4. Component Library:
+
+- Buttons (primary, secondary, danger, icon)
+
+- Cards/panels
+
+- Toggle switches (3-state)
+
+- Progress bars (linear + circular)
+
+- Charts (line, sparkline)
+
+- Tooltips
+
+- Badges/pills
+
+- Input fields
+
+- Dropdowns
+
+- Sliders
+
+- Tables
+
+- Navigation sidebar
+
+5. Icon Set (Event Horizon style):
+
+- All navigation icons
+
+- Feature icons (gaming, power, cleanup, backup, anomaly)
+
+- Hardware icons (CPU, GPU, RAM, temp)
+
+6. Typography System:
+
+- Font families, sizes, weights
+
+- Hierarchy (H1, H2, H3, body, small)
+
+7. Color System:
+
+- All brand colors with hex codes
+
+- Semantic colors (success/warning/error)
+
+- Gradients
+
+8. Interaction States:
+
+- Hover, active, focus, disabled, loading
+
+9. Responsive Layouts:
+
+- Minimum (1280x720), Optimal (1920x1080)
+
+10. Export Formats:
+
+- Figma file (.fig)
+
+- PNG previews (2x resolution for all screens)
+
+- SVG icon library
+
+- XAML resource dictionary (colors, gradients, brushes)
+
+---
+
+Priority Features to Highlight
+
+1. ✅ Real-time performance monitoring (CPU/GPU/RAM/Temp)
+
+2. ✅ ML-powered anomaly detection ⭐ (UNIQUE SELLING POINT)
+
+3. ✅ Accretion disk visual language (brand identity)
+
+4. ✅ Professional industrial aesthetic (not gaming-focused)
+
+5. ✅ One-click optimization profiles (Gaming/Balanced/Eco)
+
+6. ✅ Advanced system tweaking (services, startup, registry)
+
+7. ✅ System protection (restore points, backups, rollback)
+
+8. ✅ Historical analytics with beautiful charts
+
+9. ✅ Three monitoring modes (Active/Background/Paused for efficiency)
+
+10. ✅ Administrator privilege handling (clear indicators, safe defaults)
+
+---
+
+Design a UI that embodies the Event Horizon philosophy: Everything converges toward the center. All system data,
+
+optimizations, and control flow into a unified command center. Professional, precise, powerful.
+
+---
+
+Brand Assets to Include
+
+- Logo: Use UniversalEDA_Logo.svg (accretion disk design)
+
+- Colors: Use exact palette from LogoAssets.xaml
+
+- Icons: Match style from NavigationIcons.svg
+
+- Preview: Reference DESIGN_PREVIEW.html for brand aesthetic
+
+Company: Event Horizon / Universal EDA
+
+Product: PC Optimizer
+
+Tagline: "Automation. Optimization. Configuration."
+
+Tagline: "Automation. Optimization. Configuration."
