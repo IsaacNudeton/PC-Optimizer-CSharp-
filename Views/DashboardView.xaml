@@ -1,0 +1,261 @@
+<UserControl x:Class="PCOptimizer.Views.DashboardView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             Background="{StaticResource DeepBlackBrush}"
+             Foreground="{StaticResource PrimaryTextBrush}">
+
+    <ScrollViewer VerticalScrollBarVisibility="Auto" Background="{StaticResource DeepBlackBrush}">
+        <Grid Margin="24">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+
+            <!-- System Performance Overview - Hero Section -->
+            <Border Grid.Row="0" Style="{StaticResource CardStyle}" Margin="0,0,0,24">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                    </Grid.RowDefinitions>
+
+                    <!-- Header -->
+                    <TextBlock Grid.Row="0" Text="System Performance Overview"
+                              Style="{StaticResource H3TextBlockStyle}" Margin="0,0,0,16" />
+
+                    <!-- Gauges Row -->
+                    <Grid Grid.Row="1">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*" />
+                            <ColumnDefinition Width="*" />
+                            <ColumnDefinition Width="*" />
+                        </Grid.ColumnDefinitions>
+
+                        <!-- CPU Usage Gauge -->
+                        <StackPanel Grid.Column="0" HorizontalAlignment="Center" Margin="0,0,16,0">
+                            <Ellipse Width="120" Height="120" Fill="{StaticResource LighterCharcoalBrush}"
+                                    Stroke="{StaticResource GoldBrightBrush}" StrokeThickness="2" Margin="0,0,0,12" />
+                            <TextBlock Text="CPU" Style="{StaticResource H3TextBlockStyle}"
+                                      TextAlignment="Center" Margin="0,0,0,4" />
+                            <TextBlock x:Name="CpuValueText" Text="0%" Style="{StaticResource MetricsTextBlockStyle}"
+                                      TextAlignment="Center" />
+                        </StackPanel>
+
+                        <!-- GPU Usage Gauge -->
+                        <StackPanel Grid.Column="1" HorizontalAlignment="Center" Margin="0,0,16,0">
+                            <Ellipse Width="120" Height="120" Fill="{StaticResource LighterCharcoalBrush}"
+                                    Stroke="{StaticResource GoldMediumBrush}" StrokeThickness="2" Margin="0,0,0,12" />
+                            <TextBlock Text="GPU" Style="{StaticResource H3TextBlockStyle}"
+                                      TextAlignment="Center" Margin="0,0,0,4" />
+                            <TextBlock x:Name="GpuValueText" Text="0%" Style="{StaticResource MetricsTextBlockStyle}"
+                                      TextAlignment="Center" />
+                        </StackPanel>
+
+                        <!-- RAM Usage Gauge -->
+                        <StackPanel Grid.Column="2" HorizontalAlignment="Center">
+                            <Ellipse Width="120" Height="120" Fill="{StaticResource LighterCharcoalBrush}"
+                                    Stroke="{StaticResource CopperBrush}" StrokeThickness="2" Margin="0,0,0,12" />
+                            <TextBlock Text="RAM" Style="{StaticResource H3TextBlockStyle}"
+                                      TextAlignment="Center" Margin="0,0,0,4" />
+                            <TextBlock x:Name="RamValueText" Text="0%" Style="{StaticResource MetricsTextBlockStyle}"
+                                      TextAlignment="Center" />
+                        </StackPanel>
+                    </Grid>
+                </Grid>
+            </Border>
+
+            <!-- Quick Actions Grid -->
+            <Border Grid.Row="1" Style="{StaticResource CardStyle}" Margin="0,0,0,24">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                    </Grid.RowDefinitions>
+
+                    <!-- Header -->
+                    <TextBlock Grid.Row="0" Text="Quick Actions" Style="{StaticResource H3TextBlockStyle}"
+                              Margin="0,0,0,16" />
+
+                    <!-- Button Grid -->
+                    <Grid Grid.Row="1">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*" />
+                            <ColumnDefinition Width="*" />
+                            <ColumnDefinition Width="*" />
+                        </Grid.ColumnDefinitions>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="80" />
+                            <RowDefinition Height="80" />
+                        </Grid.RowDefinitions>
+
+                        <!-- Gaming Mode -->
+                        <Button Grid.Column="0" Grid.Row="0"
+                               Command="{Binding GamingModeCommand}"
+                               Background="{StaticResource DarkGrayBrush}"
+                               BorderBrush="{StaticResource GoldBrightBrush}"
+                               BorderThickness="2"
+                               Margin="0,0,12,12"
+                               Padding="12"
+                               Cursor="Hand">
+                            <Button.Template>
+                                <ControlTemplate TargetType="Button">
+                                    <Border Background="{TemplateBinding Background}"
+                                           BorderBrush="{TemplateBinding BorderBrush}"
+                                           BorderThickness="{TemplateBinding BorderThickness}"
+                                           CornerRadius="12"
+                                           Padding="{TemplateBinding Padding}">
+                                        <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center">
+                                            <TextBlock Text="🎮" FontSize="24" TextAlignment="Center" Margin="0,0,0,4" />
+                                            <TextBlock Text="Gaming Mode" Style="{StaticResource SecondaryTextBlockStyle}"
+                                                      TextAlignment="Center" />
+                                        </StackPanel>
+                                    </Border>
+                                </ControlTemplate>
+                            </Button.Template>
+                        </Button>
+
+                        <!-- Balanced Mode -->
+                        <Button Grid.Column="1" Grid.Row="0"
+                               Command="{Binding BalancedModeCommand}"
+                               Background="{StaticResource DarkGrayBrush}"
+                               BorderBrush="{StaticResource GoldBrightBrush}"
+                               BorderThickness="2"
+                               Margin="0,0,12,12"
+                               Padding="12"
+                               Cursor="Hand">
+                            <Button.Template>
+                                <ControlTemplate TargetType="Button">
+                                    <Border Background="{TemplateBinding Background}"
+                                           BorderBrush="{TemplateBinding BorderBrush}"
+                                           BorderThickness="{TemplateBinding BorderThickness}"
+                                           CornerRadius="12"
+                                           Padding="{TemplateBinding Padding}">
+                                        <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center">
+                                            <TextBlock Text="⚡" FontSize="24" TextAlignment="Center" Margin="0,0,0,4" />
+                                            <TextBlock Text="Balanced" Style="{StaticResource SecondaryTextBlockStyle}"
+                                                      TextAlignment="Center" />
+                                        </StackPanel>
+                                    </Border>
+                                </ControlTemplate>
+                            </Button.Template>
+                        </Button>
+
+                        <!-- Eco Mode -->
+                        <Button Grid.Column="2" Grid.Row="0"
+                               Command="{Binding EcoModeCommand}"
+                               Background="{StaticResource DarkGrayBrush}"
+                               BorderBrush="{StaticResource GoldBrightBrush}"
+                               BorderThickness="2"
+                               Margin="0,0,0,12"
+                               Padding="12"
+                               Cursor="Hand">
+                            <Button.Template>
+                                <ControlTemplate TargetType="Button">
+                                    <Border Background="{TemplateBinding Background}"
+                                           BorderBrush="{TemplateBinding BorderBrush}"
+                                           BorderThickness="{TemplateBinding BorderThickness}"
+                                           CornerRadius="12"
+                                           Padding="{TemplateBinding Padding}">
+                                        <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center">
+                                            <TextBlock Text="🌿" FontSize="24" TextAlignment="Center" Margin="0,0,0,4" />
+                                            <TextBlock Text="Eco Mode" Style="{StaticResource SecondaryTextBlockStyle}"
+                                                      TextAlignment="Center" />
+                                        </StackPanel>
+                                    </Border>
+                                </ControlTemplate>
+                            </Button.Template>
+                        </Button>
+
+                        <!-- Disk Cleanup -->
+                        <Button Grid.Column="0" Grid.Row="1"
+                               Command="{Binding DiskCleanupCommand}"
+                               Background="{StaticResource DarkGrayBrush}"
+                               BorderBrush="{StaticResource GoldBrightBrush}"
+                               BorderThickness="2"
+                               Margin="0,0,12,0"
+                               Padding="12"
+                               Cursor="Hand">
+                            <Button.Template>
+                                <ControlTemplate TargetType="Button">
+                                    <Border Background="{TemplateBinding Background}"
+                                           BorderBrush="{TemplateBinding BorderBrush}"
+                                           BorderThickness="{TemplateBinding BorderThickness}"
+                                           CornerRadius="12"
+                                           Padding="{TemplateBinding Padding}">
+                                        <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center">
+                                            <TextBlock Text="🧹" FontSize="24" TextAlignment="Center" Margin="0,0,0,4" />
+                                            <TextBlock Text="Disk Cleanup" Style="{StaticResource SecondaryTextBlockStyle}"
+                                                      TextAlignment="Center" />
+                                        </StackPanel>
+                                    </Border>
+                                </ControlTemplate>
+                            </Button.Template>
+                        </Button>
+
+                        <!-- Advanced Tweaks -->
+                        <Button Grid.Column="1" Grid.Row="1"
+                               Command="{Binding AdvancedTweaksCommand}"
+                               Background="{StaticResource DarkGrayBrush}"
+                               BorderBrush="{StaticResource GoldBrightBrush}"
+                               BorderThickness="2"
+                               Margin="0,0,12,0"
+                               Padding="12"
+                               Cursor="Hand">
+                            <Button.Template>
+                                <ControlTemplate TargetType="Button">
+                                    <Border Background="{TemplateBinding Background}"
+                                           BorderBrush="{TemplateBinding BorderBrush}"
+                                           BorderThickness="{TemplateBinding BorderThickness}"
+                                           CornerRadius="12"
+                                           Padding="{TemplateBinding Padding}">
+                                        <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center">
+                                            <TextBlock Text="🔧" FontSize="24" TextAlignment="Center" Margin="0,0,0,4" />
+                                            <TextBlock Text="Advanced Tweaks" Style="{StaticResource SecondaryTextBlockStyle}"
+                                                      TextAlignment="Center" />
+                                        </StackPanel>
+                                    </Border>
+                                </ControlTemplate>
+                            </Button.Template>
+                        </Button>
+
+                        <!-- System Backup -->
+                        <Button Grid.Column="2" Grid.Row="1"
+                               Command="{Binding SystemBackupCommand}"
+                               Background="{StaticResource DarkGrayBrush}"
+                               BorderBrush="{StaticResource GoldBrightBrush}"
+                               BorderThickness="2"
+                               Margin="0,0,0,0"
+                               Padding="12"
+                               Cursor="Hand">
+                            <Button.Template>
+                                <ControlTemplate TargetType="Button">
+                                    <Border Background="{TemplateBinding Background}"
+                                           BorderBrush="{TemplateBinding BorderBrush}"
+                                           BorderThickness="{TemplateBinding BorderThickness}"
+                                           CornerRadius="12"
+                                           Padding="{TemplateBinding Padding}">
+                                        <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center">
+                                            <TextBlock Text="🛡️" FontSize="24" TextAlignment="Center" Margin="0,0,0,4" />
+                                            <TextBlock Text="System Backup" Style="{StaticResource SecondaryTextBlockStyle}"
+                                                      TextAlignment="Center" />
+                                        </StackPanel>
+                                    </Border>
+                                </ControlTemplate>
+                            </Button.Template>
+                        </Button>
+                    </Grid>
+                </Grid>
+            </Border>
+
+            <!-- Status Footer -->
+            <Border Grid.Row="2" Style="{StaticResource CardStyle}">
+                <StackPanel>
+                    <TextBlock Text="Status" Style="{StaticResource H3TextBlockStyle}" Margin="0,0,0,8" />
+                    <TextBlock x:Name="StatusText" Text="Monitoring Active"
+                              Style="{StaticResource BodyTextBlockStyle}" />
+                </StackPanel>
+            </Border>
+        </Grid>
+    </ScrollViewer>
+</UserControl>

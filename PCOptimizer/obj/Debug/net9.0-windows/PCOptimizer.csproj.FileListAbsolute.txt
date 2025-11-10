@@ -245,3 +245,4 @@ C:\Users\isaac\PC-Optimizer-CSharp\PCOptimizer\obj\Debug\net9.0-windows\Views\Op
 C:\Users\isaac\PC-Optimizer-CSharp\PCOptimizer\obj\Debug\net9.0-windows\Views\PerformanceAnalyticsView.g.cs
 C:\Users\isaac\PC-Optimizer-CSharp\PCOptimizer\obj\Debug\net9.0-windows\Views\SettingsView.g.cs
 C:\Users\isaac\PC-Optimizer-CSharp\PCOptimizer\obj\Debug\net9.0-windows\Resources\ThemeResources.baml
+C:\Users\isaac\PC-Optimizer-CSharp\PCOptimizer\obj\Debug\net9.0-windows\PCOptimizer.sourcelink.json
