@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Event Horizon - PC Optimizer</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+<script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#b87332",
+                        "background-light": "#f8f7f6",
+                        "background-dark": "#1f1913",
+                    },
+                    fontFamily: {
+                        "display": ["Inter", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.5rem",
+                        "lg": "1rem",
+                        "xl": "1.5rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+          font-variation-settings:
+          'FILL' 0,
+          'wght' 400,
+          'GRAD' 0,
+          'opsz' 24
+        }
+    </style>
+</head>
+<body class="font-display bg-background-light dark:bg-background-dark text-[#1f1913] dark:text-[#f8f7f6]">
+<div class="flex min-h-screen">
+<!-- Side Navigation -->
+<aside class="w-[240px] flex-shrink-0 bg-[#f8f7f6] dark:bg-[#171412] p-4 flex flex-col justify-between">
+<div>
+<div class="flex items-center gap-3 p-2 mb-6">
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-10" data-alt="Abstract gradient logo" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAFbI0chWKre88g8DntCPzPbubDayjcNmNqDK43ns2V9LhwPJk7AbDq0-ZzoyK2jNRZ6e3qnyjxatKL8rYD5CBQewDR0g2TioaxpJOGFJb0_4suCJEXaFlIw5ePpulsxYugDdsWgRKwPu3ODm6x3CJRiePhDJ06jrIoiH8pkQGCrdA5s_HxIUZ3mS4xwtqX9Kny2b_3IX4gUXMqFt1yCS2pmcMRLocWqRmc8DtW0-YJOgaMjxRPlg8IQxJLUTVSym23vx3e-JqSwg");'></div>
+<div class="flex flex-col">
+<h1 class="text-[#1f1913] dark:text-white text-base font-medium leading-normal">Event Horizon</h1>
+<p class="text-stone-500 dark:text-[#b4aba2] text-sm font-normal leading-normal">PC Optimizer</p>
+</div>
+</div>
+<nav class="flex flex-col gap-2">
+<a class="flex items-center gap-3 px-3 py-2 rounded-lg bg-primary/10 dark:bg-[#36302b] text-primary dark:text-white" href="#">
+<span class="material-symbols-outlined">monitoring</span>
+<p class="text-sm font-medium leading-normal">Monitoring</p>
+</a>
+<a class="flex items-center gap-3 px-3 py-2 rounded-lg text-stone-600 dark:text-white hover:bg-primary/10 dark:hover:bg-primary/20" href="#">
+<span class="material-symbols-outlined">palette</span>
+<p class="text-sm font-medium leading-normal">Visual</p>
+</a>
+<a class="flex items-center gap-3 px-3 py-2 rounded-lg text-stone-600 dark:text-white hover:bg-primary/10 dark:hover:bg-primary/20" href="#">
+<span class="material-symbols-outlined">notifications</span>
+<p class="text-sm font-medium leading-normal">Notifications</p>
+</a>
+<a class="flex items-center gap-3 px-3 py-2 rounded-lg text-stone-600 dark:text-white hover:bg-primary/10 dark:hover:bg-primary/20" href="#">
+<span class="material-symbols-outlined">tune</span>
+<p class="text-sm font-medium leading-normal">Advanced</p>
+</a>
+<a class="flex items-center gap-3 px-3 py-2 rounded-lg text-stone-600 dark:text-white hover:bg-primary/10 dark:hover:bg-primary/20" href="#">
+<span class="material-symbols-outlined">info</span>
+<p class="text-sm font-medium leading-normal">About</p>
+</a>
+</nav>
+</div>
+</aside>
+<!-- Main Content -->
+<main class="flex-1 p-8 overflow-y-auto">
+<div class="max-w-4xl mx-auto space-y-12">
+<!-- Monitoring Section -->
+<section>
+<div class="flex flex-wrap justify-between gap-3 mb-8">
+<p class="text-[#1f1913] dark:text-white text-4xl font-black leading-tight tracking-[-0.033em] min-w-72">Monitoring</p>
+</div>
+<div class="space-y-8">
+<div class="p-6 rounded-xl bg-white/50 dark:bg-[#171412]">
+<h3 class="mb-4 text-lg font-semibold text-[#1f1913] dark:text-white">Monitoring Mode</h3>
+<div class="flex flex-wrap gap-4">
+<label class="flex-1 min-w-[150px] p-4 text-sm font-medium leading-normal flex items-center justify-center rounded-xl border border-stone-300 dark:border-[#4f4740] text-[#1f1913] dark:text-white has-[:checked]:border-2 has-[:checked]:border-primary has-[:checked]:text-primary has-[:checked]:bg-primary/10 dark:has-[:checked]:border-primary relative cursor-pointer">
+                                    Active
+                                    <input checked="" class="invisible absolute" name="monitoring_mode" type="radio"/>
+</label>
+<label class="flex-1 min-w-[150px] p-4 text-sm font-medium leading-normal flex items-center justify-center rounded-xl border border-stone-300 dark:border-[#4f4740] text-[#1f1913] dark:text-white has-[:checked]:border-2 has-[:checked]:border-primary has-[:checked]:text-primary has-[:checked]:bg-primary/10 dark:has-[:checked]:border-primary relative cursor-pointer">
+                                    Background
+                                    <input class="invisible absolute" name="monitoring_mode" type="radio"/>
+</label>
+<label class="flex-1 min-w-[150px] p-4 text-sm font-medium leading-normal flex items-center justify-center rounded-xl border border-stone-300 dark:border-[#4f4740] text-[#1f1913] dark:text-white has-[:checked]:border-2 has-[:checked]:border-primary has-[:checked]:text-primary has-[:checked]:bg-primary/10 dark:has-[:checked]:border-primary relative cursor-pointer">
+                                    Paused
+                                    <input class="invisible absolute" name="monitoring_mode" type="radio"/>
+</label>
+</div>
+</div>
+<div class="p-6 rounded-xl bg-white/50 dark:bg-[#171412]">
+<h3 class="mb-2 text-lg font-semibold text-[#1f1913] dark:text-white">Update Frequency</h3>
+<div class="@container">
+<div class="relative flex w-full flex-col items-start justify-between gap-3 @[480px]:flex-row @[480px]:items-center">
+<div class="flex w-full shrink-[3] items-center justify-between">
+<p class="text-[#1f1913] dark:text-white text-base font-medium leading-normal">Update Interval</p>
+<p class="text-[#1f1913] dark:text-white text-sm font-normal leading-normal @[480px]:hidden">5 seconds</p>
+</div>
+<div class="flex h-4 w-full items-center gap-4">
+<div class="flex h-1.5 flex-1 rounded-full bg-stone-300 dark:bg-[#4f4740]">
+<div class="h-full w-[32%] rounded-full bg-primary dark:bg-primary"></div>
+<div class="relative"><div class="absolute -left-2 -top-1.5 size-4 rounded-full bg-primary dark:bg-primary ring-2 ring-background-light dark:ring-background-dark"></div></div>
+</div>
+<p class="text-[#1f1913] dark:text-white text-sm font-normal leading-normal hidden @[480px]:block">5 seconds</p>
+</div>
+</div>
+</div>
+</div>
+<div class="p-6 rounded-xl bg-white/50 dark:bg-[#171412]">
+<h3 class="mb-4 text-lg font-semibold text-[#1f1913] dark:text-white">Hardware Monitoring</h3>
+<div class="space-y-2">
+<div class="flex items-center gap-4 px-4 min-h-14 justify-between">
+<div class="flex items-center gap-4">
+<div class="text-[#1f1913] dark:text-white flex items-center justify-center rounded-lg bg-stone-200 dark:bg-[#36302b] shrink-0 size-10">
+<span class="material-symbols-outlined">memory</span>
+</div>
+<p class="text-[#1f1913] dark:text-white text-base font-normal leading-normal flex-1 truncate">Monitor GPU</p>
+</div>
+<div class="shrink-0">
+<label class="relative flex h-[31px] w-[51px] cursor-pointer items-center rounded-full border-none bg-stone-300 dark:bg-[#36302b] p-0.5 has-[:checked]:justify-end has-[:checked]:bg-primary">
+<div class="h-full w-[27px] rounded-full bg-white transition-transform" style="box-shadow: rgba(0, 0, 0, 0.15) 0px 3px 8px, rgba(0, 0, 0, 0.06) 0px 3px 1px;"></div>
+<input checked="" class="invisible absolute" type="checkbox"/>
+</label>
+</div>
+</div>
+<div class="flex items-center gap-4 px-4 min-h-14 justify-between">
+<div class="flex items-center gap-4">
+<div class="text-[#1f1913] dark:text-white flex items-center justify-center rounded-lg bg-stone-200 dark:bg-[#36302b] shrink-0 size-10">
+<span class="material-symbols-outlined">device_thermostat</span>
+</div>
+<p class="text-[#1f1913] dark:text-white text-base font-normal leading-normal flex-1 truncate">Temperature Sensors</p>
+</div>
+<div class="shrink-0">
+<label class="relative flex h-[31px] w-[51px] cursor-pointer items-center rounded-full border-none bg-stone-300 dark:bg-[#36302b] p-0.5 has-[:checked]:justify-end has-[:checked]:bg-primary">
+<div class="h-full w-[27px] rounded-full bg-white transition-transform" style="box-shadow: rgba(0, 0, 0, 0.15) 0px 3px 8px, rgba(0, 0, 0, 0.06) 0px 3px 1px;"></div>
+<input checked="" class="invisible absolute" type="checkbox"/>
+</label>
+</div>
+</div>
+<div class="flex items-center gap-4 px-4 min-h-14 justify-between">
+<div class="flex items-center gap-4">
+<div class="text-[#1f1913] dark:text-white flex items-center justify-center rounded-lg bg-stone-200 dark:bg-[#36302b] shrink-0 size-10">
+<span class="material-symbols-outlined">neurology</span>
+</div>
+<p class="text-[#1f1913] dark:text-white text-base font-normal leading-normal flex-1 truncate">ML Anomaly Detection</p>
+</div>
+<div class="shrink-0">
+<label class="relative flex h-[31px] w-[51px] cursor-pointer items-center rounded-full border-none bg-stone-300 dark:bg-[#36302b] p-0.5 has-[:checked]:justify-end has-[:checked]:bg-primary">
+<div class="h-full w-[27px] rounded-full bg-white transition-transform" style="box-shadow: rgba(0, 0, 0, 0.15) 0px 3px 8px, rgba(0, 0, 0, 0.06) 0px 3px 1px;"></div>
+<input class="invisible absolute" type="checkbox"/>
+</label>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Spacer -->
+<div class="h-px w-full bg-stone-200 dark:bg-[#36302b]"></div>
+<!-- Visual Section -->
+<section>
+<div class="flex flex-wrap justify-between gap-3 mb-8">
+<p class="text-[#1f1913] dark:text-white text-4xl font-black leading-tight tracking-[-0.033em] min-w-72">Visual</p>
+</div>
+<div class="space-y-8">
+<div class="p-6 rounded-xl bg-white/50 dark:bg-[#171412]">
+<h3 class="mb-4 text-lg font-semibold text-[#1f1913] dark:text-white">Theme</h3>
+<div class="flex flex-wrap gap-4">
+<label class="flex-1 min-w-[150px] p-4 text-sm font-medium leading-normal flex items-center justify-center rounded-xl border border-stone-300 dark:border-[#4f4740] text-[#1f1913] dark:text-white has-[:checked]:border-2 has-[:checked]:border-primary has-[:checked]:text-primary has-[:checked]:bg-primary/10 dark:has-[:checked]:border-primary relative cursor-pointer">
+                                    Dark
+                                    <input checked="" class="invisible absolute" name="theme_mode" type="radio"/>
+</label>
+<label class="flex-1 min-w-[150px] p-4 text-sm font-medium leading-normal flex items-center justify-center rounded-xl border border-stone-300 dark:border-[#4f4740] text-[#1f1913] dark:text-white has-[:checked]:border-2 has-[:checked]:border-primary has-[:checked]:text-primary has-[:checked]:bg-primary/10 dark:has-[:checked]:border-primary relative cursor-pointer">
+                                    Light
+                                    <input class="invisible absolute" name="theme_mode" type="radio"/>
+</label>
+<label class="flex-1 min-w-[150px] p-4 text-sm font-medium leading-normal flex items-center justify-center rounded-xl border border-stone-300 dark:border-[#4f4740] text-[#1f1913] dark:text-white has-[:checked]:border-2 has-[:checked]:border-primary has-[:checked]:text-primary has-[:checked]:bg-primary/10 dark:has-[:checked]:border-primary relative cursor-pointer">
+                                    OLED Black
+                                    <input class="invisible absolute" name="theme_mode" type="radio"/>
+</label>
+</div>
+</div>
+<div class="p-6 rounded-xl bg-white/50 dark:bg-[#171412]">
+<h3 class="mb-4 text-lg font-semibold text-[#1f1913] dark:text-white">Appearance</h3>
+<div class="space-y-4">
+<div class="flex items-center justify-between">
+<p class="text-[#1f1913] dark:text-white">Accent Color</p>
+<div class="flex items-center gap-2">
+<button class="size-6 rounded-full bg-blue-500 ring-2 ring-offset-2 ring-offset-background-light dark:ring-offset-background-dark ring-primary"></button>
+<button class="size-6 rounded-full bg-pink-500"></button>
+<button class="size-6 rounded-full bg-green-500"></button>
+<button class="size-6 rounded-full bg-purple-500"></button>
+<button class="flex items-center justify-center size-6 rounded-full border border-stone-300 dark:border-stone-600"><span class="material-symbols-outlined text-sm">add</span></button>
+</div>
+</div>
+<div class="flex items-center justify-between">
+<p class="text-[#1f1913] dark:text-white">Glassmorphism Effect</p>
+<label class="relative flex h-[31px] w-[51px] cursor-pointer items-center rounded-full border-none bg-stone-300 dark:bg-[#36302b] p-0.5 has-[:checked]:justify-end has-[:checked]:bg-primary">
+<div class="h-full w-[27px] rounded-full bg-white transition-transform" style="box-shadow: rgba(0, 0, 0, 0.15) 0px 3px 8px, rgba(0, 0, 0, 0.06) 0px 3px 1px;"></div>
+<input class="invisible absolute" type="checkbox"/>
+</label>
+</div>
+<div class="flex items-center justify-between">
+<p class="text-[#1f1913] dark:text-white">Glow Effect</p>
+<label class="relative flex h-[31px] w-[51px] cursor-pointer items-center rounded-full border-none bg-stone-300 dark:bg-[#36302b] p-0.5 has-[:checked]:justify-end has-[:checked]:bg-primary">
+<div class="h-full w-[27px] rounded-full bg-white transition-transform" style="box-shadow: rgba(0, 0, 0, 0.15) 0px 3px 8px, rgba(0, 0, 0, 0.06) 0px 3px 1px;"></div>
+<input checked="" class="invisible absolute" type="checkbox"/>
+</label>
+</div>
+</div>
+</div>
+</div>
+</section>
+</div>
+</main>
+</div>
+</body></html>

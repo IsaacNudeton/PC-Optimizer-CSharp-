@@ -1,0 +1,273 @@
+<UserControl x:Class="PCOptimizer.Views.OperationHistoryLogView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             Background="{StaticResource DeepBlackBrush}"
+             Foreground="{StaticResource PrimaryTextBrush}">
+
+    <ScrollViewer VerticalScrollBarVisibility="Auto" Background="{StaticResource DeepBlackBrush}">
+        <Grid Margin="24">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+
+            <!-- Header -->
+            <StackPanel Grid.Row="0" Margin="0,0,0,24">
+                <TextBlock Text="Operation History Log" Style="{StaticResource H2TextBlockStyle}" Margin="0,0,0,8" />
+                <TextBlock Text="Timeline of all system optimizations and changes"
+                          Style="{StaticResource SecondaryTextBlockStyle}" />
+            </StackPanel>
+
+            <!-- Filters -->
+            <Border Grid.Row="1" Style="{StaticResource CardStyle}" Margin="0,0,0,24">
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="*" />
+                    </Grid.ColumnDefinitions>
+
+                    <StackPanel Grid.Column="0" Margin="0,0,12,0">
+                        <TextBlock Text="Action Type" Style="{StaticResource BodyTextBlockStyle}" Margin="0,0,0,8" />
+                        <ComboBox Background="{StaticResource DarkGrayBrush}" Foreground="{StaticResource PrimaryTextBrush}">
+                            <ComboBoxItem Content="All Actions" IsSelected="True" />
+                            <ComboBoxItem Content="Profiles" />
+                            <ComboBoxItem Content="Optimizations" />
+                            <ComboBoxItem Content="Cleanup" />
+                            <ComboBoxItem Content="Backups" />
+                        </ComboBox>
+                    </StackPanel>
+
+                    <StackPanel Grid.Column="1" Margin="0,0,12,0">
+                        <TextBlock Text="Date Range" Style="{StaticResource BodyTextBlockStyle}" Margin="0,0,0,8" />
+                        <ComboBox Background="{StaticResource DarkGrayBrush}" Foreground="{StaticResource PrimaryTextBrush}">
+                            <ComboBoxItem Content="All Time" IsSelected="True" />
+                            <ComboBoxItem Content="Today" />
+                            <ComboBoxItem Content="Last 7 Days" />
+                            <ComboBoxItem Content="Last 30 Days" />
+                        </ComboBox>
+                    </StackPanel>
+
+                    <Button Grid.Column="2" Content="Export Log as CSV" Style="{StaticResource SecondaryButtonStyle}"
+                           Padding="16,12" VerticalAlignment="Bottom" />
+                </Grid>
+            </Border>
+
+            <!-- Timeline -->
+            <StackPanel Grid.Row="2" Margin="0,0,0,24">
+                <!-- Date Separator - January 15, 2025 -->
+                <TextBlock Text="📅 January 15, 2025" Style="{StaticResource H3TextBlockStyle}"
+                          Margin="0,0,0,16" Foreground="{StaticResource GoldMediumBrush}" />
+
+                <!-- Timeline Item 1 -->
+                <Border Background="{StaticResource DarkGrayBrush}" BorderBrush="{StaticResource GoldBrightBrush}"
+                       BorderThickness="2" CornerRadius="12" Padding="20" Margin="0,0,0,12">
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="Auto" />
+                            <ColumnDefinition Width="*" />
+                            <ColumnDefinition Width="Auto" />
+                        </Grid.ColumnDefinitions>
+
+                        <StackPanel Grid.Column="0" Margin="0,0,16,0" VerticalAlignment="Top">
+                            <TextBlock Text="🎮" FontSize="24" />
+                            <TextBlock Text="14:30:12" Style="{StaticResource SmallTextBlockStyle}"
+                                      Margin="0,4,0,0" TextAlignment="Center" />
+                        </StackPanel>
+
+                        <StackPanel Grid.Column="1">
+                            <TextBlock Text="Activated Gaming Profile" Style="{StaticResource BodyTextBlockStyle}"
+                                      Margin="0,0,0,4" FontWeight="Bold" />
+                            <TextBlock Text="Applied 12 optimizations (Services, Visual Effects, Power)"
+                                      Style="{StaticResource SecondaryTextBlockStyle}" Margin="0,0,0,8" />
+                            <TextBlock Text="Status: ✅ Successful - All optimizations applied successfully"
+                                      Style="{StaticResource SmallTextBlockStyle}" Foreground="{StaticResource SuccessBrush}" />
+                        </StackPanel>
+
+                        <StackPanel Grid.Column="2" Orientation="Horizontal" Margin="12,0,0,0" VerticalAlignment="Top">
+                            <Button Content="Details" Style="{StaticResource SecondaryButtonStyle}"
+                                   Padding="12,8" Margin="0,0,8,0" />
+                            <Button Content="Rollback" Style="{StaticResource SecondaryButtonStyle}"
+                                   Padding="12,8" />
+                        </StackPanel>
+                    </Grid>
+                </Border>
+
+                <!-- Timeline Item 2 -->
+                <Border Background="{StaticResource DarkGrayBrush}" BorderBrush="{StaticResource GoldBrightBrush}"
+                       BorderThickness="2" CornerRadius="12" Padding="20" Margin="0,0,0,12">
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="Auto" />
+                            <ColumnDefinition Width="*" />
+                            <ColumnDefinition Width="Auto" />
+                        </Grid.ColumnDefinitions>
+
+                        <StackPanel Grid.Column="0" Margin="0,0,16,0" VerticalAlignment="Top">
+                            <TextBlock Text="🧹" FontSize="24" />
+                            <TextBlock Text="13:00:45" Style="{StaticResource SmallTextBlockStyle}"
+                                      Margin="0,4,0,0" TextAlignment="Center" />
+                        </StackPanel>
+
+                        <StackPanel Grid.Column="1">
+                            <TextBlock Text="Cleaned Temp Files" Style="{StaticResource BodyTextBlockStyle}"
+                                      Margin="0,0,0,4" FontWeight="Bold" />
+                            <TextBlock Text="Removed 2.3 GB (Temp, Cache, Recycle Bin)"
+                                      Style="{StaticResource SecondaryTextBlockStyle}" Margin="0,0,0,8" />
+                            <TextBlock Text="Status: ✅ Successful - Freed 2.3 GB of disk space"
+                                      Style="{StaticResource SmallTextBlockStyle}" Foreground="{StaticResource SuccessBrush}" />
+                        </StackPanel>
+
+                        <StackPanel Grid.Column="2" Orientation="Horizontal" Margin="12,0,0,0" VerticalAlignment="Top">
+                            <Button Content="Details" Style="{StaticResource SecondaryButtonStyle}"
+                                   Padding="12,8" />
+                        </StackPanel>
+                    </Grid>
+                </Border>
+
+                <!-- Timeline Item 3 -->
+                <Border Background="{StaticResource DarkGrayBrush}" BorderBrush="{StaticResource GoldBrightBrush}"
+                       BorderThickness="2" CornerRadius="12" Padding="20" Margin="0,0,0,12">
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="Auto" />
+                            <ColumnDefinition Width="*" />
+                            <ColumnDefinition Width="Auto" />
+                        </Grid.ColumnDefinitions>
+
+                        <StackPanel Grid.Column="0" Margin="0,0,16,0" VerticalAlignment="Top">
+                            <TextBlock Text="🛡️" FontSize="24" />
+                            <TextBlock Text="10:22:18" Style="{StaticResource SmallTextBlockStyle}"
+                                      Margin="0,4,0,0" TextAlignment="Center" />
+                        </StackPanel>
+
+                        <StackPanel Grid.Column="1">
+                            <TextBlock Text="Created System Restore Point" Style="{StaticResource BodyTextBlockStyle}"
+                                      Margin="0,0,0,4" FontWeight="Bold" />
+                            <TextBlock Text="Checkpoint: 'Before Gaming Optimizations'"
+                                      Style="{StaticResource SecondaryTextBlockStyle}" Margin="0,0,0,8" />
+                            <TextBlock Text="Status: ✅ Successful - Restore point created at 10:22"
+                                      Style="{StaticResource SmallTextBlockStyle}" Foreground="{StaticResource SuccessBrush}" />
+                        </StackPanel>
+
+                        <StackPanel Grid.Column="2" Orientation="Horizontal" Margin="12,0,0,0" VerticalAlignment="Top">
+                            <Button Content="Restore" Style="{StaticResource SecondaryButtonStyle}"
+                                   Padding="12,8" />
+                        </StackPanel>
+                    </Grid>
+                </Border>
+            </StackPanel>
+
+            <!-- Date Separator - January 14, 2025 -->
+            <TextBlock Grid.Row="3" Text="📅 January 14, 2025" Style="{StaticResource H3TextBlockStyle}"
+                      Margin="0,0,0,16" Foreground="{StaticResource GoldMediumBrush}" />
+
+            <!-- More Timeline Items for January 14 -->
+            <StackPanel Grid.Row="3">
+                <!-- Timeline Item 4 -->
+                <Border Background="{StaticResource DarkGrayBrush}" BorderBrush="{StaticResource GoldBrightBrush}"
+                       BorderThickness="2" CornerRadius="12" Padding="20" Margin="0,16,0,12">
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="Auto" />
+                            <ColumnDefinition Width="*" />
+                            <ColumnDefinition Width="Auto" />
+                        </Grid.ColumnDefinitions>
+
+                        <StackPanel Grid.Column="0" Margin="0,0,16,0" VerticalAlignment="Top">
+                            <TextBlock Text="⚙️" FontSize="24" />
+                            <TextBlock Text="18:45:30" Style="{StaticResource SmallTextBlockStyle}"
+                                      Margin="0,4,0,0" TextAlignment="Center" />
+                        </StackPanel>
+
+                        <StackPanel Grid.Column="1">
+                            <TextBlock Text="Modified 8 Services" Style="{StaticResource BodyTextBlockStyle}"
+                                      Margin="0,0,0,4" FontWeight="Bold" />
+                            <TextBlock Text="Disabled: wuauserv, SysMain, DiagTrack, and 5 others"
+                                      Style="{StaticResource SecondaryTextBlockStyle}" Margin="0,0,0,8" />
+                            <TextBlock Text="Status: ✅ Successful - 8 services modified"
+                                      Style="{StaticResource SmallTextBlockStyle}" Foreground="{StaticResource SuccessBrush}" />
+                        </StackPanel>
+
+                        <StackPanel Grid.Column="2" Orientation="Horizontal" Margin="12,0,0,0" VerticalAlignment="Top">
+                            <Button Content="Details" Style="{StaticResource SecondaryButtonStyle}"
+                                   Padding="12,8" Margin="0,0,8,0" />
+                            <Button Content="Rollback" Style="{StaticResource SecondaryButtonStyle}"
+                                   Padding="12,8" />
+                        </StackPanel>
+                    </Grid>
+                </Border>
+
+                <!-- Timeline Item 5 - Warning Example -->
+                <Border Background="{StaticResource DarkGrayBrush}" BorderBrush="{StaticResource WarningBrush}"
+                       BorderThickness="2" CornerRadius="12" Padding="20" Margin="0,0,0,12">
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="Auto" />
+                            <ColumnDefinition Width="*" />
+                            <ColumnDefinition Width="Auto" />
+                        </Grid.ColumnDefinitions>
+
+                        <StackPanel Grid.Column="0" Margin="0,0,16,0" VerticalAlignment="Top">
+                            <TextBlock Text="⚠️" FontSize="24" Foreground="{StaticResource WarningBrush}" />
+                            <TextBlock Text="12:15:00" Style="{StaticResource SmallTextBlockStyle}"
+                                      Margin="0,4,0,0" TextAlignment="Center" />
+                        </StackPanel>
+
+                        <StackPanel Grid.Column="1">
+                            <TextBlock Text="Attempted Privacy Optimization" Style="{StaticResource BodyTextBlockStyle}"
+                                      Margin="0,0,0,4" FontWeight="Bold" />
+                            <TextBlock Text="Partial: 5/6 privacy settings applied"
+                                      Style="{StaticResource SecondaryTextBlockStyle}" Margin="0,0,0,8" />
+                            <TextBlock Text="Status: ⚠️ Partial - One setting failed due to permissions"
+                                      Style="{StaticResource SmallTextBlockStyle}" Foreground="{StaticResource WarningBrush}" />
+                        </StackPanel>
+
+                        <StackPanel Grid.Column="2" Orientation="Horizontal" Margin="12,0,0,0" VerticalAlignment="Top">
+                            <Button Content="Details" Style="{StaticResource SecondaryButtonStyle}"
+                                   Padding="12,8" Margin="0,0,8,0" />
+                            <Button Content="Retry" Style="{StaticResource SecondaryButtonStyle}"
+                                   Padding="12,8" />
+                        </StackPanel>
+                    </Grid>
+                </Border>
+
+                <!-- Timeline Item 6 - Error Example -->
+                <Border Background="{StaticResource DarkGrayBrush}" BorderBrush="{StaticResource DangerBrush}"
+                       BorderThickness="2" CornerRadius="12" Padding="20">
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="Auto" />
+                            <ColumnDefinition Width="*" />
+                            <ColumnDefinition Width="Auto" />
+                        </Grid.ColumnDefinitions>
+
+                        <StackPanel Grid.Column="0" Margin="0,0,16,0" VerticalAlignment="Top">
+                            <TextBlock Text="❌" FontSize="24" Foreground="{StaticResource DangerBrush}" />
+                            <TextBlock Text="08:30:15" Style="{StaticResource SmallTextBlockStyle}"
+                                      Margin="0,4,0,0" TextAlignment="Center" />
+                        </StackPanel>
+
+                        <StackPanel Grid.Column="1">
+                            <TextBlock Text="Failed: Disk Cleanup" Style="{StaticResource BodyTextBlockStyle}"
+                                      Margin="0,0,0,4" FontWeight="Bold" />
+                            <TextBlock Text="Attempted to clean: Temp, Cache, Recycle Bin"
+                                      Style="{StaticResource SecondaryTextBlockStyle}" Margin="0,0,0,8" />
+                            <TextBlock Text="Status: ❌ Failed - Insufficient permissions to access some files"
+                                      Style="{StaticResource SmallTextBlockStyle}" Foreground="{StaticResource DangerBrush}" />
+                        </StackPanel>
+
+                        <StackPanel Grid.Column="2" Orientation="Horizontal" Margin="12,0,0,0" VerticalAlignment="Top">
+                            <Button Content="Details" Style="{StaticResource SecondaryButtonStyle}"
+                                   Padding="12,8" Margin="0,0,8,0" />
+                            <Button Content="Retry as Admin" Style="{StaticResource SecondaryButtonStyle}"
+                                   Padding="12,8" />
+                        </StackPanel>
+                    </Grid>
+                </Border>
+            </StackPanel>
+        </Grid>
+    </ScrollViewer>
+</UserControl>

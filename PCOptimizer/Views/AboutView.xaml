@@ -1,0 +1,205 @@
+<UserControl x:Class="PCOptimizer.Views.AboutView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             Background="{StaticResource DeepBlackBrush}"
+             Foreground="{StaticResource PrimaryTextBrush}">
+
+    <ScrollViewer VerticalScrollBarVisibility="Auto" Background="{StaticResource DeepBlackBrush}">
+        <Grid Margin="24" MaxWidth="800">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+
+            <!-- Header -->
+            <StackPanel Grid.Row="0" HorizontalAlignment="Center" Margin="0,0,0,24">
+                <TextBlock Text="About PC Optimizer" Style="{StaticResource H2TextBlockStyle}"
+                          TextAlignment="Center" Margin="0,0,0,12" />
+                <TextBlock Text="Professional system optimization powered by Event Horizon"
+                          Style="{StaticResource SecondaryTextBlockStyle}" TextAlignment="Center" />
+            </StackPanel>
+
+            <!-- App Info Card -->
+            <Border Grid.Row="1" Style="{StaticResource CardStyle}" Margin="0,0,0,24">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                    </Grid.RowDefinitions>
+
+                    <TextBlock Grid.Row="0" Text="Application Information" Style="{StaticResource H3TextBlockStyle}"
+                              Margin="0,0,0,16" />
+
+                    <StackPanel Grid.Row="1" Margin="0,0,0,12">
+                        <TextBlock Text="App Name" Style="{StaticResource BodyTextBlockStyle}"
+                                  Margin="0,0,0,4" />
+                        <TextBlock Text="PC Optimizer" Style="{StaticResource SecondaryTextBlockStyle}" />
+                    </StackPanel>
+
+                    <StackPanel Grid.Row="2" Margin="0,0,0,12">
+                        <TextBlock Text="Version" Style="{StaticResource BodyTextBlockStyle}"
+                                  Margin="0,0,0,4" />
+                        <TextBlock Text="1.0.0 (Build 2025.01.15)" Style="{StaticResource SecondaryTextBlockStyle}" />
+                    </StackPanel>
+
+                    <StackPanel Grid.Row="3" Margin="0,0,0,12">
+                        <TextBlock Text="Company" Style="{StaticResource BodyTextBlockStyle}"
+                                  Margin="0,0,0,4" />
+                        <TextBlock Text="Event Horizon / Universal EDA" Style="{StaticResource SecondaryTextBlockStyle}" />
+                    </StackPanel>
+
+                    <StackPanel Grid.Row="4">
+                        <TextBlock Text="Tagline" Style="{StaticResource BodyTextBlockStyle}"
+                                  Margin="0,0,0,4" />
+                        <TextBlock Text="Automation. Optimization. Configuration." Style="{StaticResource SecondaryTextBlockStyle}" />
+                    </StackPanel>
+                </Grid>
+            </Border>
+
+            <!-- System Specifications Card -->
+            <Border Grid.Row="2" Style="{StaticResource CardStyle}" Margin="0,0,0,24">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                    </Grid.RowDefinitions>
+
+                    <TextBlock Grid.Row="0" Text="System Information" Style="{StaticResource H3TextBlockStyle}"
+                              Margin="0,0,0,16" />
+
+                    <Grid Grid.Row="1" Margin="0,0,0,12">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*" />
+                            <ColumnDefinition Width="*" />
+                        </Grid.ColumnDefinitions>
+
+                        <StackPanel Grid.Column="0">
+                            <TextBlock Text="Processor" Style="{StaticResource BodyTextBlockStyle}"
+                                      Margin="0,0,0,4" />
+                            <TextBlock Text="Intel Core i7-9700K @ 3.60GHz"
+                                      Style="{StaticResource SecondaryTextBlockStyle}" />
+                        </StackPanel>
+
+                        <StackPanel Grid.Column="1">
+                            <TextBlock Text="Memory (RAM)" Style="{StaticResource BodyTextBlockStyle}"
+                                      Margin="0,0,0,4" />
+                            <TextBlock Text="16.0 GB DDR4-3200" Style="{StaticResource SecondaryTextBlockStyle}" />
+                        </StackPanel>
+                    </Grid>
+
+                    <Grid Grid.Row="2" Margin="0,0,0,12">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*" />
+                            <ColumnDefinition Width="*" />
+                        </Grid.ColumnDefinitions>
+
+                        <StackPanel Grid.Column="0">
+                            <TextBlock Text="Graphics" Style="{StaticResource BodyTextBlockStyle}"
+                                      Margin="0,0,0,4" />
+                            <TextBlock Text="NVIDIA GeForce RTX 3070 (8GB)"
+                                      Style="{StaticResource SecondaryTextBlockStyle}" />
+                        </StackPanel>
+
+                        <StackPanel Grid.Column="1">
+                            <TextBlock Text="Operating System" Style="{StaticResource BodyTextBlockStyle}"
+                                      Margin="0,0,0,4" />
+                            <TextBlock Text="Windows 11 Pro (Build 22621)"
+                                      Style="{StaticResource SecondaryTextBlockStyle}" />
+                        </StackPanel>
+                    </Grid>
+
+                    <Separator Grid.Row="3" Background="{StaticResource GoldMediumBrush}" Margin="0,12,0,12" Height="1" />
+
+                    <StackPanel Grid.Row="4">
+                        <TextBlock Text="✓ ML Model: Ready (82 data points)"
+                                  Style="{StaticResource SecondaryTextBlockStyle}" Foreground="{StaticResource SuccessBrush}"
+                                  Margin="0,4,0,4" />
+                        <TextBlock Text="✓ Anomaly Detection: Enabled"
+                                  Style="{StaticResource SecondaryTextBlockStyle}" Foreground="{StaticResource SuccessBrush}"
+                                  Margin="0,4,0,4" />
+                        <TextBlock Text="✓ History Buffer: 82/100 metrics stored"
+                                  Style="{StaticResource SecondaryTextBlockStyle}" Foreground="{StaticResource SuccessBrush}"
+                                  Margin="0,4,0,0" />
+                    </StackPanel>
+                </Grid>
+            </Border>
+
+            <!-- Features Card -->
+            <Border Grid.Row="3" Style="{StaticResource CardStyle}" Margin="0,0,0,24">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                    </Grid.RowDefinitions>
+
+                    <TextBlock Grid.Row="0" Text="Key Features" Style="{StaticResource H3TextBlockStyle}"
+                              Margin="0,0,0,16" />
+
+                    <StackPanel Grid.Row="1">
+                        <TextBlock Text="✅ Real-time performance monitoring (CPU/GPU/RAM/Temp)"
+                                  Style="{StaticResource SecondaryTextBlockStyle}" Margin="0,4,0,4" />
+                        <TextBlock Text="✅ ML-powered anomaly detection (UNIQUE SELLING POINT)"
+                                  Style="{StaticResource SecondaryTextBlockStyle}" Margin="0,4,0,4"
+                                  Foreground="{StaticResource GoldBrightBrush}" />
+                        <TextBlock Text="✅ Professional industrial aesthetic with Event Horizon branding"
+                                  Style="{StaticResource SecondaryTextBlockStyle}" Margin="0,4,0,4" />
+                        <TextBlock Text="✅ One-click optimization profiles (Gaming/Balanced/Eco)"
+                                  Style="{StaticResource SecondaryTextBlockStyle}" Margin="0,4,0,4" />
+                        <TextBlock Text="✅ Advanced system tweaking (services, startup, registry)"
+                                  Style="{StaticResource SecondaryTextBlockStyle}" Margin="0,4,0,4" />
+                        <TextBlock Text="✅ System protection (restore points, backups, rollback)"
+                                  Style="{StaticResource SecondaryTextBlockStyle}" Margin="0,4,0,4" />
+                        <TextBlock Text="✅ Historical analytics with beautiful charts"
+                                  Style="{StaticResource SecondaryTextBlockStyle}" Margin="0,4,0,4" />
+                        <TextBlock Text="✅ Three monitoring modes (Active/Background/Paused)"
+                                  Style="{StaticResource SecondaryTextBlockStyle}" Margin="0,4,0,4" />
+                        <TextBlock Text="✅ Administrator privilege handling with clear indicators"
+                                  Style="{StaticResource SecondaryTextBlockStyle}" Margin="0,4,0,0" />
+                    </StackPanel>
+                </Grid>
+            </Border>
+
+            <!-- Action Buttons -->
+            <Grid Grid.Row="4">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="*" />
+                </Grid.RowDefinitions>
+
+                <Button Grid.Row="0" Content="Check for Updates" Style="{StaticResource PrimaryButtonStyle}"
+                       Padding="16,12" Margin="0,0,0,12" />
+
+                <Grid Grid.Row="1" Margin="0,0,0,12">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="*" />
+                    </Grid.ColumnDefinitions>
+
+                    <Button Grid.Column="0" Content="View Changelog" Style="{StaticResource SecondaryButtonStyle}"
+                           Padding="16,12" Margin="0,0,12,0" />
+                    <Button Grid.Column="1" Content="Open Source Licenses" Style="{StaticResource SecondaryButtonStyle}"
+                           Padding="16,12" Margin="0,0,12,0" />
+                    <Button Grid.Column="2" Content="Report Issue" Style="{StaticResource SecondaryButtonStyle}"
+                           Padding="16,12" />
+                </Grid>
+
+                <TextBlock Grid.Row="2" Text="Powered by Event Horizon Design System"
+                          Style="{StaticResource SecondaryTextBlockStyle}" TextAlignment="Center"
+                          Margin="0,12,0,0" />
+            </Grid>
+        </Grid>
+    </ScrollViewer>
+</UserControl>
