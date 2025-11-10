@@ -171,6 +171,7 @@ namespace PCOptimizer.Services
 
         public async Task<OptimizationResult> OptimizeAMDGPU(bool maxPerformance = true, bool disableVSync = true)
         {
+            await Task.CompletedTask;
             try
             {
                 var changes = new List<string>();
@@ -314,7 +315,8 @@ namespace PCOptimizer.Services
                     UseShellExecute = false,
                     Verb = "runas"
                 });
-                await process.WaitForExitAsync();
+                if (process != null)
+                    await process.WaitForExitAsync();
                 changes.Add("Created Gaming Ultra Performance plan");
 
                 // Activate the plan
@@ -326,7 +328,8 @@ namespace PCOptimizer.Services
                     UseShellExecute = false,
                     Verb = "runas"
                 });
-                await process.WaitForExitAsync();
+                if (process != null)
+                    await process.WaitForExitAsync();
                 changes.Add("Activated Gaming power plan");
 
                 // Configure plan settings
@@ -352,7 +355,8 @@ namespace PCOptimizer.Services
                         UseShellExecute = false,
                         Verb = "runas"
                     });
-                    await process.WaitForExitAsync();
+                    if (process != null)
+                        await process.WaitForExitAsync();
                 }
                 changes.Add("Configured power plan settings");
 
@@ -449,6 +453,7 @@ namespace PCOptimizer.Services
 
         public async Task<OptimizationResult> DisableCoreParking()
         {
+            await Task.CompletedTask;
             try
             {
                 using (var key = Registry.LocalMachine.OpenSubKey(
@@ -482,6 +487,7 @@ namespace PCOptimizer.Services
 
         public async Task<OptimizationResult> OptimizeDisplay()
         {
+            await Task.CompletedTask;
             try
             {
                 var changes = new List<string>();
@@ -539,8 +545,9 @@ namespace PCOptimizer.Services
             }
         }
 
-        public async Task<OptimizationResult> EnableFullscreenExclusive(string[] gameExecutables = null)
+        public async Task<OptimizationResult> EnableFullscreenExclusive(string[]? gameExecutables = null)
         {
+            await Task.CompletedTask;
             try
             {
                 var changes = new List<string>();
@@ -594,6 +601,7 @@ namespace PCOptimizer.Services
 
         public async Task<OptimizationResult> OptimizeAudioLatency()
         {
+            await Task.CompletedTask;
             try
             {
                 var changes = new List<string>();
@@ -657,6 +665,7 @@ namespace PCOptimizer.Services
 
         public async Task<OptimizationResult> ClearStandbyMemory()
         {
+            await Task.CompletedTask;
             try
             {
                 // Use native Windows API to clear standby memory
@@ -684,6 +693,7 @@ namespace PCOptimizer.Services
 
         public async Task<OptimizationResult> OptimizePageFile()
         {
+            await Task.CompletedTask;
             try
             {
                 var changes = new List<string>();
@@ -775,7 +785,8 @@ namespace PCOptimizer.Services
                         UseShellExecute = false,
                         Verb = "runas"
                     });
-                    await process.WaitForExitAsync();
+                    if (process != null)
+                        await process.WaitForExitAsync();
                 }
                 changes.Add("TCP settings optimized");
 
@@ -834,7 +845,8 @@ namespace PCOptimizer.Services
                     UseShellExecute = false,
                     Verb = "runas"
                 });
-                await process.WaitForExitAsync();
+                if (process != null)
+                    await process.WaitForExitAsync();
                 changes.Add("USB selective suspend disabled");
 
                 // Disable USB power management
@@ -895,6 +907,7 @@ namespace PCOptimizer.Services
 
         public async Task<OptimizationResult> ApplyRegistryTweaks()
         {
+            await Task.CompletedTask;
             try
             {
                 var changes = new List<string>();
@@ -969,7 +982,8 @@ namespace PCOptimizer.Services
                     UseShellExecute = false,
                     Verb = "runas"
                 });
-                await process.WaitForExitAsync();
+                if (process != null)
+                    await process.WaitForExitAsync();
                 changes.Add("TRIM enabled");
 
                 // Disable LargeSystemCache (gaming optimized)
@@ -1004,6 +1018,7 @@ namespace PCOptimizer.Services
 
         public async Task<OptimizationResult> EnableMSIMode()
         {
+            await Task.CompletedTask;
             try
             {
                 var changes = new List<string>();
@@ -1070,6 +1085,7 @@ namespace PCOptimizer.Services
 
         public async Task<OptimizationResult> SetTimerResolution(double resolutionMS = 0.5)
         {
+            await Task.CompletedTask;
             try
             {
                 // Convert ms to 100-nanosecond units
@@ -1139,9 +1155,12 @@ namespace PCOptimizer.Services
                             RedirectStandardError = true,
                             Verb = "runas"
                         });
-                        await process.WaitForExitAsync();
-                        if (process.ExitCode == 0)
-                            disabledCount++;
+                        if (process != null)
+                        {
+                            await process.WaitForExitAsync();
+                            if (process.ExitCode == 0)
+                                disabledCount++;
+                        }
                     }
                     catch { }
                 }
@@ -1182,12 +1201,21 @@ namespace PCOptimizer.Services
                     UseShellExecute = false,
                     Verb = "runas"
                 });
-                await process.WaitForExitAsync();
+                if (process != null)
+                {
+                    await process.WaitForExitAsync();
 
+                    return new OptimizationResult
+                    {
+                        Success = process.ExitCode == 0,
+                        Message = "HPET disabled (requires restart)",
+                        Category = "System"
+                    };
+                }
                 return new OptimizationResult
                 {
-                    Success = process.ExitCode == 0,
-                    Message = "HPET disabled (requires restart)",
+                    Success = false,
+                    Message = "Failed to start bcdedit process",
                     Category = "System"
                 };
             }
@@ -1214,12 +1242,21 @@ namespace PCOptimizer.Services
                     UseShellExecute = false,
                     Verb = "runas"
                 });
-                await process.WaitForExitAsync();
+                if (process != null)
+                {
+                    await process.WaitForExitAsync();
 
+                    return new OptimizationResult
+                    {
+                        Success = process.ExitCode == 0,
+                        Message = "HPET enabled (requires restart)",
+                        Category = "System"
+                    };
+                }
                 return new OptimizationResult
                 {
-                    Success = process.ExitCode == 0,
-                    Message = "HPET enabled (requires restart)",
+                    Success = false,
+                    Message = "Failed to start bcdedit process",
                     Category = "System"
                 };
             }
@@ -1272,9 +1309,12 @@ namespace PCOptimizer.Services
                             CreateNoWindow = true,
                             UseShellExecute = false
                         });
-                        await process.WaitForExitAsync();
-                        if (process.ExitCode == 0)
-                            removedCount++;
+                        if (process != null)
+                        {
+                            await process.WaitForExitAsync();
+                            if (process.ExitCode == 0)
+                                removedCount++;
+                        }
                     }
                     catch { }
                 }
@@ -1305,7 +1345,8 @@ namespace PCOptimizer.Services
                             UseShellExecute = false,
                             Verb = "runas"
                         });
-                        await process.WaitForExitAsync();
+                        if (process != null)
+                            await process.WaitForExitAsync();
                     }
                     catch { }
                 }
@@ -1342,7 +1383,8 @@ namespace PCOptimizer.Services
                     UseShellExecute = false,
                     Verb = "runas"
                 });
-                await process.WaitForExitAsync();
+                if (process != null)
+                    await process.WaitForExitAsync();
 
                 process = Process.Start(new ProcessStartInfo
                 {
@@ -1352,7 +1394,8 @@ namespace PCOptimizer.Services
                     UseShellExecute = false,
                     Verb = "runas"
                 });
-                await process.WaitForExitAsync();
+                if (process != null)
+                    await process.WaitForExitAsync();
 
                 return new OptimizationResult
                 {
@@ -1384,7 +1427,8 @@ namespace PCOptimizer.Services
                     UseShellExecute = false,
                     Verb = "runas"
                 });
-                await process.WaitForExitAsync();
+                if (process != null)
+                    await process.WaitForExitAsync();
 
                 process = Process.Start(new ProcessStartInfo
                 {
@@ -1394,7 +1438,8 @@ namespace PCOptimizer.Services
                     UseShellExecute = false,
                     Verb = "runas"
                 });
-                await process.WaitForExitAsync();
+                if (process != null)
+                    await process.WaitForExitAsync();
 
                 return new OptimizationResult
                 {
@@ -1446,7 +1491,8 @@ namespace PCOptimizer.Services
                             UseShellExecute = false,
                             Verb = "runas"
                         });
-                        await process.WaitForExitAsync();
+                        if (process != null)
+                            await process.WaitForExitAsync();
                     }
                     catch { }
                 }
@@ -1482,6 +1528,7 @@ namespace PCOptimizer.Services
 
         public async Task<OptimizationResult> OptimizeMouseKeyboard()
         {
+            await Task.CompletedTask;
             try
             {
                 var changes = new List<string>();
@@ -1820,12 +1867,21 @@ namespace PCOptimizer.Services
                 };
 
                 var process = Process.Start(psi);
-                await process!.WaitForExitAsync();
+                if (process != null)
+                {
+                    await process.WaitForExitAsync();
 
+                    return new OptimizationResult
+                    {
+                        Success = process.ExitCode == 0,
+                        Message = process.ExitCode == 0 ? "System restore point created successfully" : "Failed to create restore point",
+                        Category = "Utility"
+                    };
+                }
                 return new OptimizationResult
                 {
-                    Success = process.ExitCode == 0,
-                    Message = process.ExitCode == 0 ? "System restore point created successfully" : "Failed to create restore point",
+                    Success = false,
+                    Message = "Failed to start restore point process",
                     Category = "Utility"
                 };
             }

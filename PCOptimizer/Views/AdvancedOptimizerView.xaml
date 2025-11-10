@@ -5,20 +5,8 @@
              Foreground="{StaticResource PrimaryTextBrush}">
 
     <Grid Margin="24">
-        <Grid.RowDefinitions>
-            <RowDefinition Height="Auto" />
-            <RowDefinition Height="*" />
-        </Grid.RowDefinitions>
-
-        <!-- Header -->
-        <StackPanel Grid.Row="0" Margin="0,0,0,24">
-            <TextBlock Text="Advanced Optimizer" Style="{StaticResource H2TextBlockStyle}" Margin="0,0,0,8" />
-            <TextBlock Text="Professional system optimization tools and advanced tweaks"
-                      Style="{StaticResource SecondaryTextBlockStyle}" />
-        </StackPanel>
-
         <!-- Tab Control -->
-        <TabControl Grid.Row="1" Background="{StaticResource DarkGrayBrush}"
+        <TabControl Background="{StaticResource DarkGrayBrush}"
                    Foreground="{StaticResource PrimaryTextBrush}">
 
             <!-- Performance Tab -->

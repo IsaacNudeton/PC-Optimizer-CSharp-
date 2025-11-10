@@ -12,6 +12,14 @@ namespace PCOptimizer
     {
         private DispatcherTimer _clockTimer;
 
+        // Cache views for instant navigation
+        private DashboardView? _dashboardView;
+        private AdvancedOptimizerView? _advancedOptimizerView;
+        private PerformanceAnalyticsView? _performanceAnalyticsView;
+        private OperationHistoryLogView? _operationHistoryLogView;
+        private SettingsView? _settingsView;
+        private AboutView? _aboutView;
+
         public MainWindow()
         {
             InitializeComponent();
@@ -31,9 +39,13 @@ namespace PCOptimizer
             TimeText.Text = DateTime.Now.ToString("HH:mm:ss - ddd, MMM dd");
         }
 
-        private void NavigateToDashboard(object sender, RoutedEventArgs e)
+        private void NavigateToDashboard(object? sender, RoutedEventArgs? e)
         {
-            ContentFrame.Navigate(new DashboardView { DataContext = DataContext });
+            if (_dashboardView == null)
+            {
+                _dashboardView = new DashboardView { DataContext = DataContext };
+            }
+            ContentFrame.Navigate(_dashboardView);
             UpdateActiveButton(DashboardButton);
             PageTitleText.Text = "Dashboard";
             PageSubtitleText.Text = "Real-time system monitoring and performance metrics";
@@ -41,7 +53,11 @@ namespace PCOptimizer
 
         private void NavigateToOptimizer(object sender, RoutedEventArgs e)
         {
-            ContentFrame.Navigate(new AdvancedOptimizerView { DataContext = DataContext });
+            if (_advancedOptimizerView == null)
+            {
+                _advancedOptimizerView = new AdvancedOptimizerView { DataContext = DataContext };
+            }
+            ContentFrame.Navigate(_advancedOptimizerView);
             UpdateActiveButton(OptimizerButton);
             PageTitleText.Text = "Advanced Optimizer";
             PageSubtitleText.Text = "Professional system optimization tools and tweaks";
@@ -49,7 +65,11 @@ namespace PCOptimizer
 
         private void NavigateToAnalytics(object sender, RoutedEventArgs e)
         {
-            ContentFrame.Navigate(new PerformanceAnalyticsView { DataContext = DataContext });
+            if (_performanceAnalyticsView == null)
+            {
+                _performanceAnalyticsView = new PerformanceAnalyticsView { DataContext = DataContext };
+            }
+            ContentFrame.Navigate(_performanceAnalyticsView);
             UpdateActiveButton(AnalyticsButton);
             PageTitleText.Text = "Performance Analytics";
             PageSubtitleText.Text = "Historical data visualization and anomaly detection";
@@ -57,7 +77,11 @@ namespace PCOptimizer
 
         private void NavigateToHistory(object sender, RoutedEventArgs e)
         {
-            ContentFrame.Navigate(new OperationHistoryLogView { DataContext = DataContext });
+            if (_operationHistoryLogView == null)
+            {
+                _operationHistoryLogView = new OperationHistoryLogView { DataContext = DataContext };
+            }
+            ContentFrame.Navigate(_operationHistoryLogView);
             UpdateActiveButton(HistoryButton);
             PageTitleText.Text = "Operation History Log";
             PageSubtitleText.Text = "Timeline of all system optimizations and changes";
@@ -65,7 +89,11 @@ namespace PCOptimizer
 
         private void NavigateToSettings(object sender, RoutedEventArgs e)
         {
-            ContentFrame.Navigate(new SettingsView { DataContext = DataContext });
+            if (_settingsView == null)
+            {
+                _settingsView = new SettingsView { DataContext = DataContext };
+            }
+            ContentFrame.Navigate(_settingsView);
             UpdateActiveButton(SettingsButton);
             PageTitleText.Text = "Settings";
             PageSubtitleText.Text = "Configure application behavior and preferences";
@@ -73,7 +101,11 @@ namespace PCOptimizer
 
         private void NavigateToAbout(object sender, RoutedEventArgs e)
         {
-            ContentFrame.Navigate(new AboutView { DataContext = DataContext });
+            if (_aboutView == null)
+            {
+                _aboutView = new AboutView { DataContext = DataContext };
+            }
+            ContentFrame.Navigate(_aboutView);
             UpdateActiveButton(AboutButton);
             PageTitleText.Text = "About";
             PageSubtitleText.Text = "Application information and system details";

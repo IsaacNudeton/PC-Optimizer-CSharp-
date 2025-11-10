@@ -11,20 +11,11 @@
                 <RowDefinition Height="Auto" />
                 <RowDefinition Height="Auto" />
                 <RowDefinition Height="Auto" />
-                <RowDefinition Height="Auto" />
                 <RowDefinition Height="*" />
             </Grid.RowDefinitions>
 
-            <!-- Header -->
-            <StackPanel Grid.Row="0" HorizontalAlignment="Center" Margin="0,0,0,24">
-                <TextBlock Text="About PC Optimizer" Style="{StaticResource H2TextBlockStyle}"
-                          TextAlignment="Center" Margin="0,0,0,12" />
-                <TextBlock Text="Professional system optimization powered by Event Horizon"
-                          Style="{StaticResource SecondaryTextBlockStyle}" TextAlignment="Center" />
-            </StackPanel>
-
             <!-- App Info Card -->
-            <Border Grid.Row="1" Style="{StaticResource CardStyle}" Margin="0,0,0,24">
+            <Border Grid.Row="0" Style="{StaticResource CardStyle}" Margin="0,0,0,24">
                 <Grid>
                     <Grid.RowDefinitions>
                         <RowDefinition Height="Auto" />
@@ -64,7 +55,7 @@
             </Border>
 
             <!-- System Specifications Card -->
-            <Border Grid.Row="2" Style="{StaticResource CardStyle}" Margin="0,0,0,24">
+            <Border Grid.Row="1" Style="{StaticResource CardStyle}" Margin="0,0,0,24">
                 <Grid>
                     <Grid.RowDefinitions>
                         <RowDefinition Height="Auto" />
@@ -135,7 +126,7 @@
             </Border>
 
             <!-- Features Card -->
-            <Border Grid.Row="3" Style="{StaticResource CardStyle}" Margin="0,0,0,24">
+            <Border Grid.Row="2" Style="{StaticResource CardStyle}" Margin="0,0,0,24">
                 <Grid>
                     <Grid.RowDefinitions>
                         <RowDefinition Height="Auto" />
@@ -170,7 +161,7 @@
             </Border>
 
             <!-- Action Buttons -->
-            <Grid Grid.Row="4">
+            <Grid Grid.Row="3">
                 <Grid.RowDefinitions>
                     <RowDefinition Height="Auto" />
                     <RowDefinition Height="Auto" />

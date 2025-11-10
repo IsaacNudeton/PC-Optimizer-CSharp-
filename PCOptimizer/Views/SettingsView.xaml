@@ -10,19 +10,11 @@
                 <RowDefinition Height="Auto" />
                 <RowDefinition Height="Auto" />
                 <RowDefinition Height="Auto" />
-                <RowDefinition Height="Auto" />
                 <RowDefinition Height="*" />
             </Grid.RowDefinitions>
 
-            <!-- Header -->
-            <StackPanel Grid.Row="0" Margin="0,0,0,24">
-                <TextBlock Text="Settings" Style="{StaticResource H2TextBlockStyle}" Margin="0,0,0,8" />
-                <TextBlock Text="Configure application behavior and preferences"
-                          Style="{StaticResource SecondaryTextBlockStyle}" />
-            </StackPanel>
-
             <!-- Monitoring Settings -->
-            <Border Grid.Row="1" Style="{StaticResource CardStyle}" Margin="0,0,0,24">
+            <Border Grid.Row="0" Style="{StaticResource CardStyle}" Margin="0,0,0,24">
                 <Grid>
                     <Grid.RowDefinitions>
                         <RowDefinition Height="Auto" />
@@ -57,7 +49,7 @@
             </Border>
 
             <!-- Visual Settings -->
-            <Border Grid.Row="2" Style="{StaticResource CardStyle}" Margin="0,0,0,24">
+            <Border Grid.Row="1" Style="{StaticResource CardStyle}" Margin="0,0,0,24">
                 <Grid>
                     <Grid.RowDefinitions>
                         <RowDefinition Height="Auto" />
@@ -88,7 +80,7 @@
             </Border>
 
             <!-- Advanced Settings -->
-            <Border Grid.Row="3" Style="{StaticResource CardStyle}" Margin="0,0,0,24">
+            <Border Grid.Row="2" Style="{StaticResource CardStyle}" Margin="0,0,0,24">
                 <Grid>
                     <Grid.RowDefinitions>
                         <RowDefinition Height="Auto" />

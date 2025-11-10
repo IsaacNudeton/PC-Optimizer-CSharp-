@@ -88,7 +88,7 @@ namespace PCOptimizer.Services
             var cpuSpikePipeline = _mlContext.Transforms.DetectIidSpike(
                 outputColumnName: nameof(SpikePrediction.Prediction),
                 inputColumnName: nameof(PerformanceData.Value),
-                confidence: 95,  // 95% confidence level
+                confidence: 95.0,  // 95% confidence level
                 pvalueHistoryLength: 20  // Size of sliding window
             );
             _cpuSpikeModel = cpuSpikePipeline.Fit(cpuSpikeTrainingData);
@@ -99,7 +99,7 @@ namespace PCOptimizer.Services
             var gpuSpikePipeline = _mlContext.Transforms.DetectIidSpike(
                 outputColumnName: nameof(SpikePrediction.Prediction),
                 inputColumnName: nameof(PerformanceData.Value),
-                confidence: 95,
+                confidence: 95.0,
                 pvalueHistoryLength: 20
             );
             _gpuSpikeModel = gpuSpikePipeline.Fit(gpuSpikeTrainingData);
@@ -110,7 +110,7 @@ namespace PCOptimizer.Services
             var ramSpikePipeline = _mlContext.Transforms.DetectIidSpike(
                 outputColumnName: nameof(SpikePrediction.Prediction),
                 inputColumnName: nameof(PerformanceData.Value),
-                confidence: 95,
+                confidence: 95.0,
                 pvalueHistoryLength: 20
             );
             _ramSpikeModel = ramSpikePipeline.Fit(ramSpikeTrainingData);
@@ -121,7 +121,7 @@ namespace PCOptimizer.Services
             var cpuChangePointPipeline = _mlContext.Transforms.DetectIidChangePoint(
                 outputColumnName: nameof(ChangePointPrediction.Prediction),
                 inputColumnName: nameof(PerformanceData.Value),
-                confidence: 95,
+                confidence: 95.0,
                 changeHistoryLength: 20  // Number of points to look back for change detection
             );
             _cpuChangePointModel = cpuChangePointPipeline.Fit(cpuChangePointTrainingData);
@@ -132,7 +132,7 @@ namespace PCOptimizer.Services
             var gpuChangePointPipeline = _mlContext.Transforms.DetectIidChangePoint(
                 outputColumnName: nameof(ChangePointPrediction.Prediction),
                 inputColumnName: nameof(PerformanceData.Value),
-                confidence: 95,
+                confidence: 95.0,
                 changeHistoryLength: 20
             );
             _gpuChangePointModel = gpuChangePointPipeline.Fit(gpuChangePointTrainingData);
@@ -143,7 +143,7 @@ namespace PCOptimizer.Services
             var ramChangePointPipeline = _mlContext.Transforms.DetectIidChangePoint(
                 outputColumnName: nameof(ChangePointPrediction.Prediction),
                 inputColumnName: nameof(PerformanceData.Value),
-                confidence: 95,
+                confidence: 95.0,
                 changeHistoryLength: 20
             );
             _ramChangePointModel = ramChangePointPipeline.Fit(ramChangePointTrainingData);

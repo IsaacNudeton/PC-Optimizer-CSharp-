@@ -9,19 +9,11 @@
             <Grid.RowDefinitions>
                 <RowDefinition Height="Auto" />
                 <RowDefinition Height="Auto" />
-                <RowDefinition Height="Auto" />
                 <RowDefinition Height="*" />
             </Grid.RowDefinitions>
 
-            <!-- Header -->
-            <StackPanel Grid.Row="0" Margin="0,0,0,24">
-                <TextBlock Text="Operation History Log" Style="{StaticResource H2TextBlockStyle}" Margin="0,0,0,8" />
-                <TextBlock Text="Timeline of all system optimizations and changes"
-                          Style="{StaticResource SecondaryTextBlockStyle}" />
-            </StackPanel>
-
             <!-- Filters -->
-            <Border Grid.Row="1" Style="{StaticResource CardStyle}" Margin="0,0,0,24">
+            <Border Grid.Row="0" Style="{StaticResource CardStyle}" Margin="0,0,0,24">
                 <Grid>
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition Width="*" />
@@ -56,7 +48,7 @@
             </Border>
 
             <!-- Timeline -->
-            <StackPanel Grid.Row="2" Margin="0,0,0,24">
+            <StackPanel Grid.Row="1" Margin="0,0,0,24">
                 <!-- Date Separator - January 15, 2025 -->
                 <TextBlock Text="📅 January 15, 2025" Style="{StaticResource H3TextBlockStyle}"
                           Margin="0,0,0,16" Foreground="{StaticResource GoldMediumBrush}" />
@@ -161,11 +153,11 @@
             </StackPanel>
 
             <!-- Date Separator - January 14, 2025 -->
-            <TextBlock Grid.Row="3" Text="📅 January 14, 2025" Style="{StaticResource H3TextBlockStyle}"
+            <TextBlock Grid.Row="2" Text="📅 January 14, 2025" Style="{StaticResource H3TextBlockStyle}"
                       Margin="0,0,0,16" Foreground="{StaticResource GoldMediumBrush}" />
 
             <!-- More Timeline Items for January 14 -->
-            <StackPanel Grid.Row="3">
+            <StackPanel Grid.Row="2">
                 <!-- Timeline Item 4 -->
                 <Border Background="{StaticResource DarkGrayBrush}" BorderBrush="{StaticResource GoldBrightBrush}"
                        BorderThickness="2" CornerRadius="12" Padding="20" Margin="0,16,0,12">

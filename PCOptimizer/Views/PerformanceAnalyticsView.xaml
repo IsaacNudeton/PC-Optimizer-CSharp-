@@ -10,19 +10,11 @@
                 <RowDefinition Height="Auto" />
                 <RowDefinition Height="Auto" />
                 <RowDefinition Height="Auto" />
-                <RowDefinition Height="Auto" />
                 <RowDefinition Height="*" />
             </Grid.RowDefinitions>
 
-            <!-- Header -->
-            <StackPanel Grid.Row="0" Margin="0,0,0,24">
-                <TextBlock Text="Performance Analytics" Style="{StaticResource H2TextBlockStyle}" Margin="0,0,0,8" />
-                <TextBlock Text="Historical data visualization and anomaly detection timeline"
-                          Style="{StaticResource SecondaryTextBlockStyle}" />
-            </StackPanel>
-
             <!-- Time Range Selector -->
-            <Border Grid.Row="1" Style="{StaticResource CardStyle}" Margin="0,0,0,24">
+            <Border Grid.Row="0" Style="{StaticResource CardStyle}" Margin="0,0,0,24">
                 <StackPanel>
                     <TextBlock Text="Time Range" Style="{StaticResource H3TextBlockStyle}" Margin="0,0,0,12" />
                     <Grid>
@@ -49,7 +41,7 @@
             </Border>
 
             <!-- Historical Performance Chart -->
-            <Border Grid.Row="2" Style="{StaticResource CardStyle}" Margin="0,0,0,24">
+            <Border Grid.Row="1" Style="{StaticResource CardStyle}" Margin="0,0,0,24">
                 <Grid>
                     <Grid.RowDefinitions>
                         <RowDefinition Height="Auto" />
@@ -90,7 +82,7 @@
             </Border>
 
             <!-- Anomaly Detection Timeline -->
-            <Border Grid.Row="3" Style="{StaticResource CardStyle}" Margin="0,0,0,24">
+            <Border Grid.Row="2" Style="{StaticResource CardStyle}" Margin="0,0,0,24">
                 <Grid>
                     <Grid.RowDefinitions>
                         <RowDefinition Height="Auto" />
@@ -234,7 +226,7 @@
             </Border>
 
             <!-- Performance Trends -->
-            <Border Grid.Row="4" Style="{StaticResource CardStyle}">
+            <Border Grid.Row="3" Style="{StaticResource CardStyle}">
                 <Grid>
                     <Grid.RowDefinitions>
                         <RowDefinition Height="Auto" />

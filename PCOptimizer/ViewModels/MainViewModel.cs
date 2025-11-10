@@ -122,19 +122,19 @@ namespace PCOptimizer.ViewModels
             _optimizer = new OptimizerService();
 
             // Initialize commands
-            OptimizeAllCommand = new RelayCommand(async () => await OptimizeAll(), () => !IsOptimizing);
-            OptimizeCpuCommand = new RelayCommand(async () => await OptimizeCpu(), () => !IsOptimizing);
-            OptimizeRamCommand = new RelayCommand(async () => await OptimizeRam(), () => !IsOptimizing);
-            OptimizeGpuCommand = new RelayCommand(async () => await OptimizeGpu(), () => !IsOptimizing);
-            OptimizeNetworkCommand = new RelayCommand(async () => await OptimizeNetwork(), () => !IsOptimizing);
+            OptimizeAllCommand = new RelayCommand(() => _ = OptimizeAll(), () => !IsOptimizing);
+            OptimizeCpuCommand = new RelayCommand(() => _ = OptimizeCpu(), () => !IsOptimizing);
+            OptimizeRamCommand = new RelayCommand(() => _ = OptimizeRam(), () => !IsOptimizing);
+            OptimizeGpuCommand = new RelayCommand(() => _ = OptimizeGpu(), () => !IsOptimizing);
+            OptimizeNetworkCommand = new RelayCommand(() => _ = OptimizeNetwork(), () => !IsOptimizing);
 
             // Initialize Quick Action commands
-            GamingModeCommand = new RelayCommand(async () => await ApplyGamingMode(), () => !IsOptimizing);
-            BalancedModeCommand = new RelayCommand(async () => await ApplyBalancedMode(), () => !IsOptimizing);
-            EcoModeCommand = new RelayCommand(async () => await ApplyEcoMode(), () => !IsOptimizing);
-            DiskCleanupCommand = new RelayCommand(async () => await RunDiskCleanup(), () => !IsOptimizing);
+            GamingModeCommand = new RelayCommand(() => _ = ApplyGamingMode(), () => !IsOptimizing);
+            BalancedModeCommand = new RelayCommand(() => _ = ApplyBalancedMode(), () => !IsOptimizing);
+            EcoModeCommand = new RelayCommand(() => _ = ApplyEcoMode(), () => !IsOptimizing);
+            DiskCleanupCommand = new RelayCommand(() => _ = RunDiskCleanup(), () => !IsOptimizing);
             AdvancedTweaksCommand = new RelayCommand(() => NavigateToAdvancedOptimizer());
-            SystemBackupCommand = new RelayCommand(async () => await CreateBackup(), () => !IsOptimizing);
+            SystemBackupCommand = new RelayCommand(() => _ = CreateBackup(), () => !IsOptimizing);
 
             // Update timer - starts at 2 seconds (Active mode)
             _updateTimer = new DispatcherTimer

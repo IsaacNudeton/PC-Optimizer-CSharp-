@@ -18,6 +18,9 @@ namespace PCOptimizer.Views
                 // Subscribe to property changes to update the display
                 viewModel.PropertyChanged += (s, args) =>
                 {
+                    if (args.PropertyName == null)
+                        return;
+
                     if (args.PropertyName == nameof(MainViewModel.CpuUsage))
                     {
                         CpuValueText.Text = $"{viewModel.CpuUsage:F1}%";
