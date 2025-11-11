@@ -7,7 +7,7 @@
         <ResourceDictionary>
             <ResourceDictionary.MergedDictionaries>
                 <!-- CosmicUI Base Theme (Default: Void/Universal) -->
-                <ResourceDictionary Source="CosmicUI/Themes/VoidTheme.xaml" />
+                <ResourceDictionary Source="pack://application:,,,/CosmicUI/Themes/VoidTheme.xaml" />
             </ResourceDictionary.MergedDictionaries>
         </ResourceDictionary>
     </Application.Resources>

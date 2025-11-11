@@ -1,0 +1,50 @@
+<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+
+    <!-- VOID / EVENT HORIZON MONOCHROME PALETTE -->
+
+    <!-- Background Colors -->
+    <SolidColorBrush x:Key="VoidBlackBrush" Color="#000000" />
+    <SolidColorBrush x:Key="EventHorizonBrush" Color="#0D0D0D" />
+    <SolidColorBrush x:Key="DeepSpaceBrush" Color="#1A1A1A" />
+    <SolidColorBrush x:Key="DarkMatterBrush" Color="#262626" />
+
+    <!-- Text Colors -->
+    <SolidColorBrush x:Key="StarlightBrush" Color="#FFFFFF" />
+    <SolidColorBrush x:Key="SilverGlowBrush" Color="#E0E0E0" />
+    <SolidColorBrush x:Key="GrayNebulaBrush" Color="#999999" />
+    <SolidColorBrush x:Key="DimStarBrush" Color="#666666" />
+
+    <!-- Accent Colors - Hawking Radiation Glow -->
+    <SolidColorBrush x:Key="HawkingRadiationBrush" Color="#B8D4E8" />
+    <SolidColorBrush x:Key="QuantumGlowBrush" Color="#8FB8D8" />
+
+    <!-- Semantic Colors -->
+    <SolidColorBrush x:Key="SuccessVoidBrush" Color="#B8E8C0" />
+    <SolidColorBrush x:Key="WarningVoidBrush" Color="#E8D8B8" />
+    <SolidColorBrush x:Key="DangerVoidBrush" Color="#E8B8B8" />
+
+    <!-- Gradients -->
+    <LinearGradientBrush x:Key="EventHorizonGradient" StartPoint="0,0" EndPoint="1,1">
+        <GradientStop Color="#0D0D0D" Offset="0" />
+        <GradientStop Color="#1A1A1A" Offset="0.5" />
+        <GradientStop Color="#0D0D0D" Offset="1" />
+    </LinearGradientBrush>
+
+    <RadialGradientBrush x:Key="GravitationalLensGradient" GradientOrigin="0.5,0.5">
+        <GradientStop Color="#FFFFFF" Offset="0" />
+        <GradientStop Color="#B8D4E8" Offset="0.3" />
+        <GradientStop Color="#8FB8D8" Offset="0.6" />
+        <GradientStop Color="#000000" Offset="1" />
+    </RadialGradientBrush>
+
+    <!-- Accretion Disk Gradient (for gauges) -->
+    <LinearGradientBrush x:Key="AccretionDiskGradient" StartPoint="0,0" EndPoint="1,0">
+        <GradientStop Color="#FFFFFF" Offset="0" />
+        <GradientStop Color="#E0E0E0" Offset="0.2" />
+        <GradientStop Color="#B8D4E8" Offset="0.5" />
+        <GradientStop Color="#8FB8D8" Offset="0.8" />
+        <GradientStop Color="#000000" Offset="1" />
+    </LinearGradientBrush>
+
+</ResourceDictionary>

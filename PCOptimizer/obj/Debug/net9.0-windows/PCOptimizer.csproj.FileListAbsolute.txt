@@ -246,3 +246,4 @@ C:\Users\isaac\PC-Optimizer-CSharp\PCOptimizer\obj\Debug\net9.0-windows\Views\Pe
 C:\Users\isaac\PC-Optimizer-CSharp\PCOptimizer\obj\Debug\net9.0-windows\Views\SettingsView.g.cs
 C:\Users\isaac\PC-Optimizer-CSharp\PCOptimizer\obj\Debug\net9.0-windows\Resources\ThemeResources.baml
 C:\Users\isaac\PC-Optimizer-CSharp\PCOptimizer\obj\Debug\net9.0-windows\PCOptimizer.sourcelink.json
+C:\Users\isaac\PC-Optimizer-CSharp\PCOptimizer\obj\Debug\net9.0-windows\CosmicUI\Resources\VoidTheme.baml

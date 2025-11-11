@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("PCOptimizer")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+894e99e2d835bf2067e9b5d50891c50308de5c4e")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+4d5fdf72dd136918f57e8a4a1038b81c32668d8f")]
 [assembly: System.Reflection.AssemblyProductAttribute("PCOptimizer")]
 [assembly: System.Reflection.AssemblyTitleAttribute("PCOptimizer")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
