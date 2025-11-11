@@ -1,0 +1,71 @@
+# Build outputs
+**/bin/
+**/obj/
+**/dist/
+PCOptimizer-Frontend/dist/
+
+# Node modules and dependencies
+node_modules/
+PCOptimizer-Frontend/node_modules/
+package-lock.json
+yarn.lock
+
+# Environment & secrets
+.env
+.env.local
+.env.*.local
+*.key
+credentials.json
+secrets.json
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*.user
+*.suo
+*.sln.user
+
+# Visual Studio
+.vs/
+.vscode/
+*.user
+*.suo
+
+# OS
+.DS_Store
+Thumbs.db
+nul
+desktop.ini
+
+# Temp files
+*.tmp
+build_output.txt
+.dotnet/
+*.bak
+*.log
+
+# .NET
+.vs/
+.vscode/
+bin/
+obj/
+*.csproj.user
+*.sln.user
+
+# Frontend
+PCOptimizer-Frontend/.env.local
+PCOptimizer-Frontend/dist/
+PCOptimizer-Frontend/node_modules/
+PCOptimizer-Frontend/.vite/
+
+# Build artifacts
+*.dll
+*.exe
+*.pdb
+*.deps.json
+
+# Rider
+.idea/
+*.sln.iml
