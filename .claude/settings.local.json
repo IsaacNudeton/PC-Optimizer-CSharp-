@@ -45,7 +45,8 @@
       "Bash(dotnet run:*)",
       "Bash(git commit:*)",
       "Bash(\"C:\\Program Files\\dotnet\\dotnet.exe\" build \"PCOptimizer-API\\PCOptimizer-API.csproj\" -c Debug)",
-      "Bash(pkill:*)"
+      "Bash(pkill:*)",
+      "Bash(git rm:*)"
     ],
     "deny": [],
     "ask": []
