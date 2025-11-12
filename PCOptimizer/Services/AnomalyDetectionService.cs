@@ -49,6 +49,7 @@ namespace PCOptimizer.Services
     public class AnomalyDetectionService
     {
         private readonly MLContext _mlContext;
+        private bool _modelsInitialized = false;
 
         // Separate pipelines for each metric
         private ITransformer? _cpuSpikeModel;
@@ -78,7 +79,15 @@ namespace PCOptimizer.Services
         public AnomalyDetectionService()
         {
             _mlContext = new MLContext(seed: 1);
-            InitializeModels();
+            try
+            {
+                InitializeModels();
+            }
+            catch (Exception ex)
+            {
+                System.Console.WriteLine($"[AnomalyDetectionService] Failed to initialize ML models: {ex.Message}");
+                System.Console.WriteLine("Anomaly detection will be disabled. API will continue to function normally.");
+            }
         }
 
         private void InitializeModels()
@@ -148,6 +157,10 @@ namespace PCOptimizer.Services
             );
             _ramChangePointModel = ramChangePointPipeline.Fit(ramChangePointTrainingData);
             _ramChangePointEngine = _mlContext.Model.CreatePredictionEngine<PerformanceData, ChangePointPrediction>(_ramChangePointModel);
+
+            // Mark models as successfully initialized
+            _modelsInitialized = true;
+            System.Console.WriteLine("[AnomalyDetectionService] ML models initialized successfully");
         }
 
         public List<AnomalyResult> DetectAnomalies(PerformanceMetrics metrics)
@@ -158,6 +171,12 @@ namespace PCOptimizer.Services
             AddToHistory(_cpuHistory, metrics.CpuUsage);
             AddToHistory(_gpuHistory, metrics.GpuUsage);
             AddToHistory(_ramHistory, (float)metrics.RamPercent);
+
+            // If models failed to initialize, skip anomaly detection
+            if (!_modelsInitialized)
+            {
+                return anomalies;
+            }
 
             // Only start detection after we have enough data points
             if (_cpuHistory.Count < MIN_DATA_POINTS)
@@ -272,8 +291,8 @@ namespace PCOptimizer.Services
 
         public bool IsReady()
         {
-            // System is ready when we have enough data points
-            return _cpuHistory.Count >= MIN_DATA_POINTS;
+            // System is ready when models are initialized AND we have enough data points
+            return _modelsInitialized && _cpuHistory.Count >= MIN_DATA_POINTS;
         }
     }
 }

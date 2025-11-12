@@ -43,7 +43,9 @@
       "Bash(git commit -m \"$(cat <<''EOF''\nchore: Add comprehensive .gitignore for C# .NET and React projects\n\n- Ignore build outputs (bin/, obj/, dist/)\n- Ignore node_modules and frontend artifacts\n- Ignore environment variables and secrets\n- Ignore IDE and OS files\n- Ignore temp and log files\n\nThis prevents build artifacts and dependencies from being tracked in version control.\n\n🤖 Generated with Claude Code\n\nCo-Authored-By: Claude <noreply@anthropic.com>\nEOF\n)\")",
       "Bash(curl:*)",
       "Bash(dotnet run:*)",
-      "Bash(git commit:*)"
+      "Bash(git commit:*)",
+      "Bash(\"C:\\Program Files\\dotnet\\dotnet.exe\" build \"PCOptimizer-API\\PCOptimizer-API.csproj\" -c Debug)",
+      "Bash(pkill:*)"
     ],
     "deny": [],
     "ask": []
