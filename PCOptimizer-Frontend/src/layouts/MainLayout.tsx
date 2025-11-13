@@ -60,7 +60,7 @@ const MainLayout: React.FC<MainLayoutProps> = ({ children, pageTitle = 'Dashboar
             width: DRAWER_WIDTH,
             boxSizing: 'border-box',
             bgcolor: 'background.paper',
-            borderRight: `2px solid ${theme.palette.primary.main}`,
+            borderRight: '1px solid #444',
           },
         }}
       >
@@ -68,7 +68,7 @@ const MainLayout: React.FC<MainLayoutProps> = ({ children, pageTitle = 'Dashboar
         <Box
           sx={{
             p: 2,
-            borderBottom: `2px solid ${theme.palette.primary.main}`,
+            borderBottom: '1px solid #444',
             textAlign: 'center',
           }}
         >

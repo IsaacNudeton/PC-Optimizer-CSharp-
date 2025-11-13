@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Universal - PC Optimizer Dashboard</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "primary": "#f48925",
+              "background-light": "#f8f7f5",
+              "background-dark": "#121212",
+              "accent-blue": "#00BFFF",
+              "accent-gold": "#FFD700",
+              "accent-copper": "#B87333",
+            },
+            fontFamily: {
+              "display": ["Inter", "sans-serif"]
+            },
+            borderRadius: {"DEFAULT": "0.5rem", "lg": "1rem", "xl": "1.5rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+        body {
+            background-color: #000000;
+        }
+        .text-glow {
+            text-shadow: 0 0 8px rgba(0, 191, 255, 0.5);
+        }
+        .box-glow {
+            box-shadow: 0 0 15px rgba(0, 191, 255, 0.2);
+        }
+        .icon-glow {
+             filter: drop-shadow(0 0 5px rgba(0, 191, 255, 0.7));
+        }
+        /* For the circular progress SVG */
+        .progress-ring-circle {
+            transition: stroke-dashoffset 0.35s;
+            transform: rotate(-90deg);
+            transform-origin: 50% 50%;
+        }
+    </style>
+</head>
+<body class="font-display bg-black text-gray-200">
+<div class="flex h-screen w-full">
+<!-- SideNavBar -->
+<aside class="flex-shrink-0 w-64 bg-background-dark p-4 flex flex-col justify-between">
+<div class="flex flex-col gap-6">
+<div class="flex items-center gap-3 px-2">
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-10" data-alt="Universal accretion disk logo" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCE2n9qwCeMmIZ5I7AX38_LkVVGqEv4hnwpToTkxnE3UreEeX5wP-EeCfrFx-xsGgrXHK-h3Z4xJKNL2aeYH98DjUSACIkFAzrJC9ufmtfZ4PAsRqiE6WKuhv5tpH4aI19o9-llDfPNQxRIWMa2vWmwTwhssmOfAV7q86dEJNDRv2JGgWIJWtzd-uUxb0l3Du7kub1U--U71CFLFsW6vg3PWw5DyZwz--x5UOsdgM5mYyNtJvVdTVimw9eJo67QLKS53HaUAHxtZA");'></div>
+<div class="flex flex-col">
+<h1 class="text-white text-base font-bold leading-normal">Universal</h1>
+<p class="text-accent-copper text-sm font-normal leading-normal">PC Optimizer</p>
+</div>
+</div>
+<nav class="flex flex-col gap-2">
+<a class="flex items-center gap-3 px-3 py-2 rounded-lg bg-accent-blue/20 text-accent-blue" href="#">
+<span class="material-symbols-outlined">dashboard</span>
+<p class="text-sm font-medium leading-normal">Dashboard</p>
+</a>
+<a class="flex items-center gap-3 px-3 py-2 rounded-lg text-gray-300 hover:bg-white/10 transition-colors" href="#">
+<span class="material-symbols-outlined">rocket_launch</span>
+<p class="text-sm font-medium leading-normal">Advanced Optimizer</p>
+</a>
+<a class="flex items-center gap-3 px-3 py-2 rounded-lg text-gray-300 hover:bg-white/10 transition-colors" href="#">
+<span class="material-symbols-outlined">analytics</span>
+<p class="text-sm font-medium leading-normal">Performance Analytics</p>
+</a>
+<a class="flex items-center gap-3 px-3 py-2 rounded-lg text-gray-300 hover:bg-white/10 transition-colors" href="#">
+<span class="material-symbols-outlined">settings</span>
+<p class="text-sm font-medium leading-normal">Settings</p>
+</a>
+<a class="flex items-center gap-3 px-3 py-2 rounded-lg text-gray-300 hover:bg-white/10 transition-colors" href="#">
+<span class="material-symbols-outlined">info</span>
+<p class="text-sm font-medium leading-normal">About</p>
+</a>
+<a class="flex items-center gap-3 px-3 py-2 rounded-lg text-gray-300 hover:bg-white/10 transition-colors" href="#">
+<span class="material-symbols-outlined">history</span>
+<p class="text-sm font-medium leading-normal">Operation History Log</p>
+</a>
+</nav>
+</div>
+</aside>
+<!-- Main Content -->
+<main class="flex-1 flex flex-col bg-black overflow-y-auto">
+<!-- Global Header -->
+<header class="flex-shrink-0 flex items-center justify-between p-4 border-b border-gray-800">
+<h2 class="text-xl font-bold text-white">Dashboard</h2>
+<div class="flex items-center gap-6">
+<div class="text-right">
+<p class="text-white font-semibold">10:42 PM</p>
+<p class="text-gray-400 text-sm">October 26, 2023</p>
+</div>
+<div class="flex items-center gap-2 bg-green-500/20 text-green-400 px-3 py-1 rounded-full text-sm">
+<span class="relative flex h-2 w-2">
+<span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
+<span class="relative inline-flex rounded-full h-2 w-2 bg-green-500"></span>
+</span>
+                        Monitoring: Active
+                    </div>
+</div>
+</header>
+<!-- Content Grid -->
+<div class="p-6">
+<div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+<!-- Column 1 -->
+<div class="flex flex-col gap-6">
+<!-- System Performance Gauges -->
+<div class="bg-background-dark p-6 rounded-xl border border-gray-800">
+<h3 class="text-lg font-semibold text-white mb-4">System Performance</h3>
+<div class="flex flex-col gap-4">
+<!-- CPU Gauge -->
+<div class="flex items-center gap-4">
+<div class="relative size-16">
+<svg class="size-full" viewbox="0 0 36 36"><path class="text-gray-700" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" fill="none" stroke-width="3"></path><path class="text-accent-blue progress-ring-circle" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" fill="none" stroke-dasharray="45, 100" stroke-linecap="round" stroke-width="3"></path></svg>
+<div class="absolute inset-0 flex items-center justify-center"><span class="font-bold text-lg text-white">45%</span></div>
+</div>
+<div class="flex-1"><p class="font-medium text-white">CPU</p><p class="text-sm text-gray-400">Intel Core i9-13900K</p></div>
+<svg class="w-24 h-8" fill="none" stroke="#00BFFF" stroke-width="2" xmlns="http://www.w3.org/2000/svg"><path d="M0 20 L10 15 L20 25 L30 10 L40 18 L50 12 L60 22 L70 18 L80 25 L90 20" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+</div>
+<!-- GPU Gauge -->
+<div class="flex items-center gap-4">
+<div class="relative size-16">
+<svg class="size-full" viewbox="0 0 36 36"><path class="text-gray-700" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" fill="none" stroke-width="3"></path><path class="text-accent-blue progress-ring-circle" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" fill="none" stroke-dasharray="62, 100" stroke-linecap="round" stroke-width="3"></path></svg>
+<div class="absolute inset-0 flex items-center justify-center"><span class="font-bold text-lg text-white">62%</span></div>
+</div>
+<div class="flex-1"><p class="font-medium text-white">GPU</p><p class="text-sm text-gray-400">NVIDIA RTX 4090</p></div>
+<svg class="w-24 h-8" fill="none" stroke="#00BFFF" stroke-width="2" xmlns="http://www.w3.org/2000/svg"><path d="M0 10 L10 18 L20 12 L30 25 L40 20 L50 15 L60 10 L70 18 L80 14 L90 22" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+</div>
+<!-- RAM Gauge -->
+<div class="flex items-center gap-4">
+<div class="relative size-16">
+<svg class="size-full" viewbox="0 0 36 36"><path class="text-gray-700" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" fill="none" stroke-width="3"></path><path class="text-accent-blue progress-ring-circle" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" fill="none" stroke-dasharray="78, 100" stroke-linecap="round" stroke-width="3"></path></svg>
+<div class="absolute inset-0 flex items-center justify-center"><span class="font-bold text-lg text-white">78%</span></div>
+</div>
+<div class="flex-1"><p class="font-medium text-white">RAM</p><p class="text-sm text-gray-400">32GB DDR5 6000MHz</p></div>
+<svg class="w-24 h-8" fill="none" stroke="#00BFFF" stroke-width="2" xmlns="http://www.w3.org/2000/svg"><path d="M0 15 L10 22 L20 18 L30 10 L40 14 L50 25 L60 20 L70 15 L80 12 L90 18" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+</div>
+</div>
+</div>
+<!-- Temperature Monitor -->
+<div class="bg-background-dark p-6 rounded-xl border border-gray-800">
+<h3 class="text-lg font-semibold text-white mb-4">Temperature Monitor</h3>
+<div class="grid grid-cols-2 gap-4 text-center">
+<div>
+<p class="text-5xl font-bold text-accent-gold">68°C</p>
+<p class="text-gray-400 mt-1">CPU</p>
+</div>
+<div>
+<p class="text-5xl font-bold text-accent-copper">75°C</p>
+<p class="text-gray-400 mt-1">GPU</p>
+</div>
+</div>
+</div>
+</div>
+<!-- Column 2 -->
+<div class="flex flex-col gap-6">
+<!-- Real-Time Monitoring -->
+<div class="bg-background-dark rounded-xl border border-gray-800 p-6 flex flex-col h-full">
+<div class="flex justify-between items-center mb-2">
+<h3 class="text-lg font-semibold text-white">Real-Time Monitoring</h3>
+<div class="flex gap-1 bg-gray-800 p-1 rounded-md text-sm">
+<button class="px-2 py-1 rounded bg-accent-blue/20 text-accent-blue">1m</button>
+<button class="px-2 py-1 rounded text-gray-400 hover:bg-gray-700">5m</button>
+<button class="px-2 py-1 rounded text-gray-400 hover:bg-gray-700">30m</button>
+</div>
+</div>
+<p class="text-sm text-gray-400 mb-4">CPU, GPU, RAM, CPU Temp</p>
+<div class="flex-grow flex flex-col justify-center">
+<svg fill="none" height="100%" viewbox="0 0 400 150" width="100%" xmlns="http://www.w3.org/2000/svg">
+<defs>
+<lineargradient id="chartGradient" x1="0" x2="0" y1="0" y2="1">
+<stop offset="5%" stop-color="#00BFFF" stop-opacity="0.3"></stop>
+<stop offset="95%" stop-color="#00BFFF" stop-opacity="0"></stop>
+</lineargradient>
+</defs>
+<path d="M0 100 L50 80 L100 90 L150 60 L200 75 L250 50 L300 65 L350 40 L400 50 L400 150 L0 150 Z" fill="url(#chartGradient)"></path>
+<path d="M0 100 L50 80 L100 90 L150 60 L200 75 L250 50 L300 65 L350 40 L400 50" stroke="#00BFFF" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+<!-- Second line -->
+<path d="M0 120 L50 110 L100 115 L150 90 L200 100 L250 80 L300 95 L350 70 L400 80" stroke="#FFD700" stroke-dasharray="4 4" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</div>
+<div class="flex justify-around text-xs text-gray-500 pt-2">
+<p>60s</p><p>45s</p><p>30s</p><p>15s</p><p>Now</p>
+</div>
+</div>
+<!-- Quick Actions Panel -->
+<div class="bg-background-dark p-6 rounded-xl border border-gray-800">
+<h3 class="text-lg font-semibold text-white mb-4">Quick Actions</h3>
+<div class="grid grid-cols-2 sm:grid-cols-3 gap-4">
+<button class="flex flex-col items-center justify-center gap-2 p-4 rounded-lg bg-gray-800 hover:bg-accent-blue/20 transition-colors text-white">
+<span class="material-symbols-outlined text-accent-blue icon-glow text-3xl">sports_esports</span>
+<h2 class="text-sm font-bold">Gaming</h2>
+</button>
+<button class="flex flex-col items-center justify-center gap-2 p-4 rounded-lg bg-gray-800 hover:bg-accent-blue/20 transition-colors text-white">
+<span class="material-symbols-outlined text-accent-blue icon-glow text-3xl">balance</span>
+<h2 class="text-sm font-bold">Balanced</h2>
+</button>
+<button class="flex flex-col items-center justify-center gap-2 p-4 rounded-lg bg-gray-800 hover:bg-accent-blue/20 transition-colors text-white">
+<span class="material-symbols-outlined text-accent-blue icon-glow text-3xl">battery_saver</span>
+<h2 class="text-sm font-bold">Power Saver</h2>
+</button>
+<button class="flex flex-col items-center justify-center gap-2 p-4 rounded-lg bg-gray-800 hover:bg-accent-blue/20 transition-colors text-white">
+<span class="material-symbols-outlined text-accent-blue icon-glow text-3xl">mop</span>
+<h2 class="text-sm font-bold">Disk Cleanup</h2>
+</button>
+<button class="flex flex-col items-center justify-center gap-2 p-4 rounded-lg bg-gray-800 hover:bg-accent-blue/20 transition-colors text-white">
+<span class="material-symbols-outlined text-accent-blue icon-glow text-3xl">construction</span>
+<h2 class="text-sm font-bold">Adv. Tweaks</h2>
+</button>
+<button class="flex flex-col items-center justify-center gap-2 p-4 rounded-lg bg-gray-800 hover:bg-accent-blue/20 transition-colors text-white">
+<span class="material-symbols-outlined text-accent-blue icon-glow text-3xl">backup</span>
+<h2 class="text-sm font-bold">System Backup</h2>
+</button>
+</div>
+</div>
+</div>
+<!-- Column 3 -->
+<div class="flex flex-col gap-6">
+<!-- System Health Scorecard -->
+<div class="bg-background-dark p-6 rounded-xl border border-gray-800">
+<h3 class="text-lg font-semibold text-white mb-4">System Health</h3>
+<div class="flex flex-col items-center gap-6">
+<div class="relative size-40">
+<svg class="size-full" viewbox="0 0 36 36"><path class="text-gray-700" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" fill="none" stroke-width="4"></path><path class="text-accent-blue progress-ring-circle" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" fill="none" stroke-dasharray="95, 100" stroke-linecap="round" stroke-width="4"></path></svg>
+<div class="absolute inset-0 flex flex-col items-center justify-center">
+<span class="font-black text-5xl text-white text-glow">95</span>
+<span class="text-sm text-gray-400">Excellent</span>
+</div>
+</div>
+<div class="w-full space-y-3">
+<div>
+<div class="flex justify-between text-sm mb-1"><span class="text-gray-300">Security</span><span class="font-medium text-white">100%</span></div>
+<div class="w-full bg-gray-700 rounded-full h-2"><div class="bg-accent-blue h-2 rounded-full" style="width: 100%"></div></div>
+</div>
+<div>
+<div class="flex justify-between text-sm mb-1"><span class="text-gray-300">Stability</span><span class="font-medium text-white">92%</span></div>
+<div class="w-full bg-gray-700 rounded-full h-2"><div class="bg-accent-blue h-2 rounded-full" style="width: 92%"></div></div>
+</div>
+<div>
+<div class="flex justify-between text-sm mb-1"><span class="text-gray-300">Speed</span><span class="font-medium text-white">94%</span></div>
+<div class="w-full bg-gray-700 rounded-full h-2"><div class="bg-accent-blue h-2 rounded-full" style="width: 94%"></div></div>
+</div>
+</div>
+</div>
+</div>
+<!-- ML Anomaly Detection -->
+<div class="bg-background-dark p-6 rounded-xl border border-gray-800">
+<div class="flex justify-between items-center mb-4">
+<h3 class="text-lg font-semibold text-white">ML Anomaly Detection</h3>
+<span class="px-3 py-1 text-xs font-medium rounded-full bg-green-500/20 text-green-400">Status: Normal</span>
+</div>
+<div class="space-y-3">
+<p class="text-center text-gray-400 py-4">No recent anomalies detected.</p>
+</div>
+<div class="flex gap-2 mt-4">
+<button class="w-full text-center py-2 rounded-lg bg-gray-800 hover:bg-gray-700 transition-colors text-sm font-medium text-white">View History</button>
+<button class="w-full text-center py-2 rounded-lg bg-gray-800 hover:bg-gray-700 transition-colors text-sm font-medium text-white">Dismiss All</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+</main>
+</div>
+</body></html>

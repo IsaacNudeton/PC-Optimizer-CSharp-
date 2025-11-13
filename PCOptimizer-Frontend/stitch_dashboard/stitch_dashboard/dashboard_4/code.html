@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Event Horizon - Dashboard</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "primary": "#00BFFF", // Electric Blue
+            "accent": "#FFD700", // Gold
+            "background-light": "#121212",
+            "background-dark": "#101622",
+          },
+          fontFamily: {
+            "display": ["Space Grotesk", "sans-serif"]
+          },
+          borderRadius: {"DEFAULT": "0.5rem", "lg": "1rem", "xl": "1.5rem", "full": "9999px"},
+        },
+      },
+    }
+  </script>
+<style>
+    .glow {
+      box-shadow: 0 0 5px theme('colors.primary'), 0 0 10px theme('colors.primary / 0.5'), 0 0 15px theme('colors.primary / 0.3');
+    }
+    .glow-accent {
+       box-shadow: 0 0 5px theme('colors.accent'), 0 0 10px theme('colors.accent / 0.5'), 0 0 15px theme('colors.accent / 0.3');
+    }
+    .material-symbols-outlined {
+      font-variation-settings:
+      'FILL' 0,
+      'wght' 400,
+      'GRAD' 0,
+      'opsz' 24
+    }
+    .material-symbols-outlined.fill {
+        font-variation-settings: 'FILL' 1;
+    }
+  </style>
+</head>
+<body class="bg-black font-display text-white">
+<div class="relative flex h-auto min-h-screen w-full flex-col">
+<div class="flex h-full min-h-screen">
+<!-- SideNavBar -->
+<aside class="flex w-64 flex-col bg-[#121212] p-4 border-r border-white/10">
+<div class="flex flex-col gap-4">
+<div class="flex items-center gap-3 px-2 py-2">
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-10" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCAN11ecM5k5NuvWNbW93yIov2OKoor5gj_jr44muRerP3-rb3YkcPSAPpm4Y8de4y6C7Ujunzb2hJcYhmY66tAkmYN34M8Pdk4NQ8iuRJwZH_o4Tg8qq6sLDw9oPmgOy9aPs6U8df9YAPgCm4NjeShLueKRSgvc8WfKkD4GrTY6PXbVruwbmCeoHsuTRz-oSXu0Wq_yEl-YY_PZKDhDViAQCYUVEGEE0CAQ6huXtWiQq8tI2pywy6LNq85w3JkbLaejz1BizcaNw");'></div>
+<div class="flex flex-col">
+<h1 class="text-white text-base font-medium leading-normal">Event Horizon</h1>
+<p class="text-white/60 text-sm font-normal leading-normal">Universal Optimizer</p>
+</div>
+</div>
+<nav class="flex flex-col gap-2 mt-4">
+<a class="flex items-center gap-3 px-3 py-2 rounded-lg bg-primary/20 text-primary" href="#">
+<span class="material-symbols-outlined fill text-primary">monitoring</span>
+<p class="text-sm font-medium leading-normal">Dashboard</p>
+</a>
+<a class="flex items-center gap-3 px-3 py-2 rounded-lg text-white/80 hover:bg-white/5 transition-colors" href="#">
+<span class="material-symbols-outlined">rocket_launch</span>
+<p class="text-sm font-medium leading-normal">Optimizer</p>
+</a>
+<a class="flex items-center gap-3 px-3 py-2 rounded-lg text-white/80 hover:bg-white/5 transition-colors" href="#">
+<span class="material-symbols-outlined">analytics</span>
+<p class="text-sm font-medium leading-normal">Analytics</p>
+</a>
+<a class="flex items-center gap-3 px-3 py-2 rounded-lg text-white/80 hover:bg-white/5 transition-colors" href="#">
+<span class="material-symbols-outlined">checklist</span>
+<p class="text-sm font-medium leading-normal">Processes</p>
+</a>
+<a class="flex items-center gap-3 px-3 py-2 rounded-lg text-white/80 hover:bg-white/5 transition-colors" href="#">
+<span class="material-symbols-outlined">settings</span>
+<p class="text-sm font-medium leading-normal">Settings</p>
+</a>
+</nav>
+</div>
+<div class="mt-auto">
+<button class="flex w-full items-center justify-center gap-2 rounded-lg py-2 text-white/60 hover:bg-white/5 transition-colors">
+<span class="material-symbols-outlined">menu_open</span>
+<span class="text-sm">Collapse</span>
+</button>
+</div>
+</aside>
+<!-- Main Content -->
+<main class="flex-1 flex flex-col">
+<!-- TopNavBar -->
+<header class="flex items-center justify-between whitespace-nowrap border-b border-solid border-white/10 px-10 py-4 bg-black/50 backdrop-blur-sm sticky top-0 z-10">
+<div class="flex items-center gap-4 text-white">
+<h2 class="text-white text-lg font-bold leading-tight tracking-[-0.015em]">Dashboard</h2>
+</div>
+<div class="flex gap-3">
+<button class="flex max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg size-10 bg-white/10 text-white/80 hover:bg-white/20 transition-colors">
+<span class="material-symbols-outlined text-xl">notifications</span>
+</button>
+<button class="flex max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg size-10 bg-white/10 text-white/80 hover:bg-white/20 transition-colors">
+<span class="material-symbols-outlined text-xl">account_circle</span>
+</button>
+</div>
+</header>
+<!-- Main Grid -->
+<div class="flex-1 p-6 lg:p-10 grid grid-cols-1 xl:grid-cols-3 gap-6">
+<!-- Column 1: Primary Gauges & Health -->
+<div class="flex flex-col gap-6">
+<div class="flex flex-col gap-4 rounded-xl p-6 border border-white/10 bg-[#121212]">
+<p class="text-white text-base font-medium leading-normal">System Health</p>
+<p class="text-accent tracking-light text-5xl font-bold leading-tight">95%</p>
+<p class="text-white/60 text-sm">Your system is running at optimal levels.</p>
+</div>
+<div class="flex flex-1 flex-col gap-2 rounded-xl p-6 border border-white/10 bg-[#121212]">
+<p class="text-white text-base font-medium leading-normal">CPU Usage</p>
+<div class="flex-1 flex items-center justify-center">
+<div class="relative size-48">
+<svg class="w-full h-full" viewbox="0 0 36 36">
+<path class="text-white/10" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" fill="none" stroke="currentColor" stroke-width="2"></path>
+<path class="text-primary glow" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" fill="none" stroke="currentColor" stroke-dasharray="68, 100" stroke-linecap="round" stroke-width="2"></path>
+</svg>
+<div class="absolute inset-0 flex items-center justify-center">
+<p class="text-white tracking-light text-4xl font-bold leading-tight">68%</p>
+</div>
+</div>
+</div>
+</div>
+<div class="flex flex-1 flex-col gap-2 rounded-xl p-6 border border-white/10 bg-[#121212]">
+<p class="text-white text-base font-medium leading-normal">GPU Usage</p>
+<div class="flex-1 flex items-center justify-center">
+<div class="relative size-36">
+<svg class="w-full h-full" viewbox="0 0 36 36">
+<path class="text-white/10" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" fill="none" stroke="currentColor" stroke-width="2"></path>
+<path class="text-primary glow" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" fill="none" stroke="currentColor" stroke-dasharray="85, 100" stroke-linecap="round" stroke-width="2"></path>
+</svg>
+<div class="absolute inset-0 flex items-center justify-center">
+<p class="text-white tracking-light text-3xl font-bold leading-tight">85%</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Column 2: Monitoring & Actions -->
+<div class="flex flex-col gap-6">
+<div class="flex min-w-72 flex-1 flex-col gap-4 p-6 rounded-xl border border-white/10 bg-[#121212]">
+<p class="text-white text-base font-medium leading-normal">Real-time Monitoring</p>
+<p class="text-white tracking-light text-3xl font-bold leading-tight truncate">CPU Clock Speed</p>
+<div class="flex gap-2 items-center">
+<p class="text-white/60 text-sm font-normal leading-normal">Last 60s</p>
+<div class="flex items-center gap-1 text-green-400">
+<span class="material-symbols-outlined text-base">arrow_upward</span>
+<p class="text-sm font-medium leading-normal">+1.2%</p>
+</div>
+</div>
+<div class="flex min-h-[180px] flex-1 flex-col gap-8 py-4">
+<svg fill="none" height="100%" preserveaspectratio="none" viewbox="-3 0 478 150" width="100%" xmlns="http://www.w3.org/2000/svg">
+<defs>
+<lineargradient gradientunits="userSpaceOnUse" id="chart-gradient" x1="236" x2="236" y1="1" y2="149">
+<stop stop-color="#00BFFF" stop-opacity="0.3"></stop>
+<stop offset="1" stop-color="#00BFFF" stop-opacity="0"></stop>
+</lineargradient>
+<filter height="200%" id="glow-filter" width="200%" x="-50%" y="-50%">
+<fegaussianblur in="SourceGraphic" result="blur" stddeviation="2"></fegaussianblur>
+<femerge>
+<femergenode in="blur"></femergenode>
+<femergenode in="SourceGraphic"></femergenode>
+</femerge>
+</filter>
+</defs>
+<path d="M0 109C18.1538 109 18.1538 21 36.3077 21C54.4615 21 54.4615 41 72.6154 41C90.7692 41 90.7692 93 108.923 93C127.077 93 127.077 33 145.231 33C163.385 33 163.385 101 181.538 101C199.692 101 199.692 61 217.846 61C236 61 236 45 254.154 45C272.308 45 272.308 121 290.462 121C308.615 121 308.615 149 326.769 149C344.923 149 344.923 1 363.077 1C381.231 1 381.231 81 399.385 81C417.538 81 417.538 129 435.692 129C453.846 129 453.846 25 472 25V149H0V109Z" fill="url(#chart-gradient)"></path>
+<path d="M0 109C18.1538 109 18.1538 21 36.3077 21C54.4615 21 54.4615 41 72.6154 41C90.7692 41 90.7692 93 108.923 93C127.077 93 127.077 33 145.231 33C163.385 33 163.385 101 181.538 101C199.692 101 199.692 61 217.846 61C236 61 236 45 254.154 45C272.308 45 272.308 121 290.462 121C308.615 121 308.615 149 326.769 149C344.923 149 344.923 1 363.077 1C381.231 1 381.231 81 399.385 81C417.538 81 417.538 129 435.692 129C453.846 129 453.846 25 472 25" filter="url(#glow-filter)" stroke="#00BFFF" stroke-linecap="round" stroke-width="2.5"></path>
+</svg>
+</div>
+</div>
+<div class="flex flex-col gap-3 rounded-xl p-6 border border-white/10 bg-[#121212]">
+<p class="text-white text-base font-medium leading-normal">Quick Actions</p>
+<div class="flex flex-col gap-3 items-stretch mt-2">
+<button class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-12 px-4 bg-primary text-black text-sm font-bold leading-normal tracking-[0.015em] w-full hover:bg-sky-400 transition-colors glow">
+<span class="truncate">Boost Performance</span>
+</button>
+<button class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-12 px-4 bg-white/10 text-white/80 text-sm font-bold leading-normal tracking-[0.015em] w-full hover:bg-white/20 transition-colors">
+<span class="truncate">Free up RAM</span>
+</button>
+<button class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-12 px-4 bg-white/10 text-white/80 text-sm font-bold leading-normal tracking-[0.015em] w-full hover:bg-white/20 transition-colors">
+<span class="truncate">Gaming Mode</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Column 3: Alerts & Temp -->
+<div class="flex flex-col gap-6">
+<div class="flex flex-col gap-4 rounded-xl p-6 border border-white/10 bg-[#121212] flex-1">
+<p class="text-white text-base font-medium leading-normal">ML Anomaly Detection</p>
+<div class="flex flex-col gap-4 mt-2">
+<div class="flex items-start gap-3">
+<span class="material-symbols-outlined text-accent mt-1">warning</span>
+<div class="flex flex-col">
+<p class="text-white/90 text-sm font-medium">High CPU usage by new process</p>
+<p class="text-white/50 text-xs">"updater.exe" at 14:32</p>
+</div>
+</div>
+<div class="flex items-start gap-3">
+<span class="material-symbols-outlined text-red-500 mt-1">local_fire_department</span>
+<div class="flex flex-col">
+<p class="text-white/90 text-sm font-medium">Unexpected temperature spike</p>
+<p class="text-white/50 text-xs">GPU reached 89°C at 14:28</p>
+</div>
+</div>
+<div class="flex items-start gap-3">
+<span class="material-symbols-outlined text-primary/80 mt-1">memory</span>
+<div class="flex flex-col">
+<p class="text-white/90 text-sm font-medium">Unusual Memory Allocation</p>
+<p class="text-white/50 text-xs">"chrome.exe" allocated 2.1GB</p>
+</div>
+</div>
+</div>
+</div>
+<div class="grid grid-cols-2 gap-6">
+<div class="flex flex-col gap-2 rounded-xl p-6 border border-white/10 bg-[#121212]">
+<p class="text-white text-base font-medium leading-normal">RAM Usage</p>
+<p class="text-white tracking-light text-4xl font-bold leading-tight">50%</p>
+</div>
+<div class="flex flex-col gap-2 rounded-xl p-6 border border-white/10 bg-[#121212]">
+<p class="text-white text-base font-medium leading-normal">Temperatures</p>
+<div class="mt-2 space-y-2">
+<p class="text-white tracking-light text-xl font-bold leading-tight">CPU: 58°C</p>
+<p class="text-white tracking-light text-xl font-bold leading-tight">GPU: 75°C</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</main>
+</div>
+</div>
+</body></html>

@@ -7,9 +7,12 @@ export interface DashboardMetrics {
   cpu: number;
   ram: number;
   disk: number;
+  gpu?: number;
   temperature: number;
+  gpuTemp?: number;
   activeProcesses: number;
   systemStatus: string;
+  systemHealth?: number;
   lastOptimization?: string;
   lastOptimizationFixes?: number;
 }
@@ -86,14 +89,16 @@ export interface GpuOptimizeRequest {
 }
 
 // Analytics Types
-export interface AnalyticsData {
+export interface AnalyticsDataPoint {
   timestamp: string;
-  cpuUsage: number;
-  memoryUsage: number;
-  diskIo: number;
-  temperature: number;
-  networkUpload: number;
-  networkDownload: number;
+  value: number;
+}
+
+export interface AnalyticsData {
+  cpu: AnalyticsDataPoint[];
+  ram: AnalyticsDataPoint[];
+  disk: AnalyticsDataPoint[];
+  healthScore: number;
 }
 
 // History Types

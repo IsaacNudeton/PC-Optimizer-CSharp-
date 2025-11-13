@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Event Horizon - Work Mode Dashboard</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+<script>
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "primary": "#5A82A8",
+              "accent": "#C1A77C",
+              "background-light": "#F5F5F7",
+              "background-dark": "#111921",
+              "card-light": "#FFFFFF",
+              "card-dark": "#1A242E",
+              "text-primary-light": "#333333",
+              "text-primary-dark": "#E5E7EB",
+              "text-secondary-light": "#6c757d",
+              "text-secondary-dark": "#9CA3AF",
+              "border-light": "#EAEAEA",
+              "border-dark": "#2D3748",
+            },
+            fontFamily: {
+              "display": ["Inter", "sans-serif"]
+            },
+            borderRadius: {"DEFAULT": "0.5rem", "lg": "0.75rem", "xl": "1rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .gauge-circle {
+            transform: rotate(-90deg);
+        }
+        .gauge-circle-bg {
+            stroke-width: 12;
+        }
+        .gauge-circle-progress {
+            stroke-width: 12;
+            stroke-linecap: round;
+            transition: stroke-dashoffset 0.5s ease-in-out;
+        }
+    </style>
+</head>
+<body class="font-display bg-background-light dark:bg-background-dark text-text-primary-light dark:text-text-primary-dark">
+<div class="relative flex min-h-screen w-full">
+<!-- SideNavBar -->
+<aside class="flex flex-col w-64 p-4 bg-card-light dark:bg-card-dark border-r border-border-light dark:border-border-dark shrink-0">
+<div class="flex items-center gap-3 mb-8">
+<div class="flex items-center justify-center size-10">
+<svg fill="none" height="32" viewbox="0 0 40 40" width="32" xmlns="http://www.w3.org/2000/svg">
+<circle cx="20" cy="20" r="18" stroke="#5A82A8" stroke-width="3"></circle>
+<circle cx="20" cy="20" r="12" stroke="#C1A77C" stroke-width="3"></circle>
+<circle cx="20" cy="20" fill="#5A82A8" r="6"></circle>
+</svg>
+</div>
+<div class="flex flex-col">
+<h1 class="text-text-primary-light dark:text-text-primary-dark text-base font-semibold leading-normal">Event Horizon</h1>
+<p class="text-text-secondary-light dark:text-text-secondary-dark text-sm font-normal leading-normal">PC Optimizer</p>
+</div>
+</div>
+<nav class="flex flex-col gap-2">
+<a class="flex items-center gap-3 px-3 py-2 rounded-lg bg-primary/10 text-primary" href="#">
+<span class="material-symbols-outlined !text-2xl" style="font-variation-settings: 'FILL' 1;">dashboard</span>
+<p class="text-sm font-semibold leading-normal">Dashboard</p>
+</a>
+<a class="flex items-center gap-3 px-3 py-2 rounded-lg hover:bg-primary/10 transition-colors" href="#">
+<span class="material-symbols-outlined !text-2xl">monitoring</span>
+<p class="text-text-primary-light dark:text-text-primary-dark text-sm font-medium leading-normal">Performance</p>
+</a>
+<a class="flex items-center gap-3 px-3 py-2 rounded-lg hover:bg-primary/10 transition-colors" href="#">
+<span class="material-symbols-outlined !text-2xl">hub</span>
+<p class="text-text-primary-light dark:text-text-primary-dark text-sm font-medium leading-normal">Processes</p>
+</a>
+<a class="flex items-center gap-3 px-3 py-2 rounded-lg hover:bg-primary/10 transition-colors" href="#">
+<span class="material-symbols-outlined !text-2xl">psychology</span>
+<p class="text-text-primary-light dark:text-text-primary-dark text-sm font-medium leading-normal">ML Detection</p>
+</a>
+</nav>
+<div class="mt-auto">
+<a class="flex items-center gap-3 px-3 py-2 rounded-lg hover:bg-primary/10 transition-colors" href="#">
+<span class="material-symbols-outlined !text-2xl">settings</span>
+<p class="text-text-primary-light dark:text-text-primary-dark text-sm font-medium leading-normal">Settings</p>
+</a>
+</div>
+</aside>
+<!-- Main Content -->
+<main class="flex-1 p-8 overflow-y-auto">
+<div class="max-w-7xl mx-auto">
+<!-- PageHeading -->
+<div class="mb-8">
+<p class="text-text-primary-light dark:text-text-primary-dark text-4xl font-black leading-tight tracking-tight">Dashboard - Work Mode</p>
+</div>
+<!-- 3-Column Grid -->
+<div class="grid grid-cols-1 lg:grid-cols-3 gap-6 @container">
+<!-- Column 1: Primary Stats -->
+<div class="flex flex-col gap-6">
+<!-- Circular Gauges -->
+<div class="grid grid-cols-1 @md:grid-cols-3 lg:grid-cols-1 gap-6">
+<div class="flex flex-col items-center gap-4 p-6 bg-card-light dark:bg-card-dark rounded-xl border border-border-light dark:border-border-dark shadow-sm">
+<div class="relative size-32">
+<svg class="size-full" viewbox="0 0 120 120">
+<circle class="gauge-circle-bg stroke-current text-gray-200 dark:text-gray-700" cx="60" cy="60" r="54"></circle>
+<circle class="gauge-circle-progress stroke-current text-primary" cx="60" cy="60" r="54" style="stroke-dasharray: 339.292; stroke-dashoffset: 196.79;"></circle> <!-- 339.292 * (1 - 0.42) -->
+</svg>
+<div class="absolute inset-0 flex items-center justify-center">
+<span class="text-2xl font-bold text-text-primary-light dark:text-text-primary-dark">42%</span>
+</div>
+</div>
+<p class="text-base font-medium text-text-primary-light dark:text-text-primary-dark">CPU Usage</p>
+</div>
+<div class="flex flex-col items-center gap-4 p-6 bg-card-light dark:bg-card-dark rounded-xl border border-border-light dark:border-border-dark shadow-sm">
+<div class="relative size-32">
+<svg class="size-full" viewbox="0 0 120 120">
+<circle class="gauge-circle-bg stroke-current text-gray-200 dark:text-gray-700" cx="60" cy="60" r="54"></circle>
+<circle class="gauge-circle-progress stroke-current text-primary" cx="60" cy="60" r="54" style="stroke-dasharray: 339.292; stroke-dashoffset: 142.503;"></circle> <!-- 339.292 * (1 - 0.58) -->
+</svg>
+<div class="absolute inset-0 flex items-center justify-center">
+<span class="text-2xl font-bold text-text-primary-light dark:text-text-primary-dark">58%</span>
+</div>
+</div>
+<p class="text-base font-medium text-text-primary-light dark:text-text-primary-dark">GPU Usage</p>
+</div>
+<div class="flex flex-col items-center gap-4 p-6 bg-card-light dark:bg-card-dark rounded-xl border border-border-light dark:border-border-dark shadow-sm">
+<div class="relative size-32">
+<svg class="size-full" viewbox="0 0 120 120">
+<circle class="gauge-circle-bg stroke-current text-gray-200 dark:text-gray-700" cx="60" cy="60" r="54"></circle>
+<circle class="gauge-circle-progress stroke-current text-primary" cx="60" cy="60" r="54" style="stroke-dasharray: 339.292; stroke-dashoffset: 118.752;"></circle> <!-- 339.292 * (1 - 0.65) -->
+</svg>
+<div class="absolute inset-0 flex items-center justify-center">
+<span class="text-2xl font-bold text-text-primary-light dark:text-text-primary-dark">65%</span>
+</div>
+</div>
+<p class="text-base font-medium text-text-primary-light dark:text-text-primary-dark">RAM Usage</p>
+</div>
+</div>
+<!-- System Health Scorecard -->
+<div class="p-6 bg-card-light dark:bg-card-dark rounded-xl border border-border-light dark:border-border-dark shadow-sm flex items-center gap-6">
+<span class="material-symbols-outlined text-5xl text-green-500">health_and_safety</span>
+<div class="flex-1">
+<p class="text-lg font-bold leading-tight tracking-tight text-text-primary-light dark:text-text-primary-dark">System Health</p>
+<p class="text-base font-normal leading-normal text-text-secondary-light dark:text-text-secondary-dark">Optimal</p>
+</div>
+<p class="text-4xl font-bold text-green-500">98%</p>
+</div>
+</div>
+<!-- Column 2: Detailed Monitoring -->
+<div class="flex flex-col gap-6">
+<!-- Real-time Multi-line Graphs -->
+<div class="p-6 bg-card-light dark:bg-card-dark rounded-xl border border-border-light dark:border-border-dark shadow-sm flex flex-col h-full">
+<div class="flex justify-between items-start mb-4">
+<div>
+<p class="text-lg font-bold leading-tight text-text-primary-light dark:text-text-primary-dark">Real-Time Performance</p>
+<p class="text-sm font-normal text-text-secondary-light dark:text-text-secondary-dark">Monitoring Active</p>
+</div>
+<div class="flex items-center gap-1 bg-gray-100 dark:bg-gray-800 p-1 rounded-lg text-sm">
+<button class="px-2 py-1 rounded-md bg-white dark:bg-gray-700 shadow text-primary font-semibold">60s</button>
+<button class="px-2 py-1 rounded-md hover:bg-white/50 dark:hover:bg-gray-700/50">5m</button>
+<button class="px-2 py-1 rounded-md hover:bg-white/50 dark:hover:bg-gray-700/50">15m</button>
+</div>
+</div>
+<div class="flex-grow flex flex-col min-h-[250px]">
+<svg class="w-full flex-1" fill="none" preserveaspectratio="none" viewbox="0 0 472 150" xmlns="http://www.w3.org/2000/svg">
+<path d="M0 109C18.1538 109 18.1538 21 36.3077 21C54.4615 21 54.4615 41 72.6154 41C90.7692 41 90.7692 93 108.923 93C127.077 93 127.077 33 145.231 33C163.385 33 163.385 101 181.538 101C199.692 101 199.692 61 217.846 61C236 61 236 45 254.154 45C272.308 45 272.308 121 290.462 121C308.615 121 308.615 149 326.769 149C344.923 149 344.923 1 363.077 1C381.231 1 381.231 81 399.385 81C417.538 81 417.538 129 435.692 129C453.846 129 453.846 25 472 25" stroke="#5A82A8" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+<path d="M0 60C19.6667 60 19.6667 89 39.3333 89C59 89 59 119 78.6667 119C98.3333 119 98.3333 49 118 49C137.667 49 137.667 101 157.333 101C177 101 177 22 196.667 22C216.333 22 216.333 74 236 74C255.667 74 255.667 44 275.333 44C295 44 295 87 314.667 87C334.333 87 334.333 133 354 133C373.667 133 373.667 92 393.333 92C413 92 413 32 432.667 32C452.333 32 452.333 60 472 60" stroke="#C1A77C" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+<div class="flex justify-between text-xs text-text-secondary-light dark:text-text-secondary-dark font-medium mt-2">
+<span>60s ago</span>
+<span>Now</span>
+</div>
+</div>
+<div class="flex justify-center items-center gap-6 mt-4 text-sm">
+<div class="flex items-center gap-2">
+<div class="size-3 rounded-full bg-primary"></div>
+<span>CPU</span>
+</div>
+<div class="flex items-center gap-2">
+<div class="size-3 rounded-full bg-accent"></div>
+<span>GPU</span>
+</div>
+</div>
+</div>
+<!-- Temperature Monitor Panel -->
+<div class="p-6 bg-card-light dark:bg-card-dark rounded-xl border border-border-light dark:border-border-dark shadow-sm">
+<p class="text-lg font-bold leading-tight mb-4 text-text-primary-light dark:text-text-primary-dark">Temperature Monitor</p>
+<div class="flex flex-col gap-4">
+<div class="flex justify-between items-center">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary">memory</span>
+<span class="text-base font-medium">CPU Core</span>
+</div>
+<span class="text-base font-bold">52°C</span>
+</div>
+<div class="flex justify-between items-center">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-accent">developer_board</span>
+<span class="text-base font-medium">GPU Die</span>
+</div>
+<span class="text-base font-bold">61°C</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Column 3: Actions & Intelligence -->
+<div class="flex flex-col gap-6">
+<!-- Quick Action Buttons -->
+<div class="p-6 bg-card-light dark:bg-card-dark rounded-xl border border-border-light dark:border-border-dark shadow-sm">
+<p class="text-lg font-bold leading-tight mb-4 text-text-primary-light dark:text-text-primary-dark">Quick Actions</p>
+<div class="flex flex-col gap-3">
+<button class="w-full text-left flex items-center gap-3 px-4 py-3 bg-accent/20 text-accent font-semibold rounded-lg hover:bg-accent/30 transition-colors">
+<span class="material-symbols-outlined">bolt</span>
+<span>Optimize Now</span>
+</button>
+<button class="w-full text-left flex items-center gap-3 px-4 py-3 bg-primary/20 text-primary font-semibold rounded-lg hover:bg-primary/30 transition-colors">
+<span class="material-symbols-outlined">cleaning_services</span>
+<span>Free Up RAM</span>
+</button>
+<button class="w-full text-left flex items-center gap-3 px-4 py-3 bg-primary/20 text-primary font-semibold rounded-lg hover:bg-primary/30 transition-colors">
+<span class="material-symbols-outlined">delete_sweep</span>
+<span>Clear Cache</span>
+</button>
+</div>
+</div>
+<!-- ML Anomaly Detection Panel -->
+<div class="p-6 bg-card-light dark:bg-card-dark rounded-xl border border-border-light dark:border-border-dark shadow-sm h-full">
+<p class="text-lg font-bold leading-tight mb-4 text-text-primary-light dark:text-text-primary-dark">ML Anomaly Detection</p>
+<div class="flex flex-col gap-4">
+<div class="flex items-start gap-3">
+<span class="material-symbols-outlined text-orange-400 mt-1">warning</span>
+<div>
+<p class="text-sm font-medium text-text-primary-light dark:text-text-primary-dark">High memory usage detected in <span class="font-bold">chrome.exe</span></p>
+<p class="text-xs text-text-secondary-light dark:text-text-secondary-dark">2 min ago</p>
+</div>
+</div>
+<div class="flex items-start gap-3">
+<span class="material-symbols-outlined text-blue-400 mt-1">info</span>
+<div>
+<p class="text-sm font-medium text-text-primary-light dark:text-text-primary-dark">New startup process added: <span class="font-bold">updater.exe</span></p>
+<p class="text-xs text-text-secondary-light dark:text-text-secondary-dark">1 hour ago</p>
+</div>
+</div>
+<div class="flex items-start gap-3">
+<span class="material-symbols-outlined text-orange-400 mt-1">warning</span>
+<div>
+<p class="text-sm font-medium text-text-primary-light dark:text-text-primary-dark">CPU temperature spike during <span class="font-bold">render_task.exe</span></p>
+<p class="text-xs text-text-secondary-light dark:text-text-secondary-dark">3 hours ago</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</main>
+</div>
+</body></html>

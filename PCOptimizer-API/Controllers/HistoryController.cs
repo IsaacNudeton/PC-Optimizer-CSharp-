@@ -126,5 +126,48 @@ namespace PCOptimizer.API.Controllers
                 return StatusCode(500, new { error = ex.Message });
             }
         }
+
+        [HttpGet("logs")]
+        public ActionResult<object> GetLogs([FromQuery] int page = 1, [FromQuery] int limit = 20)
+        {
+            try
+            {
+                var history = _monitor.GetHistory().ToList();
+                var skip = (page - 1) * limit;
+                var logs = history
+                    .OrderByDescending(m => m.Timestamp)
+                    .Skip(skip)
+                    .Take(limit)
+                    .Select(m => new
+                    {
+                        timestamp = m.Timestamp.ToString("O"),
+                        type = "metric",
+                        message = $"CPU: {Math.Round(m.CpuUsage, 1)}%, RAM: {Math.Round(m.RamPercent, 1)}%, GPU: {Math.Round(m.GpuUsage, 1)}%",
+                        level = "info",
+                        details = new
+                        {
+                            cpu = Math.Round(m.CpuUsage, 1),
+                            ram = Math.Round(m.RamPercent, 1),
+                            gpu = Math.Round(m.GpuUsage, 1),
+                            cpuTemp = m.CpuTemp,
+                            gpuTemp = m.GpuTemp
+                        }
+                    })
+                    .ToList();
+
+                return Ok(new
+                {
+                    logs = logs,
+                    page = page,
+                    limit = limit,
+                    total = history.Count,
+                    totalPages = (int)Math.Ceiling(history.Count / (double)limit)
+                });
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(500, new { error = ex.Message });
+            }
+        }
     }
 }

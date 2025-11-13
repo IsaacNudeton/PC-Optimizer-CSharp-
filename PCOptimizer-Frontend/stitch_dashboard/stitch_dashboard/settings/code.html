@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Event Horizon - Settings</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+<script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#00BFFF",
+                        "background-light": "#f0f2f5",
+                        "background-dark": "#0A0A0A",
+                        "surface-light": "#ffffff",
+                        "surface-dark": "#1C1C1E",
+                        "border-light": "#e5e7eb",
+                        "border-dark": "#3A3A3C",
+                        "text-light-primary": "#1f2937",
+                        "text-light-secondary": "#6b7280",
+                        "text-dark-primary": "#f9fafb",
+                        "text-dark-secondary": "#9ca3af",
+                    },
+                    fontFamily: {
+                        "display": ["Space Grotesk", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.5rem",
+                        "lg": "1rem",
+                        "xl": "1.5rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            font-size: 24px;
+        }
+        input[type="range"]::-webkit-slider-thumb {
+             -webkit-appearance: none;
+             appearance: none;
+             width: 16px;
+             height: 16px;
+             border-radius: 9999px;
+             background-color: #00BFFF;
+             cursor: pointer;
+        }
+        input[type="range"]::-moz-range-thumb {
+             width: 16px;
+             height: 16px;
+             border-radius: 9999px;
+             background-color: #00BFFF;
+             cursor: pointer;
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display text-text-light-primary dark:text-dark-primary">
+<div class="flex h-screen w-full">
+<!-- Global SideNavBar -->
+<aside class="flex w-64 flex-col gap-4 border-r border-border-light dark:border-border-dark bg-surface-light dark:bg-surface-dark p-4">
+<div class="flex items-center gap-3">
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-10" data-alt="Event Horizon Universal accretion disk logo" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCgbFdDyU-YkEsFl4aeDGTa1Xc3UHRBVIKWT68JO3-L0BwYq1ctLjl73dcWUK5h8KURA7EzVXmVkdx5BXAMoDukcDcuNEPBXjkGreX3Ai2lwLhTLaeDrKJ4SsrrEnnvgt9nTRriWEl-I969KoxHJnKIKnl9zBQLCwDtKT7Jp5ozcVzrqnPDRF0AoBGlksEc3mnEn5SmiHanrioYf2ygnRPGMaItWfRvIKI7VVG4AhtytdpKeuwPaPdsbteKSzLS5WWVPh9nMWPUCQ");'></div>
+<div class="flex flex-col">
+<h1 class="text-base font-medium leading-normal text-text-light-primary dark:text-dark-primary">Event Horizon</h1>
+<p class="text-sm font-normal leading-normal text-text-light-secondary dark:text-dark-secondary">PC Optimizer</p>
+</div>
+</div>
+<nav class="mt-4 flex flex-col gap-2">
+<a class="flex items-center gap-3 px-3 py-2 rounded-lg hover:bg-primary/20 transition-colors" href="#">
+<span class="material-symbols-outlined text-text-light-secondary dark:text-dark-secondary">dashboard</span>
+<p class="text-sm font-medium leading-normal text-text-light-primary dark:text-dark-primary">Dashboard</p>
+</a>
+<a class="flex items-center gap-3 px-3 py-2 rounded-lg hover:bg-primary/20 transition-colors" href="#">
+<span class="material-symbols-outlined text-text-light-secondary dark:text-dark-secondary">build_circle</span>
+<p class="text-sm font-medium leading-normal text-text-light-primary dark:text-dark-primary">Advanced Optimizer</p>
+</a>
+<a class="flex items-center gap-3 px-3 py-2 rounded-lg hover:bg-primary/20 transition-colors" href="#">
+<span class="material-symbols-outlined text-text-light-secondary dark:text-dark-secondary">monitoring</span>
+<p class="text-sm font-medium leading-normal text-text-light-primary dark:text-dark-primary">Performance Analytics</p>
+</a>
+<a class="flex items-center gap-3 px-3 py-2 rounded-lg bg-primary/20" href="#">
+<span class="material-symbols-outlined !font-bold text-primary">settings</span>
+<p class="text-sm font-medium leading-normal text-primary">Settings</p>
+</a>
+<a class="flex items-center gap-3 px-3 py-2 rounded-lg hover:bg-primary/20 transition-colors" href="#">
+<span class="material-symbols-outlined text-text-light-secondary dark:text-dark-secondary">history</span>
+<p class="text-sm font-medium leading-normal text-text-light-primary dark:text-dark-primary">Operation History Log</p>
+</a>
+<a class="flex items-center gap-3 px-3 py-2 rounded-lg hover:bg-primary/20 transition-colors" href="#">
+<span class="material-symbols-outlined text-text-light-secondary dark:text-dark-secondary">info</span>
+<p class="text-sm font-medium leading-normal text-text-light-primary dark:text-dark-primary">About</p>
+</a>
+</nav>
+</aside>
+<!-- Main Content Area -->
+<main class="flex-1 overflow-y-auto">
+<div class="p-8">
+<header class="mb-8">
+<h1 class="text-3xl font-bold text-text-light-primary dark:text-dark-primary">Settings</h1>
+<p class="text-text-light-secondary dark:text-dark-secondary mt-1">Customize your Event Horizon experience.</p>
+</header>
+<div class="flex gap-8">
+<!-- Secondary Settings Sidebar -->
+<aside class="w-[180px] shrink-0">
+<nav class="flex flex-col gap-1">
+<a class="flex items-center gap-4 px-4 py-2.5 rounded-lg bg-primary/20" href="#monitoring">
+<span class="material-symbols-outlined text-primary text-[20px]">cardiology</span>
+<p class="text-base font-medium text-primary flex-1 truncate">Monitoring</p>
+</a>
+<a class="flex items-center gap-4 px-4 py-2.5 rounded-lg hover:bg-primary/10 transition-colors" href="#visual">
+<span class="material-symbols-outlined text-text-light-secondary dark:text-dark-secondary text-[20px]">visibility</span>
+<p class="text-base font-normal text-text-light-primary dark:text-dark-primary flex-1 truncate">Visual</p>
+</a>
+<a class="flex items-center gap-4 px-4 py-2.5 rounded-lg hover:bg-primary/10 transition-colors" href="#notifications">
+<span class="material-symbols-outlined text-text-light-secondary dark:text-dark-secondary text-[20px]">notifications</span>
+<p class="text-base font-normal text-text-light-primary dark:text-dark-primary flex-1 truncate">Notifications</p>
+</a>
+<a class="flex items-center gap-4 px-4 py-2.5 rounded-lg hover:bg-primary/10 transition-colors" href="#advanced">
+<span class="material-symbols-outlined text-text-light-secondary dark:text-dark-secondary text-[20px]">developer_mode</span>
+<p class="text-base font-normal text-text-light-primary dark:text-dark-primary flex-1 truncate">Advanced</p>
+</a>
+</nav>
+</aside>
+<!-- Settings Content -->
+<div class="flex-1 space-y-12">
+<!-- Monitoring Section -->
+<section id="monitoring">
+<h2 class="text-xl font-semibold text-text-light-primary dark:text-dark-primary mb-1">Monitoring</h2>
+<p class="text-text-light-secondary dark:text-dark-secondary mb-6">Control how and when the application monitors your system's performance.</p>
+<div class="space-y-6">
+<div>
+<label class="block text-sm font-medium text-text-light-primary dark:text-dark-primary mb-2">Monitoring Mode</label>
+<div class="grid grid-cols-3 gap-4">
+<div class="flex flex-col items-center justify-center gap-3 p-4 border-2 border-primary rounded-lg bg-primary/10 cursor-pointer">
+<span class="material-symbols-outlined text-primary text-3xl">play_circle</span>
+<span class="font-medium text-primary">Active</span>
+<p class="text-xs text-center text-text-light-secondary dark:text-dark-secondary">Full real-time monitoring</p>
+</div>
+<div class="flex flex-col items-center justify-center gap-3 p-4 border border-border-light dark:border-border-dark rounded-lg bg-surface-light dark:bg-surface-dark cursor-pointer hover:border-primary/50">
+<span class="material-symbols-outlined text-text-light-secondary dark:text-dark-secondary text-3xl">all_inclusive</span>
+<span class="font-medium text-text-light-primary dark:text-dark-primary">Background</span>
+<p class="text-xs text-center text-text-light-secondary dark:text-dark-secondary">Low-resource monitoring</p>
+</div>
+<div class="flex flex-col items-center justify-center gap-3 p-4 border border-border-light dark:border-border-dark rounded-lg bg-surface-light dark:bg-surface-dark cursor-pointer hover:border-primary/50">
+<span class="material-symbols-outlined text-text-light-secondary dark:text-dark-secondary text-3xl">pause_circle</span>
+<span class="font-medium text-text-light-primary dark:text-dark-primary">Paused</span>
+<p class="text-xs text-center text-text-light-secondary dark:text-dark-secondary">Monitoring is inactive</p>
+</div>
+</div>
+</div>
+<div>
+<label class="flex justify-between items-center text-sm font-medium text-text-light-primary dark:text-dark-primary mb-2" for="update-interval">
+<span>Data Update Interval</span>
+<span class="text-primary font-semibold">1000ms</span>
+</label>
+<input class="w-full h-2 bg-slate-200 dark:bg-slate-700 rounded-lg appearance-none cursor-pointer" id="update-interval" max="5000" min="500" step="100" type="range" value="1000"/>
+</div>
+<div class="grid grid-cols-2 gap-4 pt-2">
+<div class="flex items-center justify-between p-4 bg-surface-light dark:bg-surface-dark border border-border-light dark:border-border-dark rounded-lg">
+<div>
+<p class="font-medium">GPU Monitoring</p>
+<p class="text-xs text-text-light-secondary dark:text-dark-secondary">Track GPU usage and clocks.</p>
+</div>
+<label class="relative inline-flex items-center cursor-pointer">
+<input checked="" class="sr-only peer" type="checkbox" value=""/>
+<div class="w-11 h-6 bg-slate-200 dark:bg-slate-700 rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-primary"></div>
+</label>
+</div>
+<div class="flex items-center justify-between p-4 bg-surface-light dark:bg-surface-dark border border-border-light dark:border-border-dark rounded-lg">
+<div>
+<p class="font-medium">Temperature Sensors</p>
+<p class="text-xs text-text-light-secondary dark:text-dark-secondary">Monitor all hardware temps.</p>
+</div>
+<label class="relative inline-flex items-center cursor-pointer">
+<input checked="" class="sr-only peer" type="checkbox" value=""/>
+<div class="w-11 h-6 bg-slate-200 dark:bg-slate-700 rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-primary"></div>
+</label>
+</div>
+<div class="flex items-center justify-between p-4 bg-surface-light dark:bg-surface-dark border border-border-light dark:border-border-dark rounded-lg">
+<div>
+<p class="font-medium">ML Anomaly Detection</p>
+<p class="text-xs text-text-light-secondary dark:text-dark-secondary">Proactively detect issues.</p>
+</div>
+<label class="relative inline-flex items-center cursor-pointer">
+<input class="sr-only peer" type="checkbox" value=""/>
+<div class="w-11 h-6 bg-slate-200 dark:bg-slate-700 rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-primary"></div>
+</label>
+</div>
+</div>
+</div>
+</section>
+<!-- Visual Section -->
+<section id="visual">
+<h2 class="text-xl font-semibold text-text-light-primary dark:text-dark-primary mb-1">Visual</h2>
+<p class="text-text-light-secondary dark:text-dark-secondary mb-6">Adjust the look and feel of the application interface.</p>
+<div class="space-y-6">
+<div>
+<label class="block text-sm font-medium text-text-light-primary dark:text-dark-primary mb-2">Theme</label>
+<div class="grid grid-cols-3 gap-4">
+<div class="relative p-4 border-2 border-primary rounded-lg bg-surface-light dark:bg-[#1C1C1E] cursor-pointer">
+<span class="material-symbols-outlined text-primary absolute top-2 right-2">check_circle</span>
+<p class="font-medium">Dark</p>
+</div>
+<div class="relative p-4 border border-border-light dark:border-border-dark rounded-lg bg-white cursor-pointer hover:border-primary/50">
+<p class="font-medium text-slate-800">Light</p>
+</div>
+<div class="relative p-4 border border-border-light dark:border-border-dark rounded-lg bg-black cursor-pointer hover:border-primary/50">
+<p class="font-medium">OLED Black</p>
+</div>
+</div>
+</div>
+<div>
+<label class="block text-sm font-medium text-text-light-primary dark:text-dark-primary mb-2">Accent Color</label>
+<div class="flex items-center gap-3">
+<div class="size-8 rounded-full bg-primary ring-2 ring-offset-2 ring-offset-background-light dark:ring-offset-background-dark ring-primary"></div>
+<div class="size-8 rounded-full bg-red-500 cursor-pointer"></div>
+<div class="size-8 rounded-full bg-amber-500 cursor-pointer"></div>
+<div class="size-8 rounded-full bg-emerald-500 cursor-pointer"></div>
+<div class="size-8 rounded-full bg-fuchsia-500 cursor-pointer"></div>
+<div class="flex items-center justify-center size-8 rounded-full border border-dashed border-border-light dark:border-border-dark cursor-pointer">
+<span class="material-symbols-outlined text-text-light-secondary dark:text-dark-secondary text-[20px]">add</span>
+</div>
+</div>
+</div>
+<div class="grid grid-cols-2 gap-4">
+<div class="flex items-center justify-between p-4 bg-surface-light dark:bg-surface-dark border border-border-light dark:border-border-dark rounded-lg">
+<p class="font-medium">Enable Glassmorphism</p>
+<label class="relative inline-flex items-center cursor-pointer">
+<input class="sr-only peer" type="checkbox" value=""/>
+<div class="w-11 h-6 bg-slate-200 dark:bg-slate-700 rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-primary"></div>
+</label>
+</div>
+<div class="flex items-center justify-between p-4 bg-surface-light dark:bg-surface-dark border border-border-light dark:border-border-dark rounded-lg">
+<p class="font-medium">Enable Glow Effect</p>
+<label class="relative inline-flex items-center cursor-pointer">
+<input checked="" class="sr-only peer" type="checkbox" value=""/>
+<div class="w-11 h-6 bg-slate-200 dark:bg-slate-700 rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-primary"></div>
+</label>
+</div>
+</div>
+<div>
+<label class="flex justify-between items-center text-sm font-medium text-text-light-primary dark:text-dark-primary mb-2" for="animation-speed">
+<span>Animation Speed</span>
+<span class="text-primary font-semibold">Normal</span>
+</label>
+<input class="w-full h-2 bg-slate-200 dark:bg-slate-700 rounded-lg appearance-none cursor-pointer" id="animation-speed" max="2" min="0" step="1" type="range" value="1"/>
+</div>
+</div>
+</section>
+<!-- Notifications Section -->
+<section id="notifications">
+<h2 class="text-xl font-semibold text-text-light-primary dark:text-dark-primary mb-1">Notifications</h2>
+<p class="text-text-light-secondary dark:text-dark-secondary mb-6">Set alert thresholds for critical system metrics.</p>
+<div class="grid grid-cols-2 gap-x-6 gap-y-6">
+<div>
+<label class="flex justify-between items-center text-sm font-medium text-text-light-primary dark:text-dark-primary mb-2" for="cpu-threshold">
+<span>CPU Usage Threshold</span>
+<span class="text-primary font-semibold">90%</span>
+</label>
+<input class="w-full h-2 bg-slate-200 dark:bg-slate-700 rounded-lg appearance-none cursor-pointer" id="cpu-threshold" max="100" min="50" step="1" type="range" value="90"/>
+</div>
+<div>
+<label class="flex justify-between items-center text-sm font-medium text-text-light-primary dark:text-dark-primary mb-2" for="gpu-threshold">
+<span>GPU Usage Threshold</span>
+<span class="text-primary font-semibold">90%</span>
+</label>
+<input class="w-full h-2 bg-slate-200 dark:bg-slate-700 rounded-lg appearance-none cursor-pointer" id="gpu-threshold" max="100" min="50" step="1" type="range" value="90"/>
+</div>
+<div>
+<label class="flex justify-between items-center text-sm font-medium text-text-light-primary dark:text-dark-primary mb-2" for="ram-threshold">
+<span>RAM Usage Threshold</span>
+<span class="text-primary font-semibold">85%</span>
+</label>
+<input class="w-full h-2 bg-slate-200 dark:bg-slate-700 rounded-lg appearance-none cursor-pointer" id="ram-threshold" max="100" min="50" step="1" type="range" value="85"/>
+</div>
+<div>
+<label class="flex justify-between items-center text-sm font-medium text-text-light-primary dark:text-dark-primary mb-2" for="temp-threshold">
+<span>CPU Temperature Threshold</span>
+<span class="text-primary font-semibold">85°C</span>
+</label>
+<input class="w-full h-2 bg-slate-200 dark:bg-slate-700 rounded-lg appearance-none cursor-pointer" id="temp-threshold" max="100" min="70" step="1" type="range" value="85"/>
+</div>
+</div>
+</section>
+<!-- Advanced Section -->
+<section id="advanced">
+<h2 class="text-xl font-semibold text-text-light-primary dark:text-dark-primary mb-1">Advanced</h2>
+<p class="text-text-light-secondary dark:text-dark-secondary mb-6">Configure system integration, safety features, and data management.</p>
+<div class="space-y-4">
+<div class="p-4 bg-surface-light dark:bg-surface-dark border border-border-light dark:border-border-dark rounded-lg">
+<h3 class="font-semibold mb-2">System Integration</h3>
+<div class="space-y-3">
+<div class="flex items-center justify-between">
+<p class="text-sm">Run on Startup</p>
+<label class="relative inline-flex items-center cursor-pointer">
+<input checked="" class="sr-only peer" type="checkbox" value=""/>
+<div class="w-11 h-6 bg-slate-200 dark:bg-slate-700 rounded-full peer peer-checked:after:translate-x-full after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-primary"></div>
+</label>
+</div>
+<div class="flex items-center justify-between">
+<p class="text-sm">Minimize to System Tray</p>
+<label class="relative inline-flex items-center cursor-pointer">
+<input checked="" class="sr-only peer" type="checkbox" value=""/>
+<div class="w-11 h-6 bg-slate-200 dark:bg-slate-700 rounded-full peer peer-checked:after:translate-x-full after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-primary"></div>
+</label>
+</div>
+</div>
+</div>
+<div class="p-4 bg-surface-light dark:bg-surface-dark border border-border-light dark:border-border-dark rounded-lg">
+<h3 class="font-semibold mb-2">Safety</h3>
+<div class="space-y-3">
+<div class="flex items-center justify-between">
+<p class="text-sm">Auto-create Restore Points</p>
+<label class="relative inline-flex items-center cursor-pointer">
+<input checked="" class="sr-only peer" type="checkbox" value=""/>
+<div class="w-11 h-6 bg-slate-200 dark:bg-slate-700 rounded-full peer peer-checked:after:translate-x-full after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-primary"></div>
+</label>
+</div>
+<div class="flex items-center justify-between">
+<p class="text-sm">Confirm Dangerous Actions</p>
+<label class="relative inline-flex items-center cursor-pointer">
+<input checked="" class="sr-only peer" type="checkbox" value=""/>
+<div class="w-11 h-6 bg-slate-200 dark:bg-slate-700 rounded-full peer peer-checked:after:translate-x-full after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-primary"></div>
+</label>
+</div>
+</div>
+</div>
+<div class="p-4 bg-surface-light dark:bg-surface-dark border border-border-light dark:border-border-dark rounded-lg">
+<h3 class="font-semibold mb-2">Data Management</h3>
+<div class="flex flex-wrap gap-3">
+<button class="px-4 py-2 text-sm font-medium rounded-lg bg-primary/20 text-primary hover:bg-primary/30 transition-colors">Export Configuration</button>
+<button class="px-4 py-2 text-sm font-medium rounded-lg bg-primary/20 text-primary hover:bg-primary/30 transition-colors">Import Configuration</button>
+<button class="px-4 py-2 text-sm font-medium rounded-lg bg-red-500/20 text-red-500 hover:bg-red-500/30 transition-colors">Reset All Settings</button>
+</div>
+</div>
+</div>
+</section>
+</div>
+</div>
+</div>
+</main>
+</div>
+</body></html>

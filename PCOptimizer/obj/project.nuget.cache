@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "gKMe2CfKLtE=",
+  "dgSpecHash": "4CMkQqYp/t4=",
   "success": true,
   "projectFilePath": "C:\\Users\\isaac\\PC-Optimizer-CSharp\\PCOptimizer\\PCOptimizer.csproj",
   "expectedPackageFiles": [
@@ -9,6 +9,8 @@
     "C:\\Users\\isaac\\.nuget\\packages\\librehardwaremonitorlib\\0.9.4\\librehardwaremonitorlib.0.9.4.nupkg.sha512",
     "C:\\Users\\isaac\\.nuget\\packages\\livecharts\\0.9.7\\livecharts.0.9.7.nupkg.sha512",
     "C:\\Users\\isaac\\.nuget\\packages\\livecharts.wpf\\0.9.7\\livecharts.wpf.0.9.7.nupkg.sha512",
+    "C:\\Users\\isaac\\.nuget\\packages\\microsoft.data.sqlite\\9.0.0\\microsoft.data.sqlite.9.0.0.nupkg.sha512",
+    "C:\\Users\\isaac\\.nuget\\packages\\microsoft.data.sqlite.core\\9.0.0\\microsoft.data.sqlite.core.9.0.0.nupkg.sha512",
     "C:\\Users\\isaac\\.nuget\\packages\\microsoft.ml\\4.0.3\\microsoft.ml.4.0.3.nupkg.sha512",
     "C:\\Users\\isaac\\.nuget\\packages\\microsoft.ml.cpumath\\4.0.3\\microsoft.ml.cpumath.4.0.3.nupkg.sha512",
     "C:\\Users\\isaac\\.nuget\\packages\\microsoft.ml.dataview\\4.0.3\\microsoft.ml.dataview.4.0.3.nupkg.sha512",
@@ -37,6 +39,10 @@
     "C:\\Users\\isaac\\.nuget\\packages\\runtime.native.system.io.ports\\9.0.0\\runtime.native.system.io.ports.9.0.0.nupkg.sha512",
     "C:\\Users\\isaac\\.nuget\\packages\\runtime.osx-arm64.runtime.native.system.io.ports\\9.0.0\\runtime.osx-arm64.runtime.native.system.io.ports.9.0.0.nupkg.sha512",
     "C:\\Users\\isaac\\.nuget\\packages\\runtime.osx-x64.runtime.native.system.io.ports\\9.0.0\\runtime.osx-x64.runtime.native.system.io.ports.9.0.0.nupkg.sha512",
+    "C:\\Users\\isaac\\.nuget\\packages\\sqlitepclraw.bundle_e_sqlite3\\2.1.10\\sqlitepclraw.bundle_e_sqlite3.2.1.10.nupkg.sha512",
+    "C:\\Users\\isaac\\.nuget\\packages\\sqlitepclraw.core\\2.1.10\\sqlitepclraw.core.2.1.10.nupkg.sha512",
+    "C:\\Users\\isaac\\.nuget\\packages\\sqlitepclraw.lib.e_sqlite3\\2.1.10\\sqlitepclraw.lib.e_sqlite3.2.1.10.nupkg.sha512",
+    "C:\\Users\\isaac\\.nuget\\packages\\sqlitepclraw.provider.e_sqlite3\\2.1.10\\sqlitepclraw.provider.e_sqlite3.2.1.10.nupkg.sha512",
     "C:\\Users\\isaac\\.nuget\\packages\\system.codedom\\9.0.10\\system.codedom.9.0.10.nupkg.sha512",
     "C:\\Users\\isaac\\.nuget\\packages\\system.collections.immutable\\8.0.0\\system.collections.immutable.8.0.0.nupkg.sha512",
     "C:\\Users\\isaac\\.nuget\\packages\\system.io.filesystem.accesscontrol\\5.0.0\\system.io.filesystem.accesscontrol.5.0.0.nupkg.sha512",
@@ -49,30 +55,5 @@
     "C:\\Users\\isaac\\.nuget\\packages\\system.security.principal.windows\\5.0.0\\system.security.principal.windows.5.0.0.nupkg.sha512",
     "C:\\Users\\isaac\\.nuget\\packages\\system.threading.channels\\8.0.0\\system.threading.channels.8.0.0.nupkg.sha512"
   ],
-  "logs": [
-    {
-      "code": "NU1701",
-      "level": "Warning",
-      "message": "Package 'LiveCharts 0.9.7' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1' instead of the project target framework 'net9.0-windows7.0'. This package may not be fully compatible with your project.",
-      "projectPath": "C:\\Users\\isaac\\PC-Optimizer-CSharp\\PCOptimizer\\PCOptimizer.csproj",
-      "warningLevel": 1,
-      "filePath": "C:\\Users\\isaac\\PC-Optimizer-CSharp\\PCOptimizer\\PCOptimizer.csproj",
-      "libraryId": "LiveCharts",
-      "targetGraphs": [
-        "net9.0-windows7.0"
-      ]
-    },
-    {
-      "code": "NU1701",
-      "level": "Warning",
-      "message": "Package 'LiveCharts.Wpf 0.9.7' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1' instead of the project target framework 'net9.0-windows7.0'. This package may not be fully compatible with your project.",
-      "projectPath": "C:\\Users\\isaac\\PC-Optimizer-CSharp\\PCOptimizer\\PCOptimizer.csproj",
-      "warningLevel": 1,
-      "filePath": "C:\\Users\\isaac\\PC-Optimizer-CSharp\\PCOptimizer\\PCOptimizer.csproj",
-      "libraryId": "LiveCharts.Wpf",
-      "targetGraphs": [
-        "net9.0-windows7.0"
-      ]
-    }
-  ]
+  "logs": []
 }

@@ -4,7 +4,7 @@
  * Access at http://localhost:5173/debug
  */
 
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { Container, Paper, Button, Box, Typography, Alert } from '@mui/material';
 
 export default function Debug() {

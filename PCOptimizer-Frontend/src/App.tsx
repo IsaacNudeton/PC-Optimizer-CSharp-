@@ -3,7 +3,8 @@ import { ThemeProvider as MuiThemeProvider } from '@mui/material/styles';
 import { Box, CssBaseline } from '@mui/material';
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import { ThemeProvider, useCosmicTheme } from './context/ThemeContext';
+import { EnhancedThemeProvider, useEnhancedTheme } from './contexts/EnhancedThemeContext';
+import { useProfileDetection } from './hooks/useProfileDetection';
 import MainLayout from './layouts/MainLayout';
 
 // Pages
@@ -30,7 +31,10 @@ interface AppContentProps {
 }
 
 const AppContent: React.FC<AppContentProps> = ({ children }) => {
-  const { muiTheme } = useCosmicTheme();
+  const { muiTheme } = useEnhancedTheme();
+  
+  // Enable profile detection
+  useProfileDetection();
 
   return (
     <MuiThemeProvider theme={muiTheme}>
@@ -58,7 +62,7 @@ const AppRouter: React.FC = () => {
 
 export default function App() {
   return (
-    <ThemeProvider>
+    <EnhancedThemeProvider>
       <QueryClientProvider client={queryClient}>
         <AppContent>
           <Router>
@@ -66,6 +70,6 @@ export default function App() {
           </Router>
         </AppContent>
       </QueryClientProvider>
-    </ThemeProvider>
+    </EnhancedThemeProvider>
   );
 }

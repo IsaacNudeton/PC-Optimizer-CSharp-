@@ -5,9 +5,7 @@ const fs = require('fs');
 let mainWindow;
 
 // Check if running in development mode
-// If dist folder doesn't exist, we're in dev mode
-const distPath = path.join(__dirname, 'dist');
-const isDev = !fs.existsSync(distPath);
+const isDev = process.env.NODE_ENV === 'development' || process.env.ELECTRON_DEV === 'true';
 
 function createWindow() {
   mainWindow = new BrowserWindow({
@@ -16,17 +14,15 @@ function createWindow() {
     webPreferences: {
       nodeIntegration: false,
       contextIsolation: true,
+      preload: undefined,
     },
   });
 
   let startUrl;
-  if (isDev) {
-    // Try to detect the actual port Vite is using
-    const vitePort = process.env.VITE_PORT || 5173;
-    startUrl = `http://localhost:${vitePort}`;
-  } else {
-    startUrl = `file://${path.join(__dirname, 'dist/index.html')}`;
-  }
+  // Always try localhost:5173 first (Vite dev server)
+  // If not available, fall back to dist folder
+  const vitePort = process.env.VITE_PORT || 5173;
+  startUrl = `http://localhost:${vitePort}`;
 
   mainWindow.loadURL(startUrl);
 

@@ -1,22 +1,22 @@
 import { createTheme, ThemeOptions } from '@mui/material/styles';
 
-// CosmicUI Color Palette
+// CosmicUI Color Palette - Updated for Stitch Design
 const cosmicColorPalettes = {
   universal: {
-    deepBlack: '#0A0A0A',
-    darkGray: '#1A1A1A',
-    lightCharcoal: '#2A2A2A',
+    deepBlack: '#1a1a1a',
+    darkGray: '#2d2d2d',
+    lightCharcoal: '#3a3a3a',
     darkMatter: '#262626',
     primaryText: '#FFFFFF',
-    secondaryText: '#B3B3B3',
+    secondaryText: '#b0b0b0',
     tertiaryText: '#808080',
-    accentBright: '#B8D4E8',
-    accentMedium: '#8FB8D8',
-    accentDark: '#7FA8C8',
-    electricBlue: '#00D4FF',
-    success: '#B8E8C0',
-    warning: '#E8D8B8',
-    danger: '#E8B8B8',
+    accentBright: '#FFB800',
+    accentMedium: '#FFA500',
+    accentDark: '#FF9500',
+    electricBlue: '#00BCD4',
+    success: '#4CAF50',
+    warning: '#FF9800',
+    danger: '#F44336',
   },
   gaming: {
     deepBlack: '#0A0A0A',
@@ -188,8 +188,8 @@ export const createCosmicTheme = (profile: ThemeProfile = 'Universal', accent: A
           root: {
             backgroundColor: colors.darkGray,
             borderRadius: '12px',
-            border: `2px solid ${colors.accentBright}`,
-            padding: '24px',
+            border: `1px solid #444`,
+            padding: '16px',
           },
         },
       },
@@ -205,7 +205,7 @@ export const createCosmicTheme = (profile: ThemeProfile = 'Universal', accent: A
         styleOverrides: {
           root: {
             backgroundColor: colors.darkGray,
-            borderBottom: `2px solid ${colors.accentBright}`,
+            borderBottom: `1px solid #444`,
           },
         },
       },
@@ -213,7 +213,7 @@ export const createCosmicTheme = (profile: ThemeProfile = 'Universal', accent: A
         styleOverrides: {
           paper: {
             backgroundColor: colors.darkGray,
-            borderRight: `2px solid ${colors.accentBright}`,
+            borderRight: `1px solid #444`,
           },
         },
       },
